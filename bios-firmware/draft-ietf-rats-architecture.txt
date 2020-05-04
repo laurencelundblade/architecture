@@ -661,10 +661,10 @@ Internet-Draft              RATS Arch & Terms                   May 2020
        means in this example and beyond]
 
    The essence of this example is a cascade of staged boot environments.
-   Each environment (after the initial one that is a root-of-trust) has
-   the duty of measuring its next environment before it is started.
-   Therefore, creating a layered boot sequence and correspondingly
-   enabling Layered Attestation.
+   Each environment has the responsibility of measuring the next
+   environment before the next environment is started.
+
+
 
 
 
@@ -673,10 +673,6 @@ Birkholz, et al.         Expires 5 November 2020               [Page 12]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
-
-   The essence of this example is a cascade of staged boot environments.
-   Each environment has the responsibility of measuring the next
-   environment before the next environment is started.
 
 4.4.  Composite Device
 
@@ -716,6 +712,10 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Attester.
 
    Figure 4 depicts the conceptual data flow for a Composite Device.
+
+
+
+
 
 
 
