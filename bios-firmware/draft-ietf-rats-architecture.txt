@@ -674,6 +674,10 @@ Birkholz, et al.         Expires 5 November 2020               [Page 12]
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   The essence of this example is a cascade of staged boot environments.
+   Each environment has the responsibility of measuring the next
+   environment before the next environment is started.
+
 4.4.  Composite Device
 
    A Composite Device is an entity composed of multiple sub-entities
@@ -712,10 +716,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Attester.
 
    Figure 4 depicts the conceptual data flow for a Composite Device.
-
-
-
-
 
 
 
