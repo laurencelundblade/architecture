@@ -1,6 +1,6 @@
 {
   "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-04-28T14:19:31.428726+00:00",
+  "timestamp": "2020-05-04T20:25:47.387557+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -1227,6 +1227,46 @@
           "body": "A google search for \"known good values\" yields some mention in the Cisco trust center and a few books on security. Linux IMA mentions \"good measurements\" once that I could find. So there's some use of the term out there and it seems worth mentioning along with RIM. It is also a very descriptive term that is probably immediately clear to the user.",
           "createdAt": "2020-04-14T14:32:24Z",
           "updatedAt": "2020-04-14T14:32:24Z"
+        }
+      ]
+    },
+    {
+      "number": 83,
+      "id": "MDU6SXNzdWU2MDgzODQ3NTU=",
+      "title": "Security Considerations for Implicit Trust Model",
+      "url": "https://github.com/ietf-rats-wg/architecture/issues/83",
+      "state": "OPEN",
+      "author": "mcr",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "new text from #82 requires some new Security Considerations text.\r\n",
+      "createdAt": "2020-04-28T14:55:49Z",
+      "updatedAt": "2020-04-28T14:55:49Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 84,
+      "id": "MDU6SXNzdWU2MDg2NzM4MDM=",
+      "title": "FIXME in document",
+      "url": "https://github.com/ietf-rats-wg/architecture/issues/84",
+      "state": "OPEN",
+      "author": "dthaler",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section 3.1 of the draft says:\r\n\r\n>   FIXME from Henk: Measurements at early stages of\r\n>   Layered Attestation are NOT evidence yet.\r\n>   This text does not cover that yet\r\n\r\nThis fixme needs to be fixed somehow.",
+      "createdAt": "2020-04-28T23:16:15Z",
+      "updatedAt": "2020-04-28T23:53:31Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "There are also still statements like these in section 4.3:\r\n> Henk: we are looking for a better term than UEFI/BIOS/Firmware\r\n\r\nand\r\n\r\n> [Henk: we might have to define what successful means in this example and beyond]",
+          "createdAt": "2020-04-28T23:53:31Z",
+          "updatedAt": "2020-04-28T23:53:31Z"
         }
       ]
     }
@@ -5430,15 +5470,15 @@
       "id": "MDExOlB1bGxSZXF1ZXN0Mzg0NTA5MTY3",
       "title": "Update Trust Model with Implicit Trust Example",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/60",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gmandyam",
-      "authorAssociation": "FIRST_TIME_CONTRIBUTOR",
+      "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Starting point for https://github.com/ietf-rats-wg/architecture/issues/59",
       "createdAt": "2020-03-05T21:27:24Z",
-      "updatedAt": "2020-04-28T14:18:58Z",
-      "closedAt": null,
+      "updatedAt": "2020-04-28T14:21:31Z",
+      "closedAt": "2020-04-28T14:21:22Z",
       "mergedAt": null,
       "mergedBy": null,
       "comments": [
@@ -5455,6 +5495,13 @@
           "body": "Tried to address the comments in PR mod's:\r\n\r\na) @dthaler  - separated out example and tried to make it better-defined\r\nb) @thomas-fossati - added 2 sentences to discuss the transience of the communications link and associated trust\r\nc) @William-PanWei - tried to better explain how a Verifier would obtain information about how the communications link was established.  It makes me wonder if the baseline architecture would need to be extended to encompass delegated trust.\r\nd) @nedmsmith - I may still have a misunderstanding of what an endorsement actually means in the RATS architecture.  In this example, I felt that an endorsement may have been leveraged in establishment of the communications link.  Therefore an additional attestation-specific endorsement may not be necessary.",
           "createdAt": "2020-03-28T21:34:53Z",
           "updatedAt": "2020-03-28T21:34:53Z"
+        },
+        {
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closed in favour of PR #82.",
+          "createdAt": "2020-04-28T14:21:22Z",
+          "updatedAt": "2020-04-28T14:21:31Z"
         }
       ],
       "reviews": [
@@ -7111,17 +7158,17 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDA2ODkxOTM2",
       "title": "Make reference value discussion apply to both types of Appraisal Policy",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/80",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "dthaler",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Previously the text was specific to policy for Evidence, but the same\r\napplies to policy for appraising Attestation Results, so generalizing\r\nthe text.\r\n\r\nThis also removes a redundant sentence where older text and newly merged text from this morning said the same thing.  And the diffs look larger than they really are, since some text was just moved around to be in a different order.\r\n\r\nSigned-off-by: Dave Thaler <dthaler@ntdev.microsoft.com>",
       "createdAt": "2020-04-21T20:29:43Z",
-      "updatedAt": "2020-04-22T09:50:40Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
+      "updatedAt": "2020-04-28T14:34:14Z",
+      "closedAt": "2020-04-28T14:34:05Z",
+      "mergedAt": "2020-04-28T14:34:05Z",
+      "mergedBy": "mcr",
       "comments": [],
       "reviews": [
         {
@@ -7136,6 +7183,46 @@
           "createdAt": "2020-04-22T09:50:40Z",
           "updatedAt": "2020-04-22T09:50:40Z",
           "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDAxODkzNjk0",
+          "commit": {
+            "abbreviatedOid": "126a4b4"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-04-28T14:29:16Z",
+          "updatedAt": "2020-04-28T14:29:22Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\nThe Verifier, when appraising Evidence, or the Relying Party, when\r\nappraising Attestation Results, checks the values of some claims\r\n```",
+              "createdAt": "2020-04-28T14:29:16Z",
+              "updatedAt": "2020-04-28T14:33:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDAxODk3NTM5",
+          "commit": {
+            "abbreviatedOid": "126a4b4"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-04-28T14:32:55Z",
+          "updatedAt": "2020-04-28T14:33:02Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\r\nagainst constraints specified in its Appraisal Policy.  Such constraints might\r\n```",
+              "createdAt": "2020-04-28T14:32:55Z",
+              "updatedAt": "2020-04-28T14:33:26Z"
+            }
+          ]
         }
       ]
     },
@@ -7144,17 +7231,17 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDA2ODk3MzQ3",
       "title": "Add Privacy discussion of trusting Verifier via appraisal",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/81",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "dthaler",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "As discussed in the design team meeting\r\n\r\nSigned-off-by: Dave Thaler <dthaler@ntdev.microsoft.com>",
       "createdAt": "2020-04-21T20:40:57Z",
-      "updatedAt": "2020-04-22T09:49:56Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
+      "updatedAt": "2020-04-28T14:22:32Z",
+      "closedAt": "2020-04-28T14:22:17Z",
+      "mergedAt": "2020-04-28T14:22:17Z",
+      "mergedBy": "mcr",
       "comments": [],
       "reviews": [
         {
@@ -7169,6 +7256,66 @@
           "createdAt": "2020-04-22T09:49:56Z",
           "updatedAt": "2020-04-22T09:49:56Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 82,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDEwMTUwNzMw",
+      "title": "Implicit trust",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/82",
+      "state": "OPEN",
+      "author": "mcr",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "replace pull request #60 with one we can edit.\r\nThis attempts to establish the architectural basis for implicit trust as a result of links.\r\n",
+      "createdAt": "2020-04-28T14:20:18Z",
+      "updatedAt": "2020-04-28T14:56:48Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDAxOTA0OTM3",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-04-28T14:40:02Z",
+          "updatedAt": "2020-04-28T14:40:03Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nTrust can also be tied to the communications link over which\r\n```",
+              "createdAt": "2020-04-28T14:40:02Z",
+              "updatedAt": "2020-04-28T14:40:03Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDAxOTE3Mjg1",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-04-28T14:52:03Z",
+          "updatedAt": "2020-04-28T14:52:04Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nAs a result, an Appraisal Policy for the Verifier may be possible that trusts the attestation evidence from the device without\r\nendorsement or cryptographically-verifiable signature of the\r\n```",
+              "createdAt": "2020-04-28T14:52:03Z",
+              "updatedAt": "2020-04-28T14:54:28Z"
+            }
+          ]
         }
       ]
     }
