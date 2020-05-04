@@ -660,7 +660,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
        [Henk: we might have to define what successful
        means in this example and beyond]
 
-   The essence of this example is a cascade of staged boot environments.
+   The essence of this example is a cascade of staged environments.
    Each environment has the responsibility of measuring the next
    environment before the next environment is started.
 
