@@ -133,7 +133,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    to support Relying Parties in their decision process.
 
    This documents defines a flexible architecture consisting of
-   attestation Roles and their interactions via Role Messages.
+   attestation Roles and their interactions via conceptual messages.
    Additionally, this document defines a universal set of terms that can
    be mapped to various existing and emerging Remote Attestation
    Procedures.  Common topological models and the data flows associated
@@ -982,12 +982,13 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 6.  Role Hosting and Composition
 
-   The RATS architecture includes the definition of Roles (e.g.
-   Attester, Verifier, Relying Party, Endorser) and Role Messages (e.g.
-   Evidence, Attestation Results, Endorsements, Appraisal Policies) that
-   captures canonical attestation behaviors, that are common to a broad
-   range of attestation-enabled systems.  An entity that combines
-   multiple Roles produces and consumes the associated Role Messages.
+   The RATS architecture includes the definition of Roles (e.g.,
+   Attester, Verifier, Relying Party, Endorser) and conceptual messages
+   (e.g., Evidence, Attestation Results, Endorsements, Appraisal
+   Policies) that captures canonical attestation behaviors, that are
+   common to a broad range of attestation-enabled systems.  An entity
+   that combines multiple Roles produces and consumes the associated
+   Role Messages.
 
    The RATS architecture is not prescriptive about deployment
    configuration options of attestation-enabled systems, therefore the
@@ -1000,8 +1001,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    architecture while flexibly accommodating the needs of various
    deployment architectures.
 
-   Interactions between Roles do not necessarily require use of Internet
-   protocols.  They could, for example, use inter-process communication,
+
 
 
 
@@ -1010,6 +1010,8 @@ Birkholz, et al.         Expires 6 November 2020               [Page 18]
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   Interactions between Roles do not necessarily require use of Internet
+   protocols.  They could, for example, use inter-process communication,
    local system buses, shared memory, hypervisors, IP-loopback devices
    or any communication path between the various environments that may
    exist on the entity that combines multiple Roles.
@@ -1026,17 +1028,17 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Device can host the Verifier role locally to appraise Evidence from
    one or more subordinate Attesters.  The local Verifier might convey
    local Attestation Results to a remote Relying party or the Relying
-   Party role also could become local where an application specific
+   Party role also could become local where an application-specific
    action is taken locally.  For example, a secure boot scenario
    prevents system software from loading if the firmware fails to
    satisfy a local trustworthiness appraisal policy.
 
    In a multi-network scenario, a network node might bridge a wide-area
-   network, local-area network and span various system buses.  In so
+   network, local-area network, and span various system buses.  In so
    doing, the bridge node might need to host multiple Roles depending on
    the type of behavior each connected domain expects.  For example, the
    node might be an Attester to a wide-area network, a Verifier to the
-   local-area network and a Relying Party to components attached to a
+   local-area network, and a Relying Party to components attached to a
    local system bus.
 
 7.  Trust Model
@@ -1056,8 +1058,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    The Endorser and Verifier Owner may need to trust the Verifier before
    giving the Endorsement and Appraisal Policy to it.  Such trust can
-   also be established directly or indirectly, implicitly or explicitly.
-   One explicit way to establish such trust may be the Verifier first
 
 
 
@@ -1066,6 +1066,8 @@ Birkholz, et al.         Expires 6 November 2020               [Page 19]
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   also be established directly or indirectly, implicitly or explicitly.
+   One explicit way to establish such trust may be the Verifier first
    acts as an Attester and creates Evidence about itself to be consumed
    by the Endorser and/or Verifier Owner as the Relying Parties.  If it
    is accepted as trustworthy, then they can provide Endorsements and
@@ -1107,8 +1109,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    hardware, firmware, or software on the device), and its appraisal in
    isolation would require Appraisal Policy to be based on device-
    specific details (e.g., a device public key).
-
-
 
 
 
