@@ -180,9 +180,9 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       vouches for the validity of the Evidence it has appraised
 
    Attester:  An entity (typically a device), whose Evidence must be
-      appraised in order to determine whether it is considered
-      trustworthy, such as when deciding whether it is authorized to
-      perform some operation
+      appraised in order to infer the extent to which the Attester is
+      considered trustworthy, such as when deciding whether it is
+      authorized to perform some operation
 
    Endorsement:  Statements that Endorsers make (typically a
       manufacturer) that vouches for the design and implementation of
