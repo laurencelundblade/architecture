@@ -5,14 +5,14 @@
 RATS Working Group                                           H. Birkholz
 Internet-Draft                                            Fraunhofer SIT
 Intended status: Informational                                 D. Thaler
-Expires: 5 November 2020                                       Microsoft
+Expires: 6 November 2020                                       Microsoft
                                                            M. Richardson
                                                 Sandelman Software Works
                                                                 N. Smith
                                                                    Intel
                                                                   W. Pan
                                                      Huawei Technologies
-                                                              4 May 2020
+                                                              5 May 2020
 
 
                Remote Attestation Procedures Architecture
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Birkholz, et al.         Expires 5 November 2020                [Page 1]
+Birkholz, et al.         Expires 6 November 2020                [Page 1]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -61,7 +61,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 November 2020.
+   This Internet-Draft will expire on 6 November 2020.
 
 Copyright Notice
 
@@ -81,46 +81,46 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Reference Use Cases . . . . . . . . . . . . . . . . . . . . .   4
+   3.  Reference Use Cases . . . . . . . . . . . . . . . . . . . . .   5
      3.1.  Network Endpoint Assessment . . . . . . . . . . . . . . .   5
      3.2.  Confidential Machine Learning (ML) Model Protection . . .   5
      3.3.  Confidential Data Retrieval . . . . . . . . . . . . . . .   6
      3.4.  Critical Infrastructure Control . . . . . . . . . . . . .   6
-     3.5.  Trusted Execution Environment (TEE) Provisioning  . . . .   6
+     3.5.  Trusted Execution Environment (TEE) Provisioning  . . . .   7
      3.6.  Hardware Watchdog . . . . . . . . . . . . . . . . . . . .   7
    4.  Architectural Overview  . . . . . . . . . . . . . . . . . . .   7
      4.1.  Two Types of Environments of an Attester  . . . . . . . .   9
      4.2.  Layered Attestation Procedures  . . . . . . . . . . . . .  10
      4.3.  Composite Device  . . . . . . . . . . . . . . . . . . . .  13
-   5.  Topological Models  . . . . . . . . . . . . . . . . . . . . .  15
+   5.  Topological Models  . . . . . . . . . . . . . . . . . . . . .  14
      5.1.  Passport Model  . . . . . . . . . . . . . . . . . . . . .  15
      5.2.  Background-Check Model  . . . . . . . . . . . . . . . . .  16
      5.3.  Combinations  . . . . . . . . . . . . . . . . . . . . . .  17
-   6.  Roles and Entities  . . . . . . . . . . . . . . . . . . . . .  18
+   6.  Role Hosting and Composition  . . . . . . . . . . . . . . . .  18
    7.  Trust Model . . . . . . . . . . . . . . . . . . . . . . . . .  19
    8.  Conceptual Messages . . . . . . . . . . . . . . . . . . . . .  20
      8.1.  Evidence  . . . . . . . . . . . . . . . . . . . . . . . .  20
-     8.2.  Endorsements  . . . . . . . . . . . . . . . . . . . . . .  20
+     8.2.  Endorsements  . . . . . . . . . . . . . . . . . . . . . .  21
      8.3.  Attestation Results . . . . . . . . . . . . . . . . . . .  21
    9.  Claims Encoding Formats . . . . . . . . . . . . . . . . . . .  22
-   10. Freshness . . . . . . . . . . . . . . . . . . . . . . . . . .  23
+   10. Freshness . . . . . . . . . . . . . . . . . . . . . . . . . .  24
    11. Privacy Considerations  . . . . . . . . . . . . . . . . . . .  24
-   12. Security Considerations . . . . . . . . . . . . . . . . . . .  24
+   12. Security Considerations . . . . . . . . . . . . . . . . . . .  25
 
 
 
-Birkholz, et al.         Expires 5 November 2020                [Page 2]
+Birkholz, et al.         Expires 6 November 2020                [Page 2]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
    13. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  25
-   14. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  25
-   15. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  25
-   16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  25
-     16.1.  Normative References . . . . . . . . . . . . . . . . . .  25
+   14. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  26
+   15. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  26
+   16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  26
+     16.1.  Normative References . . . . . . . . . . . . . . . . . .  26
      16.2.  Informative References . . . . . . . . . . . . . . . . .  26
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  26
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  27
 
 1.  Introduction
 
@@ -132,18 +132,19 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Evidence via Appraisal Policies and creates the Attestation Results
    to support Relying Parties in their decision process.
 
-   This documents defines a flexible architecture with corresponding
-   roles and their interaction via conceptual messages.  Additionally,
-   this document defines a universal set of terms that can be mapped to
-   various existing and emerging Remote Attestation Procedures.  Common
-   topological models and the data flows associated with them, such as
-   the "Passport Model" and the "Background-Check Model" are
-   illustrated.  The purpose is to enable readers of this document to
-   map their current and emerging solutions to the architecture provided
-   and the corresponding terminology defined.  A common terminology that
-   provides a well-understood semantic meaning to the concepts, roles,
-   and models in this document is vital to create semantic
-   interoperability between solutions and across different platforms.
+   This documents defines a flexible architecture consisting of
+   attestation Roles and their interactions via Role Messages.
+   Additionally, this document defines a universal set of terms that can
+   be mapped to various existing and emerging Remote Attestation
+   Procedures.  Common topological models and the data flows associated
+   with them, such as the "Passport Model" and the "Background-Check
+   Model" are illustrated.  The purpose is to enable readers to map
+   their solution architecture to the canonical attestation architecture
+   provided here and to define useful terminology for attestation.
+   Having a common terminology that provides well-understood meanings
+   for common themes such as, Roles, device composition, Topological
+   Models and appraisal is vital for semantic interoperability across
+   solutions and platforms involving multiple vendors and providers.
 
    Amongst other things, this document is about trust and
    trustworthiness.  Trust is a decision being made.  Trustworthiness is
@@ -164,8 +165,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-Birkholz, et al.         Expires 5 November 2020                [Page 3]
+Birkholz, et al.         Expires 6 November 2020                [Page 3]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -177,37 +177,54 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    Attestation Result:  The output generated by a Verifier, typically
       including information about an Attester, where the Verifier
-      vouches for the validity of the results
+      vouches for the validity of the Evidence it has appraised
 
-   Attester:  An entity whose attributes must be appraised in order to
-      determine whether the entity is considered trustworthy, such as
-      when deciding whether the entity is authorized to perform some
-      operation
+   Attester:  An entity (typically a device), whose Evidence must be
+      appraised in order to determine whether it is considered
+      trustworthy, such as when deciding whether it is authorized to
+      perform some operation
 
-   Endorsement:  A secure statement that some entity (typically a
-      manufacturer) vouches for the integrity of an Attester's signing
-      capability
+   Endorsement:  Statements that Endorsers make (typically a
+      manufacturer) that vouches for the design and implementation of
+      the Attester.  Often this includes statements about the integrity
+      of an Attester's signing capability
 
-   Endorser:  An entity that creates Endorsements that can be used to
-      help to appraise the trustworthiness of Attesters
+   Endorser:  An entity (typically a manufacturer) whose Endorsements
+      help Verifiers appraise the authenticity of Evidence
 
-   Evidence:  A set of information about an Attester that is to be
-      appraised by a Verifier
+   Evidence:  A set of information that asserts the trustworthiness
+      status of an Attester, that is appraised by a Verifier
 
-   Relying Party:  An entity that depends on the validity of information
-      about another entity, typically for purposes of authorization.
-      Compare /relying party/ in [RFC4949]
+   Relying Party:  An entity (typically an application), that depends on
+      the validity of information about an Attester, for purposes of
+      reliably applying application specific actions.  Compare /relying
+      party/ in [RFC4949]
 
-   Relying Party Owner:  An entity, such as an administrator, that is
+   Relying Party Owner:  An entity (typically an administrator), that is
       authorized to configure Appraisal Policy for Attestation Results
-      in a Relying Party.
+      in a Relying Party
 
-   Verifier:  An entity that appraises the validity of Evidence about an
-      Attester
+   Verifier:  An entity (typically a service provider), that appraises
+      the validity of Evidence about an Attester and produces
+      Attestation Results to be used by a Relying Party
 
-   Verifier Owner:  An entity, such as an administrator, that is
+   Verifier Owner:  An entity (typically an administrator), that is
       authorized to configure Appraisal Policy for Evidence in a
       Verifier
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020                [Page 4]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
 3.  Reference Use Cases
 
@@ -218,13 +235,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    not intend to have a complete list, only to have a set of use cases
    that collectively cover all the functionality required in the
    architecture.
-
-
-
-Birkholz, et al.         Expires 5 November 2020                [Page 4]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
    Each use case includes a description, and a summary of what an
    Attester and a Relying Party refer to in the use case.
@@ -264,6 +274,14 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    potentially including the customer themselves, from seeing the
    details of the model.
 
+
+
+
+Birkholz, et al.         Expires 6 November 2020                [Page 5]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    This typically works by having some protected environment in the
    device attest to some manufacturer service.  If remote attestation
    succeeds, then the manufacturer service releases either the model, or
@@ -274,13 +292,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    Relying Party:  A server or service holding ML models it desires to
       protect
-
-
-
-Birkholz, et al.         Expires 5 November 2020                [Page 5]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
 3.3.  Confidential Data Retrieval
 
@@ -315,6 +326,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       dangerous physical equipment (hazardous chemical processing,
       traffic control, power grid, etc.)
 
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020                [Page 6]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
 3.5.  Trusted Execution Environment (TEE) Provisioning
 
    A "Trusted Application Manager (TAM)" server is responsible for
@@ -330,13 +353,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       running trusted applications that can be updated
 
    Relying Party:  A Trusted Application Manager
-
-
-
-Birkholz, et al.         Expires 5 November 2020                [Page 6]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
 3.6.  Hardware Watchdog
 
@@ -373,23 +389,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020                [Page 7]
+Birkholz, et al.         Expires 6 November 2020                [Page 7]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 5 November 2020                [Page 8]
+Birkholz, et al.         Expires 6 November 2020                [Page 8]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -501,7 +501,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 5 November 2020                [Page 9]
+Birkholz, et al.         Expires 6 November 2020                [Page 9]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -557,7 +557,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 5 November 2020               [Page 10]
+Birkholz, et al.         Expires 6 November 2020               [Page 10]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -613,7 +613,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 5 November 2020               [Page 11]
+Birkholz, et al.         Expires 6 November 2020               [Page 11]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -669,7 +669,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 5 November 2020               [Page 12]
+Birkholz, et al.         Expires 6 November 2020               [Page 12]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -725,7 +725,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 5 November 2020               [Page 13]
+Birkholz, et al.         Expires 6 November 2020               [Page 13]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -763,29 +763,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Attesters and then generates the Evidence of the whole Composite
    Attester.
 
-   An entity can take on multiple RATS roles (e.g., Attester, Verifier,
-   Relying Party, etc.) at the same time.  The combination of roles can
-   be arbitrary.  For example, in this Composite Device scenario, the
-   entity inside the lead Attester can also take on the role of a
-   Verifier, and the outside entity of Verifier can take on the role of
-   a Relying Party.  After collecting the Evidence of other Attesters,
-   this inside Verifier verifies them using Endorsements and Appraisal
-   Policies (obtained the same way as any other Verifier), to generate
-   Attestation Results.  The inside Verifier then conveys the
-   Attestation Results of other Attesters, whether in the same
-   conveyance protocol as the Evidence or not, to the outside Verifier.
-
-   In this situation, the trust model described in Section 7 is also
-   suitable for this inside Verifier.
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 14]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
 5.  Topological Models
 
    Figure 1 shows a basic model for communication between an Attester, a
@@ -795,6 +772,19 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    possible models.  This section includes some reference models, but
    this is not intended to be a restrictive list, and other variations
    may exist.
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 14]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
 5.1.  Passport Model
 
@@ -834,14 +824,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
          |          |    Result    |  Party  | Appraisal
          +----------+              +---------+  Policy
 
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 15]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
                           Figure 5: Passport Model
 
    The passport model is so named because of its resemblance to how
@@ -852,6 +834,14 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    when it needs to assert a citizenship or identity claim, such as an
    airport immigration desk.  The passport is considered sufficient
    because it vouches for the citizenship and identity claims, and it is
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 15]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    issued by a trusted authority.  Thus, in this immigration desk
    analogy, the passport issuing agency is a Verifier, the passport is
    an Attestation Result, and the immigration desk is a Relying Party.
@@ -884,20 +874,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    surface area of the Relying Party, especially if the Relying Party is
    a constrained node.
 
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 16]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
                                   +-------------+
                                   |             | Compare Evidence
                                   |   Verifier  | against Appraisal
@@ -914,6 +890,13 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       +------------+               +-------------+
 
                       Figure 6: Background-Check Model
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 16]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
    The background-check model is so named because of the resemblance of
    how employers and volunteer organizations perform background checks.
@@ -945,17 +928,31 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    functionality shown in Figure 6, Relying Party 2 actually provides
    the Attestation Result back to the Attester, allowing the Attester to
    use it with other Relying Parties.  This is the model that the
+   Trusted Application Manager plans to support in the TEEP architecture
+   [I-D.ietf-teep-architecture].
 
 
 
 
-Birkholz, et al.         Expires 5 November 2020               [Page 17]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 17]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
-
-   Trusted Application Manager plans to support in the TEEP architecture
-   [I-D.ietf-teep-architecture].
 
          +-------------+
          |             | Compare Evidence
@@ -983,46 +980,64 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
                        Figure 7: Example Combination
 
-6.  Roles and Entities
+6.  Role Hosting and Composition
 
-   An entity in the RATS architecture includes at least one of the roles
-   defined in this document.  As a result, the entity can participate as
-   a constituent of the RATS architecture.  Additionally, an entity can
-   aggregate more than one role into itself.  These collapsed roles
-   combine the duties of multiple roles.  In these cases, interaction
-   between these roles do not necessarily use the Internet Protocol.
-   They can, e.g., using a loopback device or other IP-based
-   communication between separate environments, but they do not have to.
-   Alternative channels to convey conceptual messages include sockets,
-   GPIO interfaces, local busses, or hypervisors.  This conveyance is
-   sometime referred to as "local conveyance".  This type of conveyance
-   is typically found in Composite Devices.  Most importantly, these
-   conveyance methods are out-of-scope of RATS, but they are presumed to
-   exist in order to convey conceptual messages appropriately between
-   roles.
+   The RATS architecture includes the definition of Roles (e.g.
+   Attester, Verifier, Relying Party, Endorser) and Role Messages (e.g.
+   Evidence, Attestation Results, Endorsements, Appraisal Policies) that
+   captures canonical attestation behaviors, that are common to a broad
+   range of attestation-enabled systems.  An entity that combines
+   multiple Roles produces and consumes the associated Role Messages.
 
-   The following paragraph elaborates on an exemplary usage scenario:
+   The RATS architecture is not prescriptive about deployment
+   configuration options of attestation-enabled systems, therefore the
+   various Roles can be hosted on any participating entity.  This
+   implies, for a given entity, that multiple Roles could be co-resident
+   so that the duties of multiple roles could be performed
+   simultaneously.  Nevertheless, the semantics of which Role Messages
+   are inputs and outputs to a Role entity remains constant.  As a
+   result, the entity can participate as a constituent of the RATS
+   architecture while flexibly accommodating the needs of various
+   deployment architectures.
+
+   Interactions between Roles do not necessarily require use of Internet
+   protocols.  They could, for example, use inter-process communication,
 
 
 
-Birkholz, et al.         Expires 5 November 2020               [Page 18]
+Birkholz, et al.         Expires 6 November 2020               [Page 18]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
-   An entity that both connects to a wide-area network and to a system
-   bus taking on both the Attester and Verifier roles.  As a system bus
-   entity, a Verifier consumes Evidence from other devices connected to
-   the system bus that implement Attester roles.  As a wide-area network
-   connected entity, it may implement an Attester role.  The entity, as
-   a system bus Verifier, may choose to fully isolate its role as a
-   wide-area network Attester.  Alternatively, Attestation Results might
-   reflect an aggregation of system bus operational state claims in the
-   form of Evidence.
+   local system buses, shared memory, hypervisors, IP-loopback devices
+   or any communication path between the various environments that may
+   exist on the entity that combines multiple Roles.
 
-   In essence, an entity that combines more than one role also creates
-   and consumes the corresponding conceptual messages as defined in this
-   document.
+   The movement of Role Messages between locally hosted Roles is
+   referred to as "local conveyance".  Most importantly, the definition
+   of local conveyance methods is out-of-scope for the RATS
+   architecture.
+
+   The following paragraph elaborates on an exemplary usage scenario:
+
+   In a Composite Device scenario, in addition to local entities that
+   host the lead Attester and other subordinate Attesters, the Composite
+   Device can host the Verifier role locally to appraise Evidence from
+   one or more subordinate Attesters.  The local Verifier might convey
+   local Attestation Results to a remote Relying party or the Relying
+   Party role also could become local where an application specific
+   action is taken locally.  For example, a secure boot scenario
+   prevents system software from loading if the firmware fails to
+   satisfy a local trustworthiness appraisal policy.
+
+   In a multi-network scenario, a network node might bridge a wide-area
+   network, local-area network and span various system buses.  In so
+   doing, the bridge node might need to host multiple Roles depending on
+   the type of behavior each connected domain expects.  For example, the
+   node might be an Attester to a wide-area network, a Verifier to the
+   local-area network and a Relying Party to components attached to a
+   local system bus.
 
 7.  Trust Model
 
@@ -1043,6 +1058,14 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    giving the Endorsement and Appraisal Policy to it.  Such trust can
    also be established directly or indirectly, implicitly or explicitly.
    One explicit way to establish such trust may be the Verifier first
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 19]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    acts as an Attester and creates Evidence about itself to be consumed
    by the Endorser and/or Verifier Owner as the Relying Parties.  If it
    is accepted as trustworthy, then they can provide Endorsements and
@@ -1058,14 +1081,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    component, or operating system component or service, under the
    assumption that information provided about it by the lower-layer
    hypervisor or firmware is true.  A stronger level of security comes
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 19]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
    when information can be vouched for by hardware or by ROM code,
    especially if such hardware is physically resistant to hardware
    tampering.  The component that is implicitly trusted is often
@@ -1093,6 +1108,20 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    isolation would require Appraisal Policy to be based on device-
    specific details (e.g., a device public key).
 
+
+
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 20]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
 8.2.  Endorsements
 
    An Endorsement is a secure statement that some entity (e.g., a
@@ -1114,14 +1143,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    would be inappropriate to use such an Appraisal Policy as the sole
    means of authorization for use cases that wish to constrain _which_
    compliant devices are considered authorized for some purpose.  For
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 20]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
    example, an enterprise using remote attestation for Network Endpoint
    Assessment may not wish to let every healthy laptop from the same
    manufacturer onto the network, but instead only want to let devices
@@ -1150,6 +1171,13 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    good reference values, or applying more complex logic on such
    information.
 
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 21]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    Thus, Attestation Results often need to include detailed information
    about the Attester, for use by Relying Parties, much like physical
    passports and drivers licenses include personal information such as
@@ -1166,17 +1194,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    signed by a Verifier, allowing a Relying Party to only need a trust
    relationship with one entity, rather than a larger set of entities,
    for purposes of its Appraisal Policy.
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 21]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
 9.  Claims Encoding Formats
 
@@ -1208,6 +1225,15 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    embedded into an X.509 certificate to be passed in the protocol.
    Thus, remote attestation related information could be natively
    encoded in X.509 certificate extensions, or could be natively encoded
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 22]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    in some other format (e.g., a CWT) which in turn is then encoded in
    an X.509 certificate extension.
 
@@ -1224,15 +1250,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    way, and allowing multiple encoding formats (CWT, JWT, X.509, etc.)
    that encode the same information into the claims format needed by the
    Relying Party.
-
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 22]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
    The following diagram illustrates that Evidence and Attestation
    Results might each have multiple possible encoding formats, so that
@@ -1261,6 +1278,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       Figure 9: Multiple Attesters and Relying Parties with Different
                                   Formats
 
+
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 23]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
 10.  Freshness
 
    It is important to prevent replay attacks where an attacker replays
@@ -1281,15 +1310,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    remote entity (e.g., the Verifier for Evidence, or the Relying Party
    for an Attestation Result), and the nonce is then signed and included
    along with the claims in the Evidence or Attestation Result, so that
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 23]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
    the remote entity knows that the claims were signed after the nonce
    was generated.
 
@@ -1319,6 +1339,13 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    that a device is running a weak version of firmware provides a way to
    aim attacks better.
 
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 24]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    Evidence and Attestation Results data structures are expected to
    support integrity protection encoding (e.g., COSE, JOSE, X.509) and
    optionally might support confidentiality protection (e.g., COSE,
@@ -1338,13 +1365,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    replay, denial of service and privacy protection are needed in many
    use cases.  Section 10 discusses ways in which freshness can be used
    in this architecture to protect against replay attacks.
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 24]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
    To assess the security provided by a particular Appraisal Policy, it
    is important to understand the strength of the Root of Trust, e.g.,
@@ -1371,6 +1391,17 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    This document does not require any actions by IANA.
 
+
+
+
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 25]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
 14.  Acknowledgments
 
    Special thanks go to Joerg Borchert, Nancy Cam-Winget, Jessica
@@ -1394,13 +1425,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    [RFC7519]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web Token
               (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015,
               <https://www.rfc-editor.org/info/rfc7519>.
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 25]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
    [RFC8392]  Jones, M., Wahlstroem, E., Erdtman, S., and H. Tschofenig,
               "CBOR Web Token (CWT)", RFC 8392, DOI 10.17487/RFC8392,
@@ -1426,6 +1450,14 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    [OPCUA]    OPC Foundation, "OPC Unified Architecture Specification,
               Part 2: Security Model, Release 1.03", OPC 10000-2 , 25
               November 2015, <https://opcfoundation.org/developer-tools/
+
+
+
+Birkholz, et al.         Expires 6 November 2020               [Page 26]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
               specifications-unified-architecture/part-2-security-
               model/>.
 
@@ -1449,13 +1481,6 @@ Authors' Addresses
    United States of America
 
    Email: dthaler@microsoft.com
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 26]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
 
 
    Michael Richardson
@@ -1484,29 +1509,4 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 5 November 2020               [Page 27]
+Birkholz, et al.         Expires 6 November 2020               [Page 27]

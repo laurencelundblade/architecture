@@ -836,7 +836,7 @@ table.left {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Birkholz, et al.</td>
-<td class="center">Expires 5 November 2020</td>
+<td class="center">Expires 6 November 2020</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -849,12 +849,12 @@ table.left {
 <dd class="internet-draft">draft-ietf-rats-architecture-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2020-05-04" class="published">4 May 2020</time>
+<time datetime="2020-05-05" class="published">5 May 2020</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2020-11-05">5 November 2020</time></dd>
+<dd class="expires"><time datetime="2020-11-06">6 November 2020</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -918,7 +918,7 @@ remote attestation procedures (RATS).<a href="#section-abstract-1" class="pilcro
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 5 November 2020.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 November 2020.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1005,7 +1005,7 @@ remote attestation procedures (RATS).<a href="#section-abstract-1" class="pilcro
 </ul>
 </li>
 <li class="toc ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1" class="keepWithNext"><a href="#section-6" class="xref">6</a>.  <a href="#name-roles-and-entities" class="xref">Roles and Entities</a><a href="#section-toc.1-1.6.1" class="pilcrow">¶</a></p>
+            <p id="section-toc.1-1.6.1" class="keepWithNext"><a href="#section-6" class="xref">6</a>.  <a href="#name-role-hosting-and-compositio" class="xref">Role Hosting and Composition</a><a href="#section-toc.1-1.6.1" class="pilcrow">¶</a></p>
 </li>
 <li class="toc ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1" class="keepWithNext"><a href="#section-7" class="xref">7</a>.  <a href="#name-trust-model" class="xref">Trust Model</a><a href="#section-toc.1-1.7.1" class="pilcrow">¶</a></p>
@@ -1071,12 +1071,14 @@ remote attestation procedures (RATS).<a href="#section-abstract-1" class="pilcro
 <p id="section-1-1">In Remote Attestation Procedures (RATS), one peer (the "Attester") produces believable information about itself - Evidence - to enable a remote peer (the "Relying Party") to decide whether to consider that Attester a trustworthy peer or not.
 RATS are facilitated by an additional vital party, the Verifier.
 The Verifier appraises Evidence via Appraisal Policies and creates the Attestation Results to support Relying Parties in their decision process.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This documents defines a flexible architecture with corresponding roles and their interaction via conceptual messages.
+<p id="section-1-2">This documents defines a flexible architecture consisting of attestation Roles and their interactions via Role Messages.
 Additionally, this document defines a universal set of terms that can be mapped to various existing and emerging Remote Attestation Procedures.
-Common topological models and the data flows associated with them, such as the "Passport Model" and the "Background-Check Model" are illustrated. The purpose is to enable readers of this document to map their current and emerging solutions to the architecture provided and the corresponding terminology defined.
-A common terminology that provides a well-understood semantic meaning to
-the concepts, roles, and models in this document is vital to create
-semantic interoperability between solutions and across different platforms.<a href="#section-1-2" class="pilcrow">¶</a></p>
+Common topological models and the data flows associated with them, such as the "Passport Model" and the "Background-Check Model" are illustrated.
+The purpose is to enable readers to map their solution architecture to the
+canonical attestation architecture provided here and to define useful terminology for attestation.
+Having a common terminology that provides well-understood meanings for common themes
+such as, Roles, device composition, Topological Models and appraisal is vital for
+semantic interoperability across solutions and platforms involving multiple vendors and providers.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Amongst other things, this document is about trust and trustworthiness.
 Trust is a decision being made.
 Trustworthiness is a quality that is assessed via evidence created.
@@ -1102,39 +1104,40 @@ to RATS are elaborated on to enable implementers in order to choose appropriate 
 </dd>
 <dt id="section-2-2.5">Attestation Result:</dt>
 <dd id="section-2-2.6">
-  The output generated by a Verifier, typically including information about an Attester, where the Verifier vouches for the validity of the results<a href="#section-2-2.6" class="pilcrow">¶</a>
+  The output generated by a Verifier, typically including information about an Attester, where the Verifier vouches for the validity of the Evidence it has appraised<a href="#section-2-2.6" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.7">Attester:</dt>
 <dd id="section-2-2.8">
-  An entity whose attributes must be appraised in order to determine whether the entity is considered trustworthy, such as when deciding whether the entity is authorized to perform some operation<a href="#section-2-2.8" class="pilcrow">¶</a>
+  An entity (typically a device), whose Evidence must be appraised in order to determine whether it is considered trustworthy, such as when deciding whether it is authorized to perform some operation<a href="#section-2-2.8" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.9">Endorsement:</dt>
 <dd id="section-2-2.10">
-  A secure statement that some entity (typically a manufacturer) vouches for the integrity of an Attester's signing capability<a href="#section-2-2.10" class="pilcrow">¶</a>
+  Statements that Endorsers make (typically a manufacturer) that vouches for the design and implementation of the Attester. Often this includes statements about the integrity of an Attester's signing capability<a href="#section-2-2.10" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.11">Endorser:</dt>
 <dd id="section-2-2.12">
-  An entity that creates Endorsements that can be used to help to appraise the trustworthiness of Attesters<a href="#section-2-2.12" class="pilcrow">¶</a>
+  An entity (typically a manufacturer) whose Endorsements help Verifiers appraise the authenticity of Evidence<a href="#section-2-2.12" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.13">Evidence:</dt>
 <dd id="section-2-2.14">
-  A set of information about an Attester that is to be appraised by a Verifier<a href="#section-2-2.14" class="pilcrow">¶</a>
+  A set of information that asserts the trustworthiness status of an Attester, that is appraised by a Verifier<a href="#section-2-2.14" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.15">Relying Party:</dt>
 <dd id="section-2-2.16">
-  An entity that depends on the validity of information about another entity, typically for purposes of authorization.  Compare /relying party/ in <span>[<a href="#RFC4949" class="xref">RFC4949</a>]</span><a href="#section-2-2.16" class="pilcrow">¶</a>
+  An entity (typically an application), that depends on the validity of information about an Attester, for purposes of reliably applying application specific actions.  Compare /relying party/ in <span>[<a href="#RFC4949" class="xref">RFC4949</a>]</span><a href="#section-2-2.16" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.17">Relying Party Owner:</dt>
 <dd id="section-2-2.18">
-  An entity, such as an administrator, that is authorized to configure Appraisal Policy for Attestation Results in a Relying Party.<a href="#section-2-2.18" class="pilcrow">¶</a>
+  An entity (typically an administrator), that is authorized to configure Appraisal Policy for Attestation Results in a Relying Party<a href="#section-2-2.18" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.19">Verifier:</dt>
 <dd id="section-2-2.20">
-  An entity that appraises the validity of Evidence about an Attester<a href="#section-2-2.20" class="pilcrow">¶</a>
+  An entity (typically a service provider), that appraises the validity of Evidence about an Attester
+ and produces Attestation Results to be used by a Relying Party<a href="#section-2-2.20" class="pilcrow">¶</a>
 </dd>
 <dt id="section-2-2.21">Verifier Owner:</dt>
 <dd id="section-2-2.22">
-  An entity, such as an administrator, that is authorized to configure Appraisal Policy for Evidence in a Verifier<a href="#section-2-2.22" class="pilcrow">¶</a>
+  An entity (typically an administrator), that is authorized to configure Appraisal Policy for Evidence in a Verifier<a href="#section-2-2.22" class="pilcrow">¶</a>
 </dd>
 </dl>
 </section>
@@ -1612,18 +1615,6 @@ each router is an Attester and the main router is the lead Attester.<a href="#se
 Attesting Environment(s) collecting the claims from its Target Environment(s).
 The lead Attester collects the Evidence of all other Attesters and then
 generates the Evidence of the whole Composite Attester.<a href="#section-4.3-7" class="pilcrow">¶</a></p>
-<p id="section-4.3-8">An entity can take on multiple RATS roles (e.g., Attester, Verifier, Relying
-Party, etc.) at the same time. The combination of roles can be arbitrary.
-For example, in this Composite Device scenario, the entity inside
-the lead Attester can also take on the role of a Verifier, and the
-outside entity of Verifier can take on the role of a Relying Party.
-After collecting the Evidence of other Attesters, this inside Verifier
-verifies them using Endorsements and Appraisal Policies (obtained the
-same way as any other Verifier), to generate Attestation Results.
-The inside Verifier then conveys the Attestation Results of other Attesters,
-whether in the same conveyance protocol as the Evidence or not,
-to the outside Verifier.<a href="#section-4.3-8" class="pilcrow">¶</a></p>
-<p id="section-4.3-9">In this situation, the trust model described in <a href="#trustmodel" class="xref">Section 7</a> is also suitable for this inside Verifier.<a href="#section-4.3-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1808,35 +1799,43 @@ plans to support in the TEEP architecture <span>[<a href="#I-D.ietf-teep-archite
 </div>
 </section>
 </div>
-<div id="roles-and-entities">
+<div id="role-hosting-and-composition">
 <section id="section-6">
-      <h2 id="name-roles-and-entities">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-roles-and-entities" class="section-name selfRef">Roles and Entities</a>
+      <h2 id="name-role-hosting-and-compositio">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-role-hosting-and-compositio" class="section-name selfRef">Role Hosting and Composition</a>
       </h2>
-<p id="section-6-1">An entity in the RATS architecture includes at least one of the roles defined
-in this document. As a result, the entity can participate as a constituent of
-the RATS architecture. Additionally, an entity can aggregate more than one
-role into itself. These collapsed roles combine the duties of multiple roles.
-In these cases, interaction between these roles do not necessarily use the
-Internet Protocol. They can, e.g., using a loopback device or other IP-based
-communication between separate environments, but they do not have to.
-Alternative channels to convey conceptual messages include sockets, GPIO
-interfaces, local busses, or hypervisors. This conveyance is sometime
-referred to as "local conveyance". This type of conveyance is typically found
-in Composite Devices. Most importantly, these conveyance methods are
-out-of-scope of RATS, but they are presumed to exist in order to convey
-conceptual messages appropriately between roles.<a href="#section-6-1" class="pilcrow">¶</a></p>
-<p id="section-6-2">The following paragraph elaborates on an exemplary usage scenario:<a href="#section-6-2" class="pilcrow">¶</a></p>
-<p id="section-6-3">An entity that both connects to a wide-area
-network and to a system bus taking on both the Attester and Verifier roles.
-As a system bus entity, a Verifier consumes Evidence from other devices
-connected to the system bus that implement Attester roles. As a wide-area
-network connected entity, it may implement an Attester role. The entity, as a
-system bus Verifier, may choose to fully isolate its role as a wide-area
-network Attester. Alternatively, Attestation Results might reflect an
-aggregation of system bus operational state claims in the form of Evidence.<a href="#section-6-3" class="pilcrow">¶</a></p>
-<p id="section-6-4">In essence, an entity that combines more than one role also creates and
-consumes the corresponding conceptual messages as defined in this document.<a href="#section-6-4" class="pilcrow">¶</a></p>
+<p id="section-6-1">The RATS architecture includes the definition of Roles (e.g. Attester, Verifier,
+Relying Party, Endorser) and Role Messages (e.g. Evidence, Attestation Results,
+Endorsements, Appraisal Policies) that captures canonical attestation behaviors,
+that are common to a broad range of attestation-enabled systems. An entity that
+combines multiple Roles produces and consumes the associated Role Messages.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-2">The RATS architecture is not prescriptive about deployment configuration options
+of attestation-enabled systems, therefore the various Roles can be hosted on any
+participating entity. This implies, for a given entity, that multiple Roles could
+be co-resident so that the duties of multiple roles could be performed simultaneously.
+Nevertheless, the semantics of which Role Messages are inputs and outputs to a Role
+entity remains constant. As a result, the entity can participate as a constituent of the RATS architecture
+while flexibly accommodating the needs of various deployment architectures.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-3">Interactions between Roles do not necessarily require use of Internet protocols.
+They could, for example, use inter-process communication, local system buses,
+shared memory, hypervisors, IP-loopback devices or any communication path
+between the various environments that may exist on the entity that combines multiple Roles.<a href="#section-6-3" class="pilcrow">¶</a></p>
+<p id="section-6-4">The movement of Role Messages between locally hosted Roles is referred to as
+"local conveyance". Most importantly, the definition of local conveyance methods is
+out-of-scope for the RATS architecture.<a href="#section-6-4" class="pilcrow">¶</a></p>
+<p id="section-6-5">The following paragraph elaborates on an exemplary usage scenario:<a href="#section-6-5" class="pilcrow">¶</a></p>
+<p id="section-6-6">In a Composite Device scenario, in addition to local entities that host the
+lead Attester and other subordinate Attesters, the Composite Device can host the
+Verifier role locally to appraise Evidence from one or more subordinate Attesters.
+The local Verifier might convey local Attestation Results to a remote Relying party
+or the Relying Party role also could become local where an application specific
+action is taken locally. For example, a secure boot scenario prevents system software
+from loading if the firmware fails to satisfy a local trustworthiness appraisal policy.<a href="#section-6-6" class="pilcrow">¶</a></p>
+<p id="section-6-7">In a multi-network scenario, a network node might bridge a wide-area
+network, local-area network and span various system buses. In so doing, the bridge node 
+might need to host multiple Roles depending on the type of behavior each connected domain
+expects. For example, the node might be an Attester to a wide-area network, a Verifier to
+the local-area network and a Relying Party to components attached to a local system bus.<a href="#section-6-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="trustmodel">
