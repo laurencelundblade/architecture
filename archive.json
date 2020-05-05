@@ -1,6 +1,6 @@
 {
   "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-05-04T20:25:47.387557+00:00",
+  "timestamp": "2020-05-05T14:50:53.962692+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -915,7 +915,7 @@
       "labels": [],
       "body": "Section 7.1 should start out with something more like \"Evidence is made up of claims and usually signed by the attester\"n (not signed by the device).  It should say claims are being standardized.  Should say \"Evidence is always evaluated by a Verifier\"\r\n",
       "createdAt": "2020-03-03T19:23:11Z",
-      "updatedAt": "2020-03-10T14:47:22Z",
+      "updatedAt": "2020-05-05T00:32:45Z",
       "closedAt": null,
       "comments": [
         {
@@ -924,6 +924,13 @@
           "body": "General agreement that we need to improve the definition. Maybe to say that it is a set of claims.\r\nThe goal is to provide intuition about what Evidence is.",
           "createdAt": "2020-03-10T14:46:13Z",
           "updatedAt": "2020-03-10T14:47:22Z"
+        },
+        {
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Created \"Issue55\" branch and pull request.",
+          "createdAt": "2020-05-05T00:32:45Z",
+          "updatedAt": "2020-05-05T00:32:45Z"
         }
       ]
     },
@@ -1095,7 +1102,7 @@
       "labels": [],
       "body": "Section 4.2 / 4.3 are conceptually similar hence should follow similar conventions for naming. If section 4.3 is about \"Composite Device(s)\" as it relates to attestation then section 4.2 is about \"Layered Device(s)\" as it relates to attestation. Section names should be similar. (Artifact of having different authors maybe?)\r\nFigure 2 caption is \"Layered Attester\" while Figure 3 is \"Conceptual Data Flow for a Composite Device\". \r\nIt would make more sense for the section heading for 4.2 to be \"Layered Device\" or \"Layered Device Attestation\" (and \"Composite Device Attestation\") and figure 2 to be \"Conceptual Data Flow for a Layered Device\"",
       "createdAt": "2020-03-17T20:13:44Z",
-      "updatedAt": "2020-03-19T07:53:58Z",
+      "updatedAt": "2020-05-05T00:34:19Z",
       "closedAt": null,
       "comments": [
         {
@@ -1104,6 +1111,13 @@
           "body": "I prefer \"Layered Device\" and \"Conceptual Data Flow for a Layered Device\".",
           "createdAt": "2020-03-19T07:53:58Z",
           "updatedAt": "2020-03-19T07:53:58Z"
+        },
+        {
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Assign this to me and I'll fix it.",
+          "createdAt": "2020-05-05T00:34:19Z",
+          "updatedAt": "2020-05-05T00:34:19Z"
         }
       ]
     },
@@ -1145,7 +1159,7 @@
       "labels": [],
       "body": "The introduction section uses the phrase \"role compositions and data flows\" then mentions \"Passport Model\" as an example of a role composition. \r\nIn section 4.3 on Composite Device the second to last section describes \"combinations of roles\" using an example involving a Composite Device.\r\n\r\nI think the architecture should have crisper understanding of two concepts a) \"topological models\" (as defined by the section 5 heading that describes Passport, BKC and Hybrid; b) \"role composition\" which ought to refer to the \"combining of roles\" by a given entity.\r\n\r\nThe terms \"role composition\" and \"combining of roles\" are too similar for them to have different meanings and \"role composition\" as an alias for \"topological models\" is unnecessary. \r\n\r\nI suggest pulling the second to the last paragraph in section 4.3 into a new section 4.4 titled \"Role Composition\" that has a paragraph defining role composition conceptually followed by the paragraph taken from section 4.3.\r\n\r\nSuggested Text for section 4.4:\r\nRATS roles are implemented by entities (e.g., devices). A simple realization of the architecture associates a single role to a single entity; for example, the topological models described in section 5.1 and 5.2 follow this convention. However, entities may host multiple roles as a way to accommodate more sophisticated use cases and deployment scenarios. An entity that both connects to a wide-area network and to a system bus may play both Attester and Verifier roles. As a system bus entity, a Verifier consumes Evidence from other devices connected to the system bus that implement an Attester role. As a wide-area network connected entity, it may implement an Attester role. The entity, as a system bus Verifier, may choose to fully isolate its role as a wide-area network Attester. Alternatively, attestation results might reflect an aggregation of system bus operational state claims in the form of Evidence. \r\n\r\nFor example, in the Composite Device scenario, the lead Attester...\r\n<paste remainder of paragraph from section 4.3>\r\n\r\nAdditionally, the introduction section should change \"role composition\" terminology to \"topological models\" as it references Passport. ",
       "createdAt": "2020-03-17T21:51:50Z",
-      "updatedAt": "2020-03-24T14:50:22Z",
+      "updatedAt": "2020-05-05T00:33:34Z",
       "closedAt": null,
       "comments": [
         {
@@ -1154,6 +1168,13 @@
           "body": "\"Role Composition\" will be worked out of document.",
           "createdAt": "2020-03-24T14:50:22Z",
           "updatedAt": "2020-03-24T14:50:22Z"
+        },
+        {
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Also addressed in Issue55. I recommend closing this issue.",
+          "createdAt": "2020-05-05T00:33:34Z",
+          "updatedAt": "2020-05-05T00:33:34Z"
         }
       ]
     },
@@ -1258,7 +1279,7 @@
       "labels": [],
       "body": "Section 3.1 of the draft says:\r\n\r\n>   FIXME from Henk: Measurements at early stages of\r\n>   Layered Attestation are NOT evidence yet.\r\n>   This text does not cover that yet\r\n\r\nThis fixme needs to be fixed somehow.",
       "createdAt": "2020-04-28T23:16:15Z",
-      "updatedAt": "2020-04-28T23:53:31Z",
+      "updatedAt": "2020-05-05T01:19:41Z",
       "closedAt": null,
       "comments": [
         {
@@ -1267,6 +1288,34 @@
           "body": "There are also still statements like these in section 4.3:\r\n> Henk: we are looking for a better term than UEFI/BIOS/Firmware\r\n\r\nand\r\n\r\n> [Henk: we might have to define what successful means in this example and beyond]",
           "createdAt": "2020-04-28T23:53:31Z",
           "updatedAt": "2020-04-28T23:53:31Z"
+        },
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Regarding \"we are looking for a better term than UEFI/BIOS/Firmware\", what do folks think about \"first mutable environment\"?\r\n\r\nExample in context:\r\nOLD: The very first Attesting Environment has to ensure the integrity of the (U)EFI / BIOS / Firmware that initially boots up a composite device (e.g.,  a cell phone).\r\nNEW: he very first Attesting Environment has to ensure the integrity of the first mutable environment that initially boots up a composite device (e.g.,  a cell phone).\r\n",
+          "createdAt": "2020-05-04T22:16:20Z",
+          "updatedAt": "2020-05-04T22:16:20Z"
+        },
+        {
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We have a terminology convention for the thing being referred to as \u201cUEFI/BIOS/FW/FMC etc.\u201d called \u201cTarget Environment\u201d. We should use our preferred abstract terminology then provide intuition in the form of examples\r\n\r\nNEW2: The very first Attesting Environment has to ensure the integrity of the Target Environment (e.g. the BIOS, firmware or first mutable environment that initially boots up a composite device).\r\n\r\nI don\u2019t believe the example of a cell phone is helpful. Cell phones neither use BIOS (AFAIK) or commonly use the term \u2018first mutable environment\u2019.\r\n\r\nFrom: Dave Thaler <notifications@github.com>\r\nReply-To: ietf-rats-wg/architecture <reply@reply.github.com>\r\nDate: Monday, May 4, 2020 at 3:17 PM\r\nTo: ietf-rats-wg/architecture <architecture@noreply.github.com>\r\nCc: Subscribed <subscribed@noreply.github.com>\r\nSubject: Re: [ietf-rats-wg/architecture] FIXME in document (#84)\r\n\r\n\r\nRegarding \"we are looking for a better term than UEFI/BIOS/Firmware\", what do folks think about \"first mutable environment\"?\r\n\r\nExample in context:\r\nOLD: The very first Attesting Environment has to ensure the integrity of the (U)EFI / BIOS / Firmware that initially boots up a composite device (e.g., a cell phone).\r\nNEW: he very first Attesting Environment has to ensure the integrity of the first mutable environment that initially boots up a composite device (e.g., a cell phone).\r\n\r\n\u2014\r\nYou are receiving this because you are subscribed to this thread.\r\nReply to this email directly, view it on GitHub<https://github.com/ietf-rats-wg/architecture/issues/84#issuecomment-623736955>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ABPMCSDFAHDW7XLTOJNW543RP45EFANCNFSM4MTH6E4Q>.\r\n",
+          "createdAt": "2020-05-05T00:57:45Z",
+          "updatedAt": "2020-05-05T00:57:45Z"
+        },
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> We have a terminology convention for the thing being referred to as \u201cUEFI/BIOS/FW/FMC etc.\u201d called \u201cTarget Environment\u201d. \r\n\r\nNo, those terms are not synonymous.   In layered attestation, the UEFI/BIOS/firmware is also an \"Attesting Environment\", and software above it (or started later than it) are also Target Environments, so we cannot use the term Target Environment to mean UEFI/BIOS/firmware in general.   See PR #85 for proposed use in context.",
+          "createdAt": "2020-05-05T01:09:59Z",
+          "updatedAt": "2020-05-05T01:09:59Z"
+        },
+        {
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree with the text in #85 as it doesn\u2019t use either Attesting Env or Target Env.\r\nThe issue I have with NEW is the asymmetrical use of terms \u201cAttesting Env\u201d and other stuff not \u201cTarget Env\u201d. If use of Target Env is wrong then so is use of Attesting Env. The section on \u201cTwo Environments\u201d makes these terms clear and their applicationin a Layered Device attestation also clear (in terms of cascaded measurement, attestations and executions).\r\n\r\nAre you suggesting the resolution to #84 is to substitute with text from #85?\r\n\r\nThx,\r\nNed\r\n\r\nFrom: Dave Thaler <notifications@github.com>\r\nReply-To: ietf-rats-wg/architecture <reply@reply.github.com>\r\nDate: Monday, May 4, 2020 at 6:10 PM\r\nTo: ietf-rats-wg/architecture <architecture@noreply.github.com>\r\nCc: \"Smith, Ned\" <ned.smith@intel.com>, Comment <comment@noreply.github.com>\r\nSubject: Re: [ietf-rats-wg/architecture] FIXME in document (#84)\r\n\r\n\r\nWe have a terminology convention for the thing being referred to as \u201cUEFI/BIOS/FW/FMC etc.\u201d called \u201cTarget Environment\u201d.\r\n\r\nNo, those terms are not synonymous. In layered attestation, the UEFI/BIOS/firmware is also an \"Attesting Environment\", and software above it (or started later than it) are also Target Environments, so we cannot use the term Target Environment to mean UEFI/BIOS/firmware in general. See PR #85<https://github.com/ietf-rats-wg/architecture/pull/85> for proposed use in context.\r\n\r\n\u2014\r\nYou are receiving this because you commented.\r\nReply to this email directly, view it on GitHub<https://github.com/ietf-rats-wg/architecture/issues/84#issuecomment-623787969>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ABPMCSDCPCOMIDDVCZJXWYTRP5RPHANCNFSM4MTH6E4Q>.\r\n",
+          "createdAt": "2020-05-05T01:19:40Z",
+          "updatedAt": "2020-05-05T01:19:40Z"
         }
       ]
     }
@@ -7271,7 +7320,7 @@
       "labels": [],
       "body": "replace pull request #60 with one we can edit.\r\nThis attempts to establish the architectural basis for implicit trust as a result of links.\r\n",
       "createdAt": "2020-04-28T14:20:18Z",
-      "updatedAt": "2020-04-28T14:56:48Z",
+      "updatedAt": "2020-05-05T02:15:25Z",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -7314,6 +7363,399 @@
               "body": "```suggestion\r\nAs a result, an Appraisal Policy for the Verifier may be possible that trusts the attestation evidence from the device without\r\nendorsement or cryptographically-verifiable signature of the\r\n```",
               "createdAt": "2020-04-28T14:52:03Z",
               "updatedAt": "2020-04-28T14:54:28Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MzY2NDk4",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T21:37:36Z",
+          "updatedAt": "2020-05-04T21:37:41Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Two sentences starting \"As an example, ... An example of such ...\" reads poorly.\r\n\r\n```suggestion\r\ncommunicate over a link that is established using a Root of Trust, such as a cellular link established by the Attester leveraging an enclave (e.g., SIM card).  The Verifier may have established the communications link and verified\r\n```",
+              "createdAt": "2020-05-04T21:37:36Z",
+              "updatedAt": "2020-05-04T21:37:41Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MzgyNzM0",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T22:08:20Z",
+          "updatedAt": "2020-05-04T22:12:00Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "Redundant with lines 704-706",
+              "createdAt": "2020-05-04T22:08:20Z",
+              "updatedAt": "2020-05-04T22:12:01Z"
+            },
+            {
+              "originalPosition": 15,
+              "body": "I don't think this wording is correct.   Maybe \"a Root of Trust that this entity trusts\"?",
+              "createdAt": "2020-05-04T22:09:22Z",
+              "updatedAt": "2020-05-04T22:12:01Z"
+            },
+            {
+              "originalPosition": 17,
+              "body": "```suggestion\r\nAs a result, the Verifier may be able to trust the attestation Evidence from the Attester without\r\n```",
+              "createdAt": "2020-05-04T22:09:37Z",
+              "updatedAt": "2020-05-04T22:12:01Z"
+            },
+            {
+              "originalPosition": 18,
+              "body": "Maybe noun/verb mismatch?  I don't think a policy trusts something, I think the Verifier trusts something based on policy.",
+              "createdAt": "2020-05-04T22:11:05Z",
+              "updatedAt": "2020-05-04T22:12:01Z"
+            },
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\r\nEvidence.  Note that the Appraisal Policy employed by the Verifier may take into account the\r\n```",
+              "createdAt": "2020-05-04T22:11:22Z",
+              "updatedAt": "2020-05-04T22:12:01Z"
+            },
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\r\nthen the Evidence might not be trusted until it is conveyed again over a re-established link.\r\n```",
+              "createdAt": "2020-05-04T22:11:40Z",
+              "updatedAt": "2020-05-04T22:12:01Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDQzMzM4",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T01:04:01Z",
+          "updatedAt": "2020-05-05T01:04:02Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "I can't tell if this paragraph is intended to add intuition to \"Root of Trust\" or to describe the duties of a Verifier that leverages a pre-existing comms session to protect the integrity of Evidence (and to ascribe the semantics of the key that the Attester 'claims' the assertions in the Evidence are accurate representation of current state of the Target environment).",
+              "createdAt": "2020-05-05T01:04:02Z",
+              "updatedAt": "2020-05-05T01:04:02Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDQzNjA2",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T01:05:09Z",
+          "updatedAt": "2020-05-05T01:05:09Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "It is at least verbose. ",
+              "createdAt": "2020-05-05T01:05:09Z",
+              "updatedAt": "2020-05-05T01:05:09Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDQ1NjA1",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T01:13:42Z",
+          "updatedAt": "2020-05-05T01:13:43Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "This whole section seems to be more that of a use case that describes an architectural principle or concept than directly stating the principle or concept.  \r\n\r\nI think the principle is:\r\n- A conveyance protocol that is authenticated and integrity protected can be used to convey unprotected Evidence IF the following properties hold:\r\na) The key used to authenticate and integrity protect the conveyance channel is trusted by the Verifier to speak for the Attesting Environment that collected claims about the Target Environment.\r\nb) The Evidence in the conveyance channel is supplied by the Attesting Environment.\r\nc) The Root of Trust protects the key and the Attesting Environment with equivalent strength.\r\n\r\n\r\n",
+              "createdAt": "2020-05-05T01:13:42Z",
+              "updatedAt": "2020-05-05T01:13:43Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDQ3MTY3",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T01:20:15Z",
+          "updatedAt": "2020-05-05T01:20:15Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "+1",
+              "createdAt": "2020-05-05T01:20:15Z",
+              "updatedAt": "2020-05-05T01:20:15Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDU2NjYx",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T02:03:47Z",
+          "updatedAt": "2020-05-05T02:03:48Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "Agree and I like Ned's articulation above. Maybe the PR should just say what's in Ned's principle?",
+              "createdAt": "2020-05-05T02:03:48Z",
+              "updatedAt": "2020-05-05T02:03:48Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDU5MDIx",
+          "commit": {
+            "abbreviatedOid": "c4b3972"
+          },
+          "author": "gmandyam",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T02:15:24Z",
+          "updatedAt": "2020-05-05T02:15:25Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "I have no objection.  It is concise and captures my original inten.  @nedmsmith - will you be taking the lead on the PR revision.",
+              "createdAt": "2020-05-05T02:15:24Z",
+              "updatedAt": "2020-05-05T02:15:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 85,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDEzMjE2NTM4",
+      "title": "Strawman term for UEFI/BIOS/Firmware",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/85",
+      "state": "OPEN",
+      "author": "dthaler",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "A proposal for addressing a FIXME as called out in issue #84\r\n\r\nSigned-off-by: Dave Thaler <dthaler@ntdev.microsoft.com>",
+      "createdAt": "2020-05-04T22:22:46Z",
+      "updatedAt": "2020-05-04T22:29:29Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 86,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDEzMjUzMzE4",
+      "title": "Update draft-ietf-rats-architecture.md",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/86",
+      "state": "OPEN",
+      "author": "nedmsmith",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "nedmsmith"
+      ],
+      "labels": [],
+      "body": "Revised the new Section 6 \"Role Hosting and Composition\" based on Henk's previously contributed content. Moved the example of multiple roles on a Composite Device to this section and integrated it into one of the existing examples. Revisited the Introduction and vocabulary sections to make \"Roles\" and \"Role Messages\" more clearly linked to the objectives of the architecture and terminology. ",
+      "createdAt": "2020-05-05T00:29:59Z",
+      "updatedAt": "2020-05-05T14:50:25Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODEzNjgz",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T13:57:13Z",
+          "updatedAt": "2020-05-05T13:59:59Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Change \"Role Messages\" back to \"conceptual messages\".  The latter is the name of the section title, and we don't need to define a new term.  Same in other new sentences below.\r\n```suggestion\r\nThis documents defines a flexible architecture consisting of attestation Roles and their interactions via conceptual messages.\r\n```",
+              "createdAt": "2020-05-05T13:57:13Z",
+              "updatedAt": "2020-05-05T14:50:24Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "I don't think \"typically a device\" is accurate.  In TEEP it's certainly not.   In SGX in general, it's not.   Better to be silent and not say what is typical.",
+              "createdAt": "2020-05-05T13:59:17Z",
+              "updatedAt": "2020-05-05T14:50:24Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "Is \"it\" referring to \"Evidence\" now?  That doesn't seem right.   Revert changes to \"it\".",
+              "createdAt": "2020-05-05T13:59:53Z",
+              "updatedAt": "2020-05-05T14:50:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODE4MTkw",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T14:01:42Z",
+          "updatedAt": "2020-05-05T14:05:03Z",
+          "comments": [
+            {
+              "originalPosition": 35,
+              "body": "Bad grammar now: \"Statements .. vouches\" doesn't match.",
+              "createdAt": "2020-05-05T14:01:42Z",
+              "updatedAt": "2020-05-05T14:50:24Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "Grammar of the last phrase is now harder to read in my view.",
+              "createdAt": "2020-05-05T14:03:01Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "I don't think we should introduce the term \"service provider\" here, we'd have to define it.",
+              "createdAt": "2020-05-05T14:04:04Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            },
+            {
+              "originalPosition": 113,
+              "body": "```suggestion\r\nThe RATS architecture includes the definition of Roles (e.g., Attester, Verifier,\r\nRelying Party, Endorser) and conceptual messages (e.g., Evidence, Attestation Results,\r\n```",
+              "createdAt": "2020-05-05T14:04:52Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODIzODAw",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T14:07:37Z",
+          "updatedAt": "2020-05-05T14:08:33Z",
+          "comments": [
+            {
+              "originalPosition": 152,
+              "body": "```suggestion\r\nor the Relying Party role also could become local where an application-specific\r\n```",
+              "createdAt": "2020-05-05T14:07:37Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            },
+            {
+              "originalPosition": 157,
+              "body": "```suggestion\r\nnetwork, local-area network, and span various system buses. In so doing, the bridge node \r\n```",
+              "createdAt": "2020-05-05T14:08:09Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            },
+            {
+              "originalPosition": 160,
+              "body": "```suggestion\r\nthe local-area network, and a Relying Party to components attached to a local system bus.\r\n```",
+              "createdAt": "2020-05-05T14:08:27Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODUwNTk2",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T14:34:55Z",
+          "updatedAt": "2020-05-05T14:34:55Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "Laurence suggests \"service\" instead of \"service provider\"",
+              "createdAt": "2020-05-05T14:34:55Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODU5NjM2",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T14:44:13Z",
+          "updatedAt": "2020-05-05T14:44:14Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "\"the extent to which it is trustworthy\"\r\n```suggestion\r\n: An entity (typically a device), whose Evidence must be appraised in order to infer the extent to which the Attester is considered trustworthy, such as when deciding whether it is authorized to perform some operation\r\n```",
+              "createdAt": "2020-05-05T14:44:13Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODYxNzgy",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T14:46:28Z",
+          "updatedAt": "2020-05-05T14:46:29Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "or \"the Attester\"",
+              "createdAt": "2020-05-05T14:46:29Z",
+              "updatedAt": "2020-05-05T14:50:25Z"
             }
           ]
         }
