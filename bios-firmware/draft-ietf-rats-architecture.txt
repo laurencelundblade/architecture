@@ -545,9 +545,9 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    conduct the Claims collection in order to create believable
    attestation Evidence.
 
-   Figure 3 depicts an example of a device that includes (A) a BIOS in
-   read-only memory, (B) an updatable bootloader, and (C) an operating
-   system kernel.
+   Figure 3 depicts an example of a device that includes (A) a BIOS
+   stored in read-only memory in this example, (B) an updatable
+   bootloader, and (C) an operating system kernel.
 
 
 
