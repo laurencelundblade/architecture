@@ -1,6 +1,6 @@
 {
-  "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-05-05T14:50:53.962692+00:00",
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2020-05-12T09:25:25.275442+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -1365,7 +1365,16 @@
           "updatedAt": "2019-11-18T19:59:09Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "df383a09335d8c871510584ffaa169f70eb368be",
+      "headRepository": "dthaler/architecture-1",
+      "headRefName": "abstract",
+      "headRefOid": "4897b156bd37582a2e712ce97ef005429ba22fa1",
+      "mergeCommit": {
+        "oid": "7cf13dc69f598933be6a3cd666ba1140ab7197db"
+      }
     },
     {
       "number": 2,
@@ -1411,7 +1420,16 @@
           "updatedAt": "2019-11-18T20:00:41Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "7b78570617c175a2d11cca5f32e006bb7d93b362",
+      "headRepository": "dthaler/architecture-1",
+      "headRefName": "iana",
+      "headRefOid": "87c86b7346a0bab7b1b72b891aa713bfa834966f",
+      "mergeCommit": {
+        "oid": "ef863b8d76fb0ee137d48cde7388f770abab0791"
+      }
     },
     {
       "number": 3,
@@ -1466,7 +1484,16 @@
           "updatedAt": "2019-11-21T01:06:55Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "8d986b5f237a7750761adb5790f3e8ad4a7245a7",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "arch-nms",
+      "headRefOid": "b729572e3bf70b3ba55a1f198a4389dcaec7acb8",
+      "mergeCommit": {
+        "oid": "ff1a83686c2ab4d1397a139e0d47d95a21892a71"
+      }
     },
     {
       "number": 4,
@@ -1512,7 +1539,16 @@
           "updatedAt": "2019-11-21T01:04:11Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "439fad7c003e0c0113e94cf3b79ac564d85a562f",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "privacy",
+      "headRefOid": "5e6bb64cad48741ef53bcf7e53355156f6f3fb25",
+      "mergeCommit": {
+        "oid": "124ee5e9f5c951f0c25a4f7e068448a34e723603"
+      }
     },
     {
       "number": 5,
@@ -1586,7 +1622,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "124ee5e9f5c951f0c25a4f7e068448a34e723603",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "security-considerations",
+      "headRefOid": "06d36ad3c4389a25799ded6544a84aa2b16a539d",
+      "mergeCommit": {
+        "oid": "75f092578570c67f919904099002f18a837052ee"
+      }
     },
     {
       "number": 6,
@@ -1941,7 +1986,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "ff1a83686c2ab4d1397a139e0d47d95a21892a71",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "terminology-roles",
+      "headRefOid": "d38884397da5c16314156aa367ec8feb44af6ff0",
+      "mergeCommit": {
+        "oid": "398f118cbbfeec9f09663715f512b873dee8b841"
+      }
     },
     {
       "number": 7,
@@ -1993,7 +2047,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "arch-nms",
+      "baseRefOid": "a9e3af65e3350b3536e47c257bf0c70f53f748c5",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "formats",
+      "headRefOid": "f0b82951c026af5670e89e26f39ab282de6bc51c",
+      "mergeCommit": {
+        "oid": "b729572e3bf70b3ba55a1f198a4389dcaec7acb8"
+      }
     },
     {
       "number": 8,
@@ -2012,7 +2075,16 @@
       "mergedAt": "2019-12-03T15:36:21Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "formats",
+      "baseRefOid": "f0b82951c026af5670e89e26f39ab282de6bc51c",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "mcr-patch-1",
+      "headRefOid": "418dfa34f5228bac31a33b033c22e0fcb71d1e02",
+      "mergeCommit": {
+        "oid": "9a9e71cda3266e19adf9d0425e987d7b21962154"
+      }
     },
     {
       "number": 10,
@@ -2045,7 +2117,16 @@
           "updatedAt": "2020-01-06T23:11:42Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "ff1a83686c2ab4d1397a139e0d47d95a21892a71",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "models",
+      "headRefOid": "0df5da424ef0dbc5c5656999a77b67ecdb2e4eb0",
+      "mergeCommit": {
+        "oid": "0b436c247de7d79e7ecd43fdacba4597c7dec162"
+      }
     },
     {
       "number": 11,
@@ -2091,7 +2172,16 @@
           "updatedAt": "2020-01-07T15:07:47Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "dd1526880306c0dbd92eabcba99f07a92486f09c",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "terminology",
+      "headRefOid": "b740d19173e9feed6a47eb4a61a7e0206ee2dd28",
+      "mergeCommit": {
+        "oid": "074871f7cd3779881b31437e20077a9e4d8167d5"
+      }
     },
     {
       "number": 12,
@@ -2110,7 +2200,16 @@
       "mergedAt": "2020-01-07T15:54:12Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "dd1526880306c0dbd92eabcba99f07a92486f09c",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "term-modify",
+      "headRefOid": "da13fa8ab2d400fe28bf83ea5b61f23fb32d598a",
+      "mergeCommit": {
+        "oid": "2182c12061ff37fdcb38655df8a4bd0a56310d75"
+      }
     },
     {
       "number": 13,
@@ -2856,7 +2955,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "e6c7ee6314719c2e4e37ac0b08c7be189ea80621",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "composite-devices",
+      "headRefOid": "f88991b935a7317778446ec1ee36099796400c67",
+      "mergeCommit": {
+        "oid": "b14a482e66b729c98f359a42b3b405c0f06fe547"
+      }
     },
     {
       "number": 15,
@@ -3076,7 +3184,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "2182c12061ff37fdcb38655df8a4bd0a56310d75",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "environments",
+      "headRefOid": "05ae796b3218b3d6e13b2835467c2bda464e8d15",
+      "mergeCommit": {
+        "oid": "e6c7ee6314719c2e4e37ac0b08c7be189ea80621"
+      }
     },
     {
       "number": 16,
@@ -3232,7 +3349,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "2182c12061ff37fdcb38655df8a4bd0a56310d75",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "freshness",
+      "headRefOid": "6fad2c34880923edecedf7e4fee02f11cf2b1bdc",
+      "mergeCommit": {
+        "oid": "ccea2eddab8ffb881c98af80d216515631252817"
+      }
     },
     {
       "number": 17,
@@ -3278,7 +3404,16 @@
           "updatedAt": "2020-01-21T15:10:28Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "e6c7ee6314719c2e4e37ac0b08c7be189ea80621",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "environments",
+      "headRefOid": "b5328acd88251b5d6b5fe7acd4195aefaae9243e",
+      "mergeCommit": {
+        "oid": "1deee61f0a3f7a52c2cc490cf0e49d4374a69ac9"
+      }
     },
     {
       "number": 21,
@@ -3337,7 +3472,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "1deee61f0a3f7a52c2cc490cf0e49d4374a69ac9",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "composite",
+      "headRefOid": "0d58236479c380d676249331bdff8f862bf85c22",
+      "mergeCommit": {
+        "oid": "0735d229cef73f1390966c5805054af1cc0cb0b1"
+      }
     },
     {
       "number": 23,
@@ -3372,7 +3516,16 @@
           "updatedAt": "2020-02-04T14:39:37Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "09b70943dd856a153a2ea89c2a8b8dd29da443de",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "composite",
+      "headRefOid": "2ed707fd19b0390fac838f26a14cdb34576d34d0",
+      "mergeCommit": {
+        "oid": "90c5890fe5e620955bff0c92690c84e3a1440e9f"
+      }
     },
     {
       "number": 25,
@@ -3391,7 +3544,16 @@
       "mergedAt": "2020-01-28T16:01:56Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "ba1252d9f157af60045aa6885f5a429f6164d32f",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "fixref",
+      "headRefOid": "77bb1b82f175ca70e9d5536a3b838b6d456b5375",
+      "mergeCommit": {
+        "oid": "09b70943dd856a153a2ea89c2a8b8dd29da443de"
+      }
     },
     {
       "number": 27,
@@ -3475,7 +3637,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "68c079089fa630e2ea943f6e063b185d9c702db1",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "messages",
+      "headRefOid": "1ded87f2b8a655b8d50e3151daef4d8b3b588e8f",
+      "mergeCommit": {
+        "oid": "027c6262cf6f977d6cc1b6ffc6bfe7f8524e7fe1"
+      }
     },
     {
       "number": 28,
@@ -3596,7 +3767,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "8a9943a20eabffaedbdbdd33124fc1b686452e60",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "composite-attester2",
+      "headRefOid": "80e9ecec37d0fec73222d8087f76edbf64d9f412",
+      "mergeCommit": null
     },
     {
       "number": 29,
@@ -3629,7 +3807,16 @@
           "updatedAt": "2020-02-04T13:49:01Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "68c079089fa630e2ea943f6e063b185d9c702db1",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "layered",
+      "headRefOid": "9c13bf178870a7c4f3d44b8469d74f0c4f75dfe9",
+      "mergeCommit": {
+        "oid": "57e5ad89fda4535acae094c9a167169349e6b6d5"
+      }
     },
     {
       "number": 30,
@@ -4459,7 +4646,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fd685bc979c0eba52481344be3a17c397cb72909",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "layered-attestation",
+      "headRefOid": "228d15013fd102f0965d0f2d37a2a6d5e7fc8fb6",
+      "mergeCommit": {
+        "oid": "46160d19c7fd67b68cb00ae2fcc41c839683ac2c"
+      }
     },
     {
       "number": 32,
@@ -4478,7 +4674,16 @@
       "mergedAt": "2020-02-04T16:13:36Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "90c5890fe5e620955bff0c92690c84e3a1440e9f",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "attester-diagram-update",
+      "headRefOid": "c5ec06514e77294f88f090d07a4e822255260b6a",
+      "mergeCommit": {
+        "oid": "38528b93750363ecd05fd5ce9f9f6b3362ae4684"
+      }
     },
     {
       "number": 44,
@@ -4497,7 +4702,16 @@
       "mergedAt": "2020-02-25T15:08:08Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fec14299c653467531bd29c753959b9d6071b28a",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "usecases",
+      "headRefOid": "0832e0bb1728278c8913636eecf57173635ae7f1",
+      "mergeCommit": {
+        "oid": "c79054920771a0f131f3a4f5530a69934feb93af"
+      }
     },
     {
       "number": 46,
@@ -4557,7 +4771,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "8a9943a20eabffaedbdbdd33124fc1b686452e60",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "William-PanWei/composite-attester2",
+      "headRefOid": "4dce497fe35249ceb891f2843452d324a7af5f7a",
+      "mergeCommit": {
+        "oid": "44becc5bfd92c8f84108eade1e73bd125548c570"
+      }
     },
     {
       "number": 47,
@@ -4584,7 +4807,14 @@
           "updatedAt": "2020-03-03T15:44:17Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "314c43b19b66e43c36b04a7de6384ee247951623",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "trusted-statements1",
+      "headRefOid": "ae1675c0cbb7d6726d8de91d5313810026002eb2",
+      "mergeCommit": null
     },
     {
       "number": 48,
@@ -4611,7 +4841,16 @@
           "updatedAt": "2020-02-28T12:46:41Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "44becc5bfd92c8f84108eade1e73bd125548c570",
+      "headRepository": "puiterwijk/architecture",
+      "headRefName": "fixreading",
+      "headRefOid": "e2afc906b6c802ef85c7d693356306514808cb3c",
+      "mergeCommit": {
+        "oid": "440e8952bee12de75ef14c230806db633b82ed75"
+      }
     },
     {
       "number": 49,
@@ -4630,7 +4869,16 @@
       "mergedAt": "2020-03-03T01:37:55Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "3b71bc41093b3c21ae358e8216c9e5753bb9fcc0",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "reorder",
+      "headRefOid": "bbffd1528dd1d175e744cbc20e3a7c108154b292",
+      "mergeCommit": {
+        "oid": "fd685bc979c0eba52481344be3a17c397cb72909"
+      }
     },
     {
       "number": 51,
@@ -4649,7 +4897,14 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fd685bc979c0eba52481344be3a17c397cb72909",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "composite-attester2",
+      "headRefOid": "ee6c293a5f947fda1807ca119070aead87cd407d",
+      "mergeCommit": null
     },
     {
       "number": 52,
@@ -4927,7 +5182,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "d84980b1354d7c2b03ad80bd3a4f13740f94e415",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "composite-attester",
+      "headRefOid": "47ae642033555960c8a76d6f4702ce8411ae5435",
+      "mergeCommit": null
     },
     {
       "number": 53,
@@ -4954,7 +5216,16 @@
           "updatedAt": "2020-03-03T16:16:38Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "d84980b1354d7c2b03ad80bd3a4f13740f94e415",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "two-environments",
+      "headRefOid": "2639a58ee5154a1a156e55cd230a3a2831049c24",
+      "mergeCommit": {
+        "oid": "a2a57345fd4cffd00fdd7c03b493b56a4e7b7e13"
+      }
     },
     {
       "number": 56,
@@ -5184,7 +5455,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "d84980b1354d7c2b03ad80bd3a4f13740f94e415",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "inro_and_terms",
+      "headRefOid": "b214b183a2fa80386d7c4e76a60236e789bb0762",
+      "mergeCommit": {
+        "oid": "b678d6693d2d1e2eb2ddf608a3da6671aadbd3ae"
+      }
     },
     {
       "number": 58,
@@ -5512,7 +5792,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "b1c04451731f4c44cb45844e0ff1f758b53182bd",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "composite-device",
+      "headRefOid": "66f55c1e7128d9d84d169a2d978eaa738c72137e",
+      "mergeCommit": null
     },
     {
       "number": 60,
@@ -5862,7 +6149,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "b1c04451731f4c44cb45844e0ff1f758b53182bd",
+      "headRepository": "gmandyam/architecture",
+      "headRefName": "master",
+      "headRefOid": "3c8cbef54a24693f2b3c47fe949560d6aa4296b2",
+      "mergeCommit": null
     },
     {
       "number": 61,
@@ -5881,7 +6175,16 @@
       "mergedAt": "2020-03-06T17:25:07Z",
       "mergedBy": "mcr",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "a2a57345fd4cffd00fdd7c03b493b56a4e7b7e13",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "issue45",
+      "headRefOid": "604fac550521417b0265c59b06ffba6d5361b8b0",
+      "mergeCommit": {
+        "oid": "104fdc70a06f8a037bf469187abfba2d36bf7bd3"
+      }
     },
     {
       "number": 62,
@@ -5949,7 +6252,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "b1c04451731f4c44cb45844e0ff1f758b53182bd",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "basic-topo",
+      "headRefOid": "501ca00b41a13825643a9f36dbb89b2c63432b38",
+      "mergeCommit": {
+        "oid": "f728adf5e297acde32ded0781bf9455c7984344c"
+      }
     },
     {
       "number": 63,
@@ -6045,7 +6357,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fc09354d0b5caafdc3baccb0262a41c206b57543",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "composite-device-58",
+      "headRefOid": "fbc447d76df3c31d5e6602a6ec65c6eb3791b670",
+      "mergeCommit": {
+        "oid": "c697c04c627c04efc4d7241a51e967abe898690a"
+      }
     },
     {
       "number": 64,
@@ -6085,7 +6406,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "5af5d62c3b3bc84412d509869fe58368c8743815",
+      "headRepository": "William-PanWei/architecture",
+      "headRefName": "nits-modify",
+      "headRefOid": "edcfe5645784d6b35a11ffb1e21209fd87c58493",
+      "mergeCommit": {
+        "oid": "9105516c3e2fb1c93954c24b4a471782e8ff5974"
+      }
     },
     {
       "number": 68,
@@ -6118,7 +6448,16 @@
           "updatedAt": "2020-03-17T14:00:34Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "c03013681df76ae5794b16d798cf1d585662d2d5",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "layered-attestation",
+      "headRefOid": "2d1d41bc1a32c7577141fdbc6311564c0108540e",
+      "mergeCommit": {
+        "oid": "5af5d62c3b3bc84412d509869fe58368c8743815"
+      }
     },
     {
       "number": 70,
@@ -6193,7 +6532,16 @@
           "updatedAt": "2020-03-24T13:20:47Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "5af5d62c3b3bc84412d509869fe58368c8743815",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "two-environments",
+      "headRefOid": "b75dbec006c5ef06386db70e9211be55f4c1c57a",
+      "mergeCommit": {
+        "oid": "b169034e14c4879082f93daea505ce06da86715c"
+      }
     },
     {
       "number": 74,
@@ -6364,7 +6712,16 @@
           "updatedAt": "2020-04-14T14:03:49Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "8ce7111e8d5e86d3bb8fd486c44b2fddff158efb",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "define-claim",
+      "headRefOid": "d8ba76946fd2c87c81d503b2a0e1144acf0af890",
+      "mergeCommit": {
+        "oid": "c945ba4ea1058b41727b60aa0c27955d81a4cd90"
+      }
     },
     {
       "number": 75,
@@ -6564,7 +6921,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "562baf885771558ab98712eb77e6ab22cc0a2285",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "timing",
+      "headRefOid": "dd5cc3d5d1dccf983f6c9ce17157fa42efe8bc38",
+      "mergeCommit": {
+        "oid": "61283851d08336509200be9a4591771c01257e08"
+      }
     },
     {
       "number": 76,
@@ -6720,7 +7086,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "61283851d08336509200be9a4591771c01257e08",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "Evidence",
+      "headRefOid": "84a5f84fe240c90e2cfea972009da0c4cc597be9",
+      "mergeCommit": {
+        "oid": "6ee33a887349983974b755d54d4ad3888cb203ad"
+      }
     },
     {
       "number": 77,
@@ -7108,7 +7483,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "5ed55a0336ba100347d0053c33c8925ae25ed0a1",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "role-composition",
+      "headRefOid": "6845f6149fd9dabfdc01633158c9b3d43654c836",
+      "mergeCommit": null
     },
     {
       "number": 79,
@@ -7200,7 +7582,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "c945ba4ea1058b41727b60aa0c27955d81a4cd90",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "claims-example",
+      "headRefOid": "d7bebc2856caacfb2dfab26b12ad75736678cb0b",
+      "mergeCommit": {
+        "oid": "fd3402220ae8764c44c77afed7b860e53f989fa3"
+      }
     },
     {
       "number": 80,
@@ -7273,7 +7664,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fd3402220ae8764c44c77afed7b860e53f989fa3",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "reference-values",
+      "headRefOid": "f8f85d9cf2a9b9c0c84fb420489ea83e82abddb5",
+      "mergeCommit": {
+        "oid": "2a8eec68b3de946ddb8840f1776c54cd72646c96"
+      }
     },
     {
       "number": 81,
@@ -7306,7 +7706,16 @@
           "updatedAt": "2020-04-22T09:49:56Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fd3402220ae8764c44c77afed7b860e53f989fa3",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "privacy",
+      "headRefOid": "b58e7d742d26622d5e582b9d2aff519947e2758d",
+      "mergeCommit": {
+        "oid": "b4176b2a4da5adde8d26022d5ccc76233a6c3dac"
+      }
     },
     {
       "number": 82,
@@ -7556,7 +7965,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fd3402220ae8764c44c77afed7b860e53f989fa3",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "implicit-trust",
+      "headRefOid": "c4b397263baa2103869f77f921952ee58ed3aa95",
+      "mergeCommit": null
     },
     {
       "number": 85,
@@ -7575,7 +7991,14 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "bios-firmware",
+      "headRefOid": "72507025158227893ee7e59f819a713a44b824d4",
+      "mergeCommit": null
     },
     {
       "number": 86,
@@ -7591,10 +8014,17 @@
       "labels": [],
       "body": "Revised the new Section 6 \"Role Hosting and Composition\" based on Henk's previously contributed content. Moved the example of multiple roles on a Composite Device to this section and integrated it into one of the existing examples. Revisited the Introduction and vocabulary sections to make \"Roles\" and \"Role Messages\" more clearly linked to the objectives of the architecture and terminology. ",
       "createdAt": "2020-05-05T00:29:59Z",
-      "updatedAt": "2020-05-05T14:50:25Z",
+      "updatedAt": "2020-05-05T15:05:48Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "role-composition",
+      "baseRefOid": "6845f6149fd9dabfdc01633158c9b3d43654c836",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "Issue55",
+      "headRefOid": "d94f56fc871a8b27d54e4c53e9516de1e808887d",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": [
         {
@@ -7613,19 +8043,19 @@
               "originalPosition": 5,
               "body": "Change \"Role Messages\" back to \"conceptual messages\".  The latter is the name of the section title, and we don't need to define a new term.  Same in other new sentences below.\r\n```suggestion\r\nThis documents defines a flexible architecture consisting of attestation Roles and their interactions via conceptual messages.\r\n```",
               "createdAt": "2020-05-05T13:57:13Z",
-              "updatedAt": "2020-05-05T14:50:24Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 30,
               "body": "I don't think \"typically a device\" is accurate.  In TEEP it's certainly not.   In SGX in general, it's not.   Better to be silent and not say what is typical.",
               "createdAt": "2020-05-05T13:59:17Z",
-              "updatedAt": "2020-05-05T14:50:24Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 30,
               "body": "Is \"it\" referring to \"Evidence\" now?  That doesn't seem right.   Revert changes to \"it\".",
               "createdAt": "2020-05-05T13:59:53Z",
-              "updatedAt": "2020-05-05T14:50:24Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             }
           ]
         },
@@ -7645,25 +8075,25 @@
               "originalPosition": 35,
               "body": "Bad grammar now: \"Statements .. vouches\" doesn't match.",
               "createdAt": "2020-05-05T14:01:42Z",
-              "updatedAt": "2020-05-05T14:50:24Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 45,
               "body": "Grammar of the last phrase is now harder to read in my view.",
               "createdAt": "2020-05-05T14:03:01Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 60,
               "body": "I don't think we should introduce the term \"service provider\" here, we'd have to define it.",
               "createdAt": "2020-05-05T14:04:04Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 113,
               "body": "```suggestion\r\nThe RATS architecture includes the definition of Roles (e.g., Attester, Verifier,\r\nRelying Party, Endorser) and conceptual messages (e.g., Evidence, Attestation Results,\r\n```",
               "createdAt": "2020-05-05T14:04:52Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             }
           ]
         },
@@ -7683,19 +8113,19 @@
               "originalPosition": 152,
               "body": "```suggestion\r\nor the Relying Party role also could become local where an application-specific\r\n```",
               "createdAt": "2020-05-05T14:07:37Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 157,
               "body": "```suggestion\r\nnetwork, local-area network, and span various system buses. In so doing, the bridge node \r\n```",
               "createdAt": "2020-05-05T14:08:09Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             },
             {
               "originalPosition": 160,
               "body": "```suggestion\r\nthe local-area network, and a Relying Party to components attached to a local system bus.\r\n```",
               "createdAt": "2020-05-05T14:08:27Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             }
           ]
         },
@@ -7715,7 +8145,7 @@
               "originalPosition": 60,
               "body": "Laurence suggests \"service\" instead of \"service provider\"",
               "createdAt": "2020-05-05T14:34:55Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             }
           ]
         },
@@ -7735,7 +8165,7 @@
               "originalPosition": 30,
               "body": "\"the extent to which it is trustworthy\"\r\n```suggestion\r\n: An entity (typically a device), whose Evidence must be appraised in order to infer the extent to which the Attester is considered trustworthy, such as when deciding whether it is authorized to perform some operation\r\n```",
               "createdAt": "2020-05-05T14:44:13Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
             }
           ]
         },
@@ -7755,7 +8185,51 @@
               "originalPosition": 30,
               "body": "or \"the Attester\"",
               "createdAt": "2020-05-05T14:46:29Z",
-              "updatedAt": "2020-05-05T14:50:25Z"
+              "updatedAt": "2020-05-05T14:53:40Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODI0Njcx",
+          "commit": {
+            "abbreviatedOid": "d451edb"
+          },
+          "author": "laurencelundblade",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-05T14:08:29Z",
+          "updatedAt": "2020-05-05T15:05:48Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "- Should mention \"claims\"\r\n- Should mention \"attestation target(s)\"\r\n- Prefer to avoid the term \"trustworthiness\"\r\n\r\nHow about: A set of claims created by the Attester that characterize the Attestation Target(s). The Attestation Evidence is conveyed from the Attester to the Verifier where it is appraised.",
+              "createdAt": "2020-05-05T14:08:29Z",
+              "updatedAt": "2020-05-05T15:05:48Z"
+            },
+            {
+              "originalPosition": 51,
+              "body": "I don't think an RP is typically an application. I think it is typically a service or legal entity like an enterprise, network operator, bank...\r\n\r\nHow about this: The final end-entity that consumes (relies upon) the Attestation Result. The Relying Party is the end customer of the entire attestation process. The Relying Party usually makes a decision based on the Attestation Result, such as whether to let the device on the network, how large a transaction to allows, whether to allow the user of the device access to some information and such.  ",
+              "createdAt": "2020-05-05T14:19:04Z",
+              "updatedAt": "2020-05-05T15:05:48Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "Mention that the Result goes to a Relying Party\r\n\r\nThe Result is produced by the Verifier based the inputs that are the Evidence, Endorsements and Policy and thus may contain data from or derived from each.",
+              "createdAt": "2020-05-05T14:24:32Z",
+              "updatedAt": "2020-05-05T15:05:48Z"
+            },
+            {
+              "originalPosition": 31,
+              "body": "Prefer to avoid the term trustworthy.\r\n\r\nShould say that the Attester produces Evidence that is conveyed to the Verifier.\r\n\r\nWould really like for this to say that an Attester typically has a private key that is used to sign the Evidence.",
+              "createdAt": "2020-05-05T14:30:55Z",
+              "updatedAt": "2020-05-05T15:05:48Z"
+            },
+            {
+              "originalPosition": 36,
+              "body": "Would really like this to say that it often contains the key material (e.g. public key) that is used to Verify the signature on the Evidence.",
+              "createdAt": "2020-05-05T14:32:19Z",
+              "updatedAt": "2020-05-05T15:05:48Z"
             }
           ]
         }
