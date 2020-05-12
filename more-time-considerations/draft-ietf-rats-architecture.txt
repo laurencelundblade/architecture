@@ -120,7 +120,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    13. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  25
    14. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  26
    15. Appendix A: Time Considerations . . . . . . . . . . . . . . .  26
-     15.1.  Example 1: Timestamp-based Passport Model Example  . . .  28
+     15.1.  Example 1: Timestamp-based Passport Model Example  . . .  27
      15.2.  Example 2: Nonce-based Passport Model Example  . . . . .  29
      15.3.  Example 3: Timestamp-based Background-Check Model
             Example  . . . . . . . . . . . . . . . . . . . . . . . .  30
@@ -1420,36 +1420,36 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Universal Time, or might be defined relative to some other timestamp
    or timeticks counter.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   +----+--------------+-----------------------------------------------+
+   | ID | Event        | Explanation of event                          |
+   +====+==============+===============================================+
+   | VG | Value        | A value to appear in a Claim was              |
+   |    | generation   | created.                                      |
+   +----+--------------+-----------------------------------------------+
+   | AA | Attester     | An Attesting Environment starts to be         |
+   |    | awareness    | aware of a new/changed Claim value.           |
+   +----+--------------+-----------------------------------------------+
+   | CC | Claim        | An Attesting Environment collects a new/      |
+   |    | Collection   | changed Claim value to appear in              |
+   |    |              | Evidence.                                     |
+   +----+--------------+-----------------------------------------------+
+   | HD | Handle       | A centrally generated identifier for          |
+   |    | distribution | time-bound recentness across a domain of      |
+   |    |              | devices is successfully distributed to        |
+   |    |              | Attesters.                                    |
+   +----+--------------+-----------------------------------------------+
+   | NS | Nonce sent   | A nonce not predictable to an Attester        |
+   |    |              | (recentness & uniqueness) is sent to an       |
+   |    |              | Attester.                                     |
+   +----+--------------+-----------------------------------------------+
+   | NR | Nonce        | A nonce is relayed to an Attester by          |
+   |    | relayed      | another entity.                               |
+   +----+--------------+-----------------------------------------------+
+   | EG | Evidence     | An Attester creates Evidence from             |
+   |    | generation   | collected Claims (CC).                        |
+   +----+--------------+-----------------------------------------------+
+   | ER | Evidence     | A Relying Party relays Evidence to a          |
+   |    | relayed      | Verifier.                                     |
 
 
 
@@ -1458,49 +1458,49 @@ Birkholz, et al.        Expires 13 November 2020               [Page 26]
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
-    +----+------------+-----------------------------------------------+
-    | ID | Event      | Explanation of event                          |
-    +====+============+===============================================+
-    | VG | Value      | A value to appear in a claim was created      |
-    |    | generation |                                               |
-    +----+------------+-----------------------------------------------+
-    | NS | Nonce sent | A random number not predictable to an         |
-    |    |            | Attester is sent                              |
-    +----+------------+-----------------------------------------------+
-    | NR | Nonce      | The nonce is relayed to an Attester by        |
-    |    | relayed    | enother entity                                |
-    +----+------------+-----------------------------------------------+
-    | EG | Evidence   | An Attester collects claims and generates     |
-    |    | generation | Evidence                                      |
-    +----+------------+-----------------------------------------------+
-    | ER | Evidence   | A Relying Party relays Evidence to a Verifier |
-    |    | relayed    |                                               |
-    +----+------------+-----------------------------------------------+
-    | RG | Result     | A Verifier appraises Evidence and generates   |
-    |    | generation | an Attestation Result                         |
-    +----+------------+-----------------------------------------------+
-    | RR | Result     | A Relying Party relays an Attestation Result  |
-    |    | relayed    | to a Relying Party                            |
-    +----+------------+-----------------------------------------------+
-    | RA | Result     | The Relying Party appraises Attestation       |
-    |    | appraised  | Results                                       |
-    +----+------------+-----------------------------------------------+
-    | OP | Operation  | The Relying Party performs some operation     |
-    |    | performed  | requested by the Attester.  For example,      |
-    |    |            | acting upon some message just received across |
-    |    |            | a session created earlier at time(RA).        |
-    +----+------------+-----------------------------------------------+
-    | RX | Result     | An Attestation Result should no longer be     |
-    |    | expiry     | accepted, according to the Verifier that      |
-    |    |            | generated it                                  |
-    +----+------------+-----------------------------------------------+
+   +----+--------------+-----------------------------------------------+
+   | RG | Result       | A Verifier appraises Evidence and             |
+   |    | generation   | generates an Attestation Result.              |
+   +----+--------------+-----------------------------------------------+
+   | RP | Result push  | A set of one or more Evidence bundles is      |
+   |    |              | conveyed to a Verifier with or without        |
+   |    |              | solicitation initially triggered by AA,       |
+   |    |              | in a periodic interval, or ad-hoc.            |
+   +----+--------------+-----------------------------------------------+
+   | RR | Result       | A Relying Party relays an Attestation         |
+   |    | relayed      | Result to a Relying Party.                    |
+   +----+--------------+-----------------------------------------------+
+   | RA | Result       | The Relying Party appraises Attestation       |
+   |    | appraised    | Results.                                      |
+   +----+--------------+-----------------------------------------------+
+   | OP | Operation    | The Relying Party performs some               |
+   |    | performed    | operation requested by the Attester.          |
+   |    |              | For example, acting upon some message         |
+   |    |              | just received across a session created        |
+   |    |              | earlier at time(RA).                          |
+   +----+--------------+-----------------------------------------------+
+   | RX | Result       | An Attestation Result should no longer        |
+   |    | expiry       | be accepted, according to the Verifier        |
+   |    |              | that generated it.                            |
+   +----+--------------+-----------------------------------------------+
 
                                   Table 1
 
-   We now walk through a number of hypothetical examples of how a
-   solution might be built.  This list is not intended to be complete,
-   but is just representative enough to highlight various timing
-   considerations.
+   Using the table above, the examples following below illustrate a
+   number of hypothetical examples of how a solution might be built.
+   This list is not intended to be complete, but is just representative
+   enough to highlight various timing considerations.
+
+15.1.  Example 1: Timestamp-based Passport Model Example
+
+   The following example illustrates a hypothetical Passport Model
+   solution that uses timestamps and requires roughly synchronized
+   clocks between the Attester, Verifier, and Relying Party, which
+   depends on using a secure clock synchronization mechanism.
+
+
+
+
 
 
 
@@ -1513,13 +1513,6 @@ Birkholz, et al.        Expires 13 November 2020               [Page 27]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
-
-15.1.  Example 1: Timestamp-based Passport Model Example
-
-   The following example illustrates a hypothetical Passport Model
-   solution that uses timestamps and requires roughly synchronized
-   clocks between the Attester, Verifier, and Relying Party, which
-   depends on using a secure clock synchronization mechanism.
 
       .----------.                     .----------.  .---------------.
       | Attester |                     | Verifier |  | Relying Party |
@@ -1562,6 +1555,13 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    however, to not allow continued use beyond the period for which it
    deems the Attestation Result to remain fresh enough.  Thus, it might
    allow use (at time(OP)) as long as "time(RA) - time(RG) < Threshold",
+   where the Relying Party's threshold is large enough to account for
+   the maximum permitted clock skew between the Relying Party and the
+   Verifier."time(OP) - time(RG) < Threshold".  However, if the
+   Attestation Result contains an expiry time time(RX) then it could
+   explicitly check "time(OP) < time(RX)".
+
+
 
 
 
@@ -1569,12 +1569,6 @@ Birkholz, et al.        Expires 13 November 2020               [Page 28]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
-
-   where the Relying Party's threshold is large enough to account for
-   the maximum permitted clock skew between the Relying Party and the
-   Verifier."time(OP) - time(RG) < Threshold".  However, if the
-   Attestation Result contains an expiry time time(RX) then it could
-   explicitly check "time(OP) < time(RX)".
 
 15.2.  Example 2: Nonce-based Passport Model Example
 
@@ -1617,6 +1611,12 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    correctly provide the delta time(EG)-time(VG), then it can determine
    recency by checking "time(RG)-time(NS) + time(EG)-time(VG) <
    Threshold".
+
+
+
+
+
+
 
 
 

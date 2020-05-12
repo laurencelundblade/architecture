@@ -2247,42 +2247,62 @@ or might be defined relative to some other timestamp or timeticks counter.<a hre
           <tr>
             <td class="text-left" rowspan="1" colspan="1">VG</td>
             <td class="text-left" rowspan="1" colspan="1">Value generation</td>
-            <td class="text-left" rowspan="1" colspan="1">A value to appear in a claim was created</td>
+            <td class="text-left" rowspan="1" colspan="1">A value to appear in a Claim was created.</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">AA</td>
+            <td class="text-left" rowspan="1" colspan="1">Attester awareness</td>
+            <td class="text-left" rowspan="1" colspan="1">An Attesting Environment starts to be aware of a new/changed Claim value.</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">CC</td>
+            <td class="text-left" rowspan="1" colspan="1">Claim Collection</td>
+            <td class="text-left" rowspan="1" colspan="1">An Attesting Environment collects a new/changed Claim value to appear in Evidence.</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">HD</td>
+            <td class="text-left" rowspan="1" colspan="1">Handle distribution</td>
+            <td class="text-left" rowspan="1" colspan="1">A centrally generated identifier for time-bound recentness across a domain of devices is successfully distributed to Attesters.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">NS</td>
             <td class="text-left" rowspan="1" colspan="1">Nonce sent</td>
-            <td class="text-left" rowspan="1" colspan="1">A random number not predictable to an Attester is sent</td>
+            <td class="text-left" rowspan="1" colspan="1">A nonce not predictable to an Attester (recentness &amp; uniqueness) is sent to an Attester.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">NR</td>
             <td class="text-left" rowspan="1" colspan="1">Nonce relayed</td>
-            <td class="text-left" rowspan="1" colspan="1">The nonce is relayed to an Attester by enother entity</td>
+            <td class="text-left" rowspan="1" colspan="1">A nonce is relayed to an Attester by another entity.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">EG</td>
             <td class="text-left" rowspan="1" colspan="1">Evidence generation</td>
-            <td class="text-left" rowspan="1" colspan="1">An Attester collects claims and generates Evidence</td>
+            <td class="text-left" rowspan="1" colspan="1">An Attester creates Evidence from collected Claims (CC).</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">ER</td>
             <td class="text-left" rowspan="1" colspan="1">Evidence relayed</td>
-            <td class="text-left" rowspan="1" colspan="1">A Relying Party relays Evidence to a Verifier</td>
+            <td class="text-left" rowspan="1" colspan="1">A Relying Party relays Evidence to a Verifier.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">RG</td>
             <td class="text-left" rowspan="1" colspan="1">Result generation</td>
-            <td class="text-left" rowspan="1" colspan="1">A Verifier appraises Evidence and generates an Attestation Result</td>
+            <td class="text-left" rowspan="1" colspan="1">A Verifier appraises Evidence and generates an Attestation Result.</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">RP</td>
+            <td class="text-left" rowspan="1" colspan="1">Result push</td>
+            <td class="text-left" rowspan="1" colspan="1">A set of one or more Evidence bundles is conveyed to a Verifier with or without solicitation initially triggered by AA, in a periodic interval, or ad-hoc.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">RR</td>
             <td class="text-left" rowspan="1" colspan="1">Result relayed</td>
-            <td class="text-left" rowspan="1" colspan="1">A Relying Party relays an Attestation Result to a Relying Party</td>
+            <td class="text-left" rowspan="1" colspan="1">A Relying Party relays an Attestation Result to a Relying Party.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">RA</td>
             <td class="text-left" rowspan="1" colspan="1">Result appraised</td>
-            <td class="text-left" rowspan="1" colspan="1">The Relying Party appraises Attestation Results</td>
+            <td class="text-left" rowspan="1" colspan="1">The Relying Party appraises Attestation Results.</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">OP</td>
@@ -2292,11 +2312,11 @@ or might be defined relative to some other timestamp or timeticks counter.<a hre
           <tr>
             <td class="text-left" rowspan="1" colspan="1">RX</td>
             <td class="text-left" rowspan="1" colspan="1">Result expiry</td>
-            <td class="text-left" rowspan="1" colspan="1">An Attestation Result should no longer be accepted, according to the Verifier that generated it</td>
+            <td class="text-left" rowspan="1" colspan="1">An Attestation Result should no longer be accepted, according to the Verifier that generated it.</td>
           </tr>
         </tbody>
       </table>
-<p id="section-15-3">We now walk through a number of hypothetical examples of how
+<p id="section-15-3">Using the table above, the examples following below illustrate a number of hypothetical examples of how
 a solution might be built.  This list is not intended to be complete,
 but is just representative enough to highlight various timing considerations.<a href="#section-15-3" class="pilcrow">¶</a></p>
 <div id="example-1-timestamp-based-passport-model-example">
