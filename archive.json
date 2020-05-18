@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-12T09:25:25.275442+00:00",
+  "timestamp": "2020-05-18T23:14:43.902159+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -3372,10 +3372,19 @@
       "labels": [],
       "body": "Addresses issue #14\r\nAnd review comments on PR #15\r\n\r\nSigned-off-by: Dave Thaler <dthaler@microsoft.com>",
       "createdAt": "2020-01-14T19:24:49Z",
-      "updatedAt": "2020-01-28T00:20:35Z",
+      "updatedAt": "2020-05-18T22:29:14Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "e6c7ee6314719c2e4e37ac0b08c7be189ea80621",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "environments",
+      "headRefOid": "b5328acd88251b5d6b5fe7acd4195aefaae9243e",
       "closedAt": "2020-01-21T15:53:22Z",
       "mergedAt": "2020-01-21T15:53:22Z",
       "mergedBy": "mcr",
+      "mergeCommit": {
+        "oid": "1deee61f0a3f7a52c2cc490cf0e49d4374a69ac9"
+      },
       "comments": [],
       "reviews": [
         {
@@ -3404,16 +3413,7 @@
           "updatedAt": "2020-01-21T15:10:28Z",
           "comments": []
         }
-      ],
-      "baseRepository": "ietf-rats-wg/architecture",
-      "baseRefName": "master",
-      "baseRefOid": "e6c7ee6314719c2e4e37ac0b08c7be189ea80621",
-      "headRepository": "ietf-rats-wg/architecture",
-      "headRefName": "environments",
-      "headRefOid": "b5328acd88251b5d6b5fe7acd4195aefaae9243e",
-      "mergeCommit": {
-        "oid": "1deee61f0a3f7a52c2cc490cf0e49d4374a69ac9"
-      }
+      ]
     },
     {
       "number": 21,
@@ -7729,10 +7729,17 @@
       "labels": [],
       "body": "replace pull request #60 with one we can edit.\r\nThis attempts to establish the architectural basis for implicit trust as a result of links.\r\n",
       "createdAt": "2020-04-28T14:20:18Z",
-      "updatedAt": "2020-05-05T02:15:25Z",
+      "updatedAt": "2020-05-18T23:14:15Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "fd3402220ae8764c44c77afed7b860e53f989fa3",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "implicit-trust",
+      "headRefOid": "4b3c327aa734abef807413624da7f660b54f1252",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": [
         {
@@ -7751,7 +7758,7 @@
               "originalPosition": 4,
               "body": "```suggestion\r\nTrust can also be tied to the communications link over which\r\n```",
               "createdAt": "2020-04-28T14:40:02Z",
-              "updatedAt": "2020-04-28T14:40:03Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7771,7 +7778,7 @@
               "originalPosition": 18,
               "body": "```suggestion\r\nAs a result, an Appraisal Policy for the Verifier may be possible that trusts the attestation evidence from the device without\r\nendorsement or cryptographically-verifiable signature of the\r\n```",
               "createdAt": "2020-04-28T14:52:03Z",
-              "updatedAt": "2020-04-28T14:54:28Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7791,7 +7798,7 @@
               "originalPosition": 7,
               "body": "Two sentences starting \"As an example, ... An example of such ...\" reads poorly.\r\n\r\n```suggestion\r\ncommunicate over a link that is established using a Root of Trust, such as a cellular link established by the Attester leveraging an enclave (e.g., SIM card).  The Verifier may have established the communications link and verified\r\n```",
               "createdAt": "2020-05-04T21:37:36Z",
-              "updatedAt": "2020-05-04T21:37:41Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7811,37 +7818,37 @@
               "originalPosition": 12,
               "body": "Redundant with lines 704-706",
               "createdAt": "2020-05-04T22:08:20Z",
-              "updatedAt": "2020-05-04T22:12:01Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             },
             {
               "originalPosition": 15,
               "body": "I don't think this wording is correct.   Maybe \"a Root of Trust that this entity trusts\"?",
               "createdAt": "2020-05-04T22:09:22Z",
-              "updatedAt": "2020-05-04T22:12:01Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             },
             {
               "originalPosition": 17,
               "body": "```suggestion\r\nAs a result, the Verifier may be able to trust the attestation Evidence from the Attester without\r\n```",
               "createdAt": "2020-05-04T22:09:37Z",
-              "updatedAt": "2020-05-04T22:12:01Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             },
             {
               "originalPosition": 18,
               "body": "Maybe noun/verb mismatch?  I don't think a policy trusts something, I think the Verifier trusts something based on policy.",
               "createdAt": "2020-05-04T22:11:05Z",
-              "updatedAt": "2020-05-04T22:12:01Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             },
             {
               "originalPosition": 19,
               "body": "```suggestion\r\nEvidence.  Note that the Appraisal Policy employed by the Verifier may take into account the\r\n```",
               "createdAt": "2020-05-04T22:11:22Z",
-              "updatedAt": "2020-05-04T22:12:01Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             },
             {
               "originalPosition": 21,
               "body": "```suggestion\r\nthen the Evidence might not be trusted until it is conveyed again over a re-established link.\r\n```",
               "createdAt": "2020-05-04T22:11:40Z",
-              "updatedAt": "2020-05-04T22:12:01Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7861,7 +7868,7 @@
               "originalPosition": 7,
               "body": "I can't tell if this paragraph is intended to add intuition to \"Root of Trust\" or to describe the duties of a Verifier that leverages a pre-existing comms session to protect the integrity of Evidence (and to ascribe the semantics of the key that the Attester 'claims' the assertions in the Evidence are accurate representation of current state of the Target environment).",
               "createdAt": "2020-05-05T01:04:02Z",
-              "updatedAt": "2020-05-05T01:04:02Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7881,7 +7888,7 @@
               "originalPosition": 15,
               "body": "It is at least verbose. ",
               "createdAt": "2020-05-05T01:05:09Z",
-              "updatedAt": "2020-05-05T01:05:09Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7901,7 +7908,7 @@
               "originalPosition": 21,
               "body": "This whole section seems to be more that of a use case that describes an architectural principle or concept than directly stating the principle or concept.  \r\n\r\nI think the principle is:\r\n- A conveyance protocol that is authenticated and integrity protected can be used to convey unprotected Evidence IF the following properties hold:\r\na) The key used to authenticate and integrity protect the conveyance channel is trusted by the Verifier to speak for the Attesting Environment that collected claims about the Target Environment.\r\nb) The Evidence in the conveyance channel is supplied by the Attesting Environment.\r\nc) The Root of Trust protects the key and the Attesting Environment with equivalent strength.\r\n\r\n\r\n",
               "createdAt": "2020-05-05T01:13:42Z",
-              "updatedAt": "2020-05-05T01:13:43Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7921,7 +7928,7 @@
               "originalPosition": 4,
               "body": "+1",
               "createdAt": "2020-05-05T01:20:15Z",
-              "updatedAt": "2020-05-05T01:20:15Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7941,7 +7948,7 @@
               "originalPosition": 21,
               "body": "Agree and I like Ned's articulation above. Maybe the PR should just say what's in Ned's principle?",
               "createdAt": "2020-05-05T02:03:48Z",
-              "updatedAt": "2020-05-05T02:03:48Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         },
@@ -7961,44 +7968,121 @@
               "originalPosition": 21,
               "body": "I have no objection.  It is concise and captures my original inten.  @nedmsmith - will you be taking the lead on the PR revision.",
               "createdAt": "2020-05-05T02:15:24Z",
-              "updatedAt": "2020-05-05T02:15:25Z"
+              "updatedAt": "2020-05-18T23:14:15Z"
             }
           ]
         }
-      ],
-      "baseRepository": "ietf-rats-wg/architecture",
-      "baseRefName": "master",
-      "baseRefOid": "fd3402220ae8764c44c77afed7b860e53f989fa3",
-      "headRepository": "ietf-rats-wg/architecture",
-      "headRefName": "implicit-trust",
-      "headRefOid": "c4b397263baa2103869f77f921952ee58ed3aa95",
-      "mergeCommit": null
+      ]
     },
     {
       "number": 85,
       "id": "MDExOlB1bGxSZXF1ZXN0NDEzMjE2NTM4",
-      "title": "Strawman term for UEFI/BIOS/Firmware",
+      "title": "Address FIXME about term for UEFI/BIOS/Firmware",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/85",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "dthaler",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "A proposal for addressing a FIXME as called out in issue #84\r\n\r\nSigned-off-by: Dave Thaler <dthaler@ntdev.microsoft.com>",
       "createdAt": "2020-05-04T22:22:46Z",
-      "updatedAt": "2020-05-04T22:29:29Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "comments": [],
-      "reviews": [],
+      "updatedAt": "2020-05-12T14:25:57Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "bios-firmware",
-      "headRefOid": "72507025158227893ee7e59f819a713a44b824d4",
-      "mergeCommit": null
+      "headRefOid": "012860ee41d87dd0216e05632960fde6784506bd",
+      "closedAt": "2020-05-12T14:25:52Z",
+      "mergedAt": "2020-05-12T14:25:52Z",
+      "mergedBy": "dthaler",
+      "mergeCommit": {
+        "oid": "7a47cdf4d471a6658122b9747733b1df169bb015"
+      },
+      "comments": [
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Since people didn't like the previous version of this PR, I rewrote the layered attestation section to not need to define a term at all.  Now it just uses one specific example to illustrate the concept, rather than trying to combine multiple variations in the same text.",
+          "createdAt": "2020-05-12T09:43:13Z",
+          "updatedAt": "2020-05-12T09:43:13Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA5ODk5NDk5",
+          "commit": {
+            "abbreviatedOid": "fee3c69"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T10:16:39Z",
+          "updatedAt": "2020-05-12T10:16:40Z",
+          "comments": [
+            {
+              "originalPosition": 111,
+              "body": "When we say \"signed\" here are we implying a signing operation done by A in the cryptographic sense, i.e. using A's private key?  If so, I'm not sure this is the necessary precondition.  Measurements might just be \"sealed\" in the RoT at a certain boot stage for later use by the lead attester.",
+              "createdAt": "2020-05-12T10:16:40Z",
+              "updatedAt": "2020-05-12T14:24:32Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA5OTExMTM4",
+          "commit": {
+            "abbreviatedOid": "54bd1f1"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T10:33:54Z",
+          "updatedAt": "2020-05-12T10:33:55Z",
+          "comments": [
+            {
+              "originalPosition": 111,
+              "body": "Good point, updated.",
+              "createdAt": "2020-05-12T10:33:54Z",
+              "updatedAt": "2020-05-12T14:24:32Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDg4NzAx",
+          "commit": {
+            "abbreviatedOid": "54bd1f1"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-12T14:16:45Z",
+          "updatedAt": "2020-05-12T14:16:45Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDg4MzM3",
+          "commit": {
+            "abbreviatedOid": "54bd1f1"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:16:23Z",
+          "updatedAt": "2020-05-12T14:19:30Z",
+          "comments": [
+            {
+              "originalPosition": 113,
+              "body": "```suggestion\r\nEnvironment A or stored in an untamperable manner by Attesting\r\n```",
+              "createdAt": "2020-05-12T14:16:24Z",
+              "updatedAt": "2020-05-12T14:24:32Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 86,
@@ -8014,7 +8098,7 @@
       "labels": [],
       "body": "Revised the new Section 6 \"Role Hosting and Composition\" based on Henk's previously contributed content. Moved the example of multiple roles on a Composite Device to this section and integrated it into one of the existing examples. Revisited the Introduction and vocabulary sections to make \"Roles\" and \"Role Messages\" more clearly linked to the objectives of the architecture and terminology. ",
       "createdAt": "2020-05-05T00:29:59Z",
-      "updatedAt": "2020-05-05T15:05:48Z",
+      "updatedAt": "2020-05-15T17:07:32Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "role-composition",
       "baseRefOid": "6845f6149fd9dabfdc01633158c9b3d43654c836",
@@ -8230,6 +8314,835 @@
               "body": "Would really like this to say that it often contains the key material (e.g. public key) that is used to Verify the signature on the Evidence.",
               "createdAt": "2020-05-05T14:32:19Z",
               "updatedAt": "2020-05-05T15:05:48Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTAzNDU4",
+          "commit": {
+            "abbreviatedOid": "d94f56f"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:30:53Z",
+          "updatedAt": "2020-05-12T14:30:53Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Can we not capitalize Roles?  Should not need to define a term for Roles, just use it.",
+              "createdAt": "2020-05-12T14:30:53Z",
+              "updatedAt": "2020-05-12T14:30:53Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTA1MzE4",
+          "commit": {
+            "abbreviatedOid": "d94f56f"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:32:44Z",
+          "updatedAt": "2020-05-12T14:32:45Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\nsuch as, roles, device composition, topological models and appraisal is vital for\r\n```\r\nuse capitalization consistent with line 94 which has \"topological models\"",
+              "createdAt": "2020-05-12T14:32:45Z",
+              "updatedAt": "2020-05-12T14:32:45Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTEwMDAy",
+          "commit": {
+            "abbreviatedOid": "d94f56f"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:37:30Z",
+          "updatedAt": "2020-05-12T14:37:31Z",
+          "comments": [
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\n: A set of claims created by the Attester. The Evidence is conveyed from the Attester to the Verifier where it is appraised.\r\n```",
+              "createdAt": "2020-05-12T14:37:31Z",
+              "updatedAt": "2020-05-12T14:50:25Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTMyOTQ3",
+          "commit": {
+            "abbreviatedOid": "d94f56f"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:59:54Z",
+          "updatedAt": "2020-05-12T14:59:55Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "Discussion during meeting: no consensus on the phrase \"typically an application\" being useful",
+              "createdAt": "2020-05-12T14:59:54Z",
+              "updatedAt": "2020-05-12T14:59:55Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTM4NzA4",
+          "commit": {
+            "abbreviatedOid": "d94f56f"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T15:05:22Z",
+          "updatedAt": "2020-05-12T15:05:22Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "Another possibility:\r\n\r\nAn entity that depends on the validity of information about an Attester.  Compare /relying party/ in {{RFC4949}}.",
+              "createdAt": "2020-05-12T15:05:22Z",
+              "updatedAt": "2020-05-12T15:05:22Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEyODIyMTk2",
+          "commit": {
+            "abbreviatedOid": "d94f56f"
+          },
+          "author": "nedmsmith",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-15T17:07:31Z",
+          "updatedAt": "2020-05-15T17:07:32Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "+1 to Dave's suggested wording.",
+              "createdAt": "2020-05-15T17:07:31Z",
+              "updatedAt": "2020-05-15T17:07:32Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 87,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDE2NzM5MzUy",
+      "title": "An update to Freshness",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/87",
+      "state": "OPEN",
+      "author": "henkbirkholz",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Sry, for the included conflict to references. Should have checked master first....",
+      "createdAt": "2020-05-12T13:50:37Z",
+      "updatedAt": "2020-05-14T09:26:02Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "freshness",
+      "headRefOid": "49750bd521f46e88e2d6eb640ae79aeeb2d15531",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "body": "General comment / suggestion.  I don't think we should go in great details here.  It's good to provide a bit of context and clarifying information around freshness, but I don't see the need for a big taxonomical effort :-)\r\n\r\nI think the concepts could be condensed in a couple of paragraphs, like:\r\n```\r\nFreshness has two dimensions: recentness and uniqueness.\r\n\r\nUniqueness is conveyed via a non-repeatable value sourced, for example,\r\nfrom a high quality randomness pool, a \u201cgranular enough\u201d clock, a serial\r\nnumber that doesn\u2019t wrap-around, etc.  In the context of Evidence and\r\nAttestation Results, uniqueness can be encoded into a \"nonce\" attribute.\r\n\r\nRecentness is conveyed via either a relative or absolute timestamp - \r\nassociated with the time of collection of claims by the attester, or the\r\ntime the attestation report is produced \u2014 and an either explicit\r\nor implicit \u201cexpiry\u201d value that determines the threshold between\r\nacceptable (i.e. recent enough) and non-acceptable (i.e., too old)\r\nvalues of the timestamp. It assumes time synchronisation between\r\nproducers and consumers.    In the context of Evidence and Attestation\r\nResults, recentness can be encoded using a \"timestamp\" and \"expiry\"\r\nattributes.\r\n```\r\nor similar.  Cheers!",
+          "createdAt": "2020-05-12T17:21:09Z",
+          "updatedAt": "2020-05-12T17:21:09Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree that is not necessary to start a taxonomy here ). It would be very tiny in any way. I think that it would suffice to say that recentness and uniqueness are the two vital parts of freshness with respect to evidence (attestation results work differently, they are literally more like actual tokens and could come with an expiration date aka a period of validity).",
+          "createdAt": "2020-05-12T18:00:38Z",
+          "updatedAt": "2020-05-12T18:00:38Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDc0MDYx",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:02:19Z",
+          "updatedAt": "2020-05-12T14:02:19Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "This part doesn't make sense for Attestation Results in my opinion.",
+              "createdAt": "2020-05-12T14:02:19Z",
+              "updatedAt": "2020-05-12T14:02:19Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDc1MDE2",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:03:17Z",
+          "updatedAt": "2020-05-12T14:03:18Z",
+          "comments": [
+            {
+              "originalPosition": 54,
+              "body": "```suggestion\r\ntwo characteristics that can be part of freshness are further elaborated below,\r\n```",
+              "createdAt": "2020-05-12T14:03:17Z",
+              "updatedAt": "2020-05-12T14:35:28Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDc1MjY2",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:03:33Z",
+          "updatedAt": "2020-05-12T14:03:33Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "In general this may not be correct since it may be about the time a claim value was generated rather than the time the evidence was generated.   Or perhaps maybe that's a third term and defining terms is not a good direction...",
+              "createdAt": "2020-05-12T14:03:33Z",
+              "updatedAt": "2020-05-12T14:03:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDgxNjQw",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:09:58Z",
+          "updatedAt": "2020-05-12T14:09:58Z",
+          "comments": [
+            {
+              "originalPosition": 61,
+              "body": "\"sealing via signing\" seems over-specific to me (I commented similarly on #85).  I'd drop it and just leave \"(typically by sealing a Claims set)\"",
+              "createdAt": "2020-05-12T14:09:58Z",
+              "updatedAt": "2020-05-12T14:09:59Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDk1MDUx",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:22:47Z",
+          "updatedAt": "2020-05-12T14:22:48Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "I'm slightly confused: nonce is about uniqueness, not recentness.",
+              "createdAt": "2020-05-12T14:22:47Z",
+              "updatedAt": "2020-05-12T14:22:48Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMDk4MTEx",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:25:39Z",
+          "updatedAt": "2020-05-12T14:25:39Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "Unless I'm missing something big, this sentence looks like a truism to me?\r\nI think this should state what defines the \"too old\" criterion.",
+              "createdAt": "2020-05-12T14:25:39Z",
+              "updatedAt": "2020-05-12T14:25:40Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTAwNDU0",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:27:56Z",
+          "updatedAt": "2020-05-12T14:27:57Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "While I understand your point of view.... I literally strongly disagree. It very much can be used specifically for recentness in the context of CHARRA.",
+              "createdAt": "2020-05-12T14:27:56Z",
+              "updatedAt": "2020-05-12T14:27:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTAwNjcz",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:28:10Z",
+          "updatedAt": "2020-05-12T14:28:10Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "pls, see below",
+              "createdAt": "2020-05-12T14:28:10Z",
+              "updatedAt": "2020-05-12T14:28:10Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTAyMzY1",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:29:48Z",
+          "updatedAt": "2020-05-12T14:29:48Z",
+          "comments": [
+            {
+              "originalPosition": 61,
+              "body": "I understand the specifics of a \"Secure Channel\" that would not require sealing. As this is covered by Giri's PR, I deliberately highlighted \"the other\"/\"most common\" way to inhibit tampering here. And I think that is okay, still, taking your comment into account.",
+              "createdAt": "2020-05-12T14:29:48Z",
+              "updatedAt": "2020-05-12T14:29:48Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTA1NDAw",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:32:50Z",
+          "updatedAt": "2020-05-12T14:32:50Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "pls, see the #88 \r\n\r\nWe have to \"qualify\" this step well. I am happy to read alternatives. It remains to be vital independent of phrasing, I think.",
+              "createdAt": "2020-05-12T14:32:50Z",
+              "updatedAt": "2020-05-12T14:32:50Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTA3MTA3",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:34:34Z",
+          "updatedAt": "2020-05-12T14:34:34Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "Correct. That is a content oversight! It's on my list, but I made an error here by omitting that.\r\n\r\nAttestation Results have a certain \"time interval of validity\", which we have not talked about at all, yet? I assume?",
+              "createdAt": "2020-05-12T14:34:34Z",
+              "updatedAt": "2020-05-12T14:34:34Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTE2NzE1",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:44:18Z",
+          "updatedAt": "2020-05-12T14:44:19Z",
+          "comments": [
+            {
+              "originalPosition": 72,
+              "body": "I'm not sure why this should be Evidence specific?  (This also applies to Recentness above.)",
+              "createdAt": "2020-05-12T14:44:18Z",
+              "updatedAt": "2020-05-12T14:44:19Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTI1Mzc4",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:52:44Z",
+          "updatedAt": "2020-05-12T14:52:45Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "The thing I wanted to say is that any concept of \"recentness\" must come with an (either explicit or implicit) \"max-age\" label, otherwise it isn't actionable.",
+              "createdAt": "2020-05-12T14:52:45Z",
+              "updatedAt": "2020-05-12T14:52:59Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTI2NTUw",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T14:53:54Z",
+          "updatedAt": "2020-05-12T14:53:55Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "Sorry, I can't see anything below, even after refreshing the page.",
+              "createdAt": "2020-05-12T14:53:55Z",
+              "updatedAt": "2020-05-12T14:53:55Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTQ3Nzc4",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T15:14:37Z",
+          "updatedAt": "2020-05-12T15:14:37Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "Example: a nonce provided by a Verifier in a network protocol to retrieve Evidence from an Attester that is subsequently used in creating the Evidence enables a Verifier to assert that the reply from the Attester including the evidence was created upon the just emitted request of the Verifier; therefore establishing the most common method of providing a proof-of-recentness via a challenge/response remote attestation (CHARRA).\r\n\r\nMaybe I am missing something obvious here, but how is this mechanic not addressing the appraisal of \"recent creation of evidence\"?",
+              "createdAt": "2020-05-12T15:14:37Z",
+              "updatedAt": "2020-05-12T15:14:37Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTU1MzUy",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T15:22:16Z",
+          "updatedAt": "2020-05-12T15:22:17Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "Sry. \"Below\" was meant to refer to a different comment of yours on lines 376-379 (I am not sure how to ref that comment here).",
+              "createdAt": "2020-05-12T15:22:17Z",
+              "updatedAt": "2020-05-12T15:22:17Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTU4NTM1",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T15:25:30Z",
+          "updatedAt": "2020-05-12T15:25:30Z",
+          "comments": [
+            {
+              "originalPosition": 72,
+              "body": "The entire text I wrote was Evidence-specific. Your comment relates to Dave's on lines 340+343 (\"above\"). I am hesitant to extend this beyond the scope of Evidence and Attestation Results (the latter is missing). Would the scope of Evidence + Attestation Results be okay?",
+              "createdAt": "2020-05-12T15:25:30Z",
+              "updatedAt": "2020-05-12T15:25:30Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMjAwNjg0",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T16:10:24Z",
+          "updatedAt": "2020-05-12T16:10:25Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "In the example you make it's the _uniqueness_ property of the nonce that guarantees that the Evidence is fresh.  A nonce bears no recentness.",
+              "createdAt": "2020-05-12T16:10:25Z",
+              "updatedAt": "2020-05-12T16:11:43Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMjg2NTM2",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T17:54:28Z",
+          "updatedAt": "2020-05-12T17:54:29Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "Then no value, including the timestamp of a certificate, bears inherent recentness characteristics, yes?\r\n\r\nBut that is not correct in the context of the Challenge/Response handshake. Again, maybe I am missing something very obvious. Could you provide me with a protocol-based exemplary use of a nonce, generated by the challenger, where the reply that uses the nonce (most likely in a \"sealed\" way, such as digital signing) does not bear a proof-of-recentness by using that nonce in its reply?",
+              "createdAt": "2020-05-12T17:54:29Z",
+              "updatedAt": "2020-05-12T17:55:01Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMjk5NDI4",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T18:11:08Z",
+          "updatedAt": "2020-05-12T18:11:08Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "An additional clarifying comment:\r\n\r\nIf you add a timestamp that was generated on a responder in evidence, the \"meaning of recentness it bears\" is based on a trust relationship created by an endorser that vouches for the fact that \"timestamps from that attestation Evidence provenance\" are to be trusted. Alternatively, a challenger can simply establish a similar bi-lateral trust relationship by conducting a Challenge/Response handshake here. It is a smaller scoped trust relationship, it is temporary, and the challenger must at least be RESTful in order not to forget that it created the nonce in the Challenge. But then - in this context - the nonce created by the challenger \"bears recentness\" from the point of view of the Challenger, I would think. ",
+              "createdAt": "2020-05-12T18:11:08Z",
+              "updatedAt": "2020-05-12T18:11:08Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMzAyNDM3",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T18:15:12Z",
+          "updatedAt": "2020-05-12T18:15:13Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "The max-age in this case is not included in the evidence as a value, it is simply state (like... a Verifier measuring a time interval to the best of its capability) maintained by the challenger. In that way, like a secure channel enabling you to omit a signature, the nonce enables you to omit a max-age while retaining being actionable.\r\n\r\nI assume that you would see this as the concept of providing an 'implicit \"max-age\" label'. The use of a nonce explicitly enables that, I think.",
+              "createdAt": "2020-05-12T18:15:12Z",
+              "updatedAt": "2020-05-12T18:17:18Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMzEzNTA5",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T18:29:48Z",
+          "updatedAt": "2020-05-12T18:29:49Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "> Then no value, including the timestamp of a certificate, bears inherent recentness characteristics, yes?\r\n\r\nNot by itself.  You also need a synchronised clock and an expiry threshold to determine \u201cfreshness by recentness\u201d, at least in the sense I intend it.\r\n\r\n> But that is not correct in the context of the Challenge/Response handshake. Again, maybe I am missing something very obvious. Could you provide me with a protocol-based exemplary use of a nonce, generated by the challenger, where the reply that uses the nonce (most likely in a \"sealed\" way, such as digital signing) does not bear a proof-of-recentness by using that nonce in its reply?\r\n\r\nThis is IMO \u201cfreshness by uniqueness\u201d, in fact it doesn\u2019t require a clock nor an expiry to work, just a non-repeating source of byte strings.\r\n",
+              "createdAt": "2020-05-12T18:29:48Z",
+              "updatedAt": "2020-05-12T18:29:49Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMzMxNjcz",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T18:54:30Z",
+          "updatedAt": "2020-05-12T18:54:30Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "I guess my main point here is the following: if we need to go into the semantic finesse of distinguishing between the recentness and uniqueness aspects of freshness, then we need to make it worth the words we spend by _clearly_ separating the two.\r\n\r\nSince I've diluted it across a few different comments, it's maybe worth summing up the way I see the distinction working in practice :\r\n- uniqueness needs a source of non-repeatable byte strings and is completely driven by the requestor;\r\n- recentness needs synchronised clocks between requestor and responder and is conveyed via a timestamp plus an expiration threshold associated with the provided evidence / attestation result.\r\n\r\nThe problem I have with the current text when it says that nonces convey recentness is it seems to be blurring that distinction, therefore voiding the overall \"semantic finesse\" plan :-)\r\n",
+              "createdAt": "2020-05-12T18:54:30Z",
+              "updatedAt": "2020-05-12T18:54:30Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMDUxOTI5",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T15:37:27Z",
+          "updatedAt": "2020-05-13T15:37:27Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "> > Then no value, including the timestamp of a certificate, bears inherent recentness characteristics, yes?\r\n> \r\n> Not by itself. You also need a synchronised clock and an expiry threshold to determine \u201cfreshness by recentness\u201d, at least in the sense I intend it.\r\n\r\nThen I agree that without context, values never bear a meaning of recentness.\r\n\r\n\r\n\r\n> > Then no value, including the timestamp of a certificate, bears inherent recentness characteristics, yes?\r\n> \r\n> Not by itself. You also need a synchronised clock and an expiry threshold to determine \u201cfreshness by recentness\u201d, at least in the sense I intend it.\r\n> \r\n> > But that is not correct in the context of the Challenge/Response handshake. Again, maybe I am missing something very obvious. Could you provide me with a protocol-based exemplary use of a nonce, generated by the challenger, where the reply that uses the nonce (most likely in a \"sealed\" way, such as digital signing) does not bear a proof-of-recentness by using that nonce in its reply?\r\n> \r\n> This is IMO \u201cfreshness by uniqueness\u201d, in fact it doesn\u2019t require a clock nor an expiry to work, just a non-repeating source of byte strings.\r\n\r\nWell, the Verifier has to retain state, \"remembering the nonce\" until a certain time-out, which I think most certainly requires a clock. Otherwise, networks protocols would have a hard time.\r\n\r\nThe curious mixture of \"freshness by uniqueness\" is exactly the reason why I wrote the text. Typically \"freshness\" is used without context here. And we decided to provide more context because it is not \"freshness by uniqueness\" but \"recentness & uniqueness\" called freshness for simplicity, I think.",
+              "createdAt": "2020-05-13T15:37:27Z",
+              "updatedAt": "2020-05-13T15:37:27Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMDY1MDE5",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T15:51:18Z",
+          "updatedAt": "2020-05-13T15:51:19Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "> I guess my main point here is the following: if we need to go into the semantic finesse of distinguishing between the recentness and uniqueness aspects of freshness, then we need to make it worth the words we spend by _clearly_ separating the two.\r\n\r\nAbsolutely agreed.\r\n\r\n> * uniqueness needs a source of non-repeatable byte strings and is completely driven by the requestor;\r\n> \r\n> * recentness needs synchronised clocks between requestor and responder and is conveyed via a timestamp plus an expiration threshold associated with the provided evidence / attestation result.\r\n\r\nI am not entirely sure that uniqueness is always completely driven by the challenger/requester, but it most certainly can and is.\r\n\r\nI agree that recentness is based on synchronization and timestamps in TUDA, of course. I still do not understand how that is required for a Challenge/Response handshake, because there are conveyance mechanisms today that only need a clock on the Challenger side, measuring the time between a Challenge including a nonce and a Response including a digest of the nonce (in a secure channel or digitally signed).\r\n\r\n \r\n\r\n> The problem I have with the current text when it says that nonces convey recentness is it seems to be blurring that distinction, therefore voiding the overall \"semantic finesse\" plan :-)\r\n\r\nYou are correct that a nonce value by itself does not convey recentness :-) We wildly agree that even timestamp values do not do that. I think that is typically way harder to agree on. A nonce in a Challenge/Response interaction does convey recentness, but due to the context of the protocol mechanism - not by the value itself. I tried to always provide the context of the interaction model in the text, but i seems I was not successful with that.",
+              "createdAt": "2020-05-13T15:51:18Z",
+              "updatedAt": "2020-05-13T15:51:19Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMTEyMzM2",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T16:46:33Z",
+          "updatedAt": "2020-05-13T16:46:33Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "> Well, the Verifier has to retain state, \"remembering the nonce\" until a certain time-out, which I think most certainly requires a clock. Otherwise, networks protocols would have a hard time.\r\n\r\nI disagree, the existence of a garbage collector that sweeps allocated nonces at regular intervals (i.e., the \"remembering until time-out\") is just an implementation detail, it's not fundamental.\r\n\r\nWhat a nonce gives you is the assurance that *when* the transaction completes -- maybe one ms after the end of the universe! ;-) -- the response you get back is uniquely bound to your original request and there is no other transaction that could have produced the same response.  This is what I mean by freshness by uniqueness, which doesn't imply time and therefore clocks to measure it.\r\n",
+              "createdAt": "2020-05-13T16:46:33Z",
+              "updatedAt": "2020-05-13T16:50:03Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMTM4Nzgw",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T17:19:58Z",
+          "updatedAt": "2020-05-13T17:19:59Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "Okay :-) Let me rephrase that. A Challenger that intends to retrieve Evidence in a finite time, has a clock, and that intends to obtain a notion of recentness can track a time interval only using its clock to do this. The indicator for the duration here (duration being a time interval where the left time is an epoch starting with 0 at which the Challenge including a nonce is emitted and at the right time evidence including a digest of a nonce is received) is the time that has passed between Challenge and Response.\r\n\r\nVery small RESTful interactions as enabled via CoAP enable this (even with using an observe option) notion of recentness - intrinsically. Retaining state for an operation is not an implementation detail, I think. It is, for example required to associate CoAP tokens. Typically protocols use time-outs to avoid waiting until the end of the universe - and I think that is not an implementation detail, too, but an interaction model capability. The binding to what you call an transaction here, which typically is a operation I think, is what is the essential part to get a notion of recentness. \r\n\r\nIn contrast to your point, my point is that a re-use of a nonce that is cryptographically (and in this case uniquely) \"bound\" to a Response does not require synchronized clocks due to the \"recentness\" based on the uniqueness that is provided by the \"arbitrary number used only once in a cryptographic communication\" (nonce) intrinsically.\r\n\r\nEdit: maybe this will also help us to converge here :-)\r\nRFC4949 definition of a nonce\r\nA random or non-repeating value that is included in data exchanged by a protocol, usually for the purpose of guaranteeing liveness and thus detecting and protecting gainst replay attacks.\r\n\r\nIn consequence, I think:\r\n\r\n1.) \"recentness by uniqueness\" is an over-simplification (you could receive two responses based on the same nonce, violating uniqueness wrt the nonce, and still only process the most recent response via sequence or clock use), and\r\n2.) \"recentness needs synchronized clocks between requestor and responder and is conveyed via a timestamp plus an expiration threshold associated with the provided evidence / attestation result.\" is not correct, due to being too specific (you do not always need synchronized clocks) and unnecessary limiting (you do not necessarily need time-stamps and or expiration dates).\r\n\r\nIf I would only look at the interaction model of TUDA, I would agree! :-) But looking at charra, tuda and subscribed evidence, I think I still cannot agree.\r\n\r\nEdit: I think I have to highlight that this is about the conveyance of evidence - only! As noted in another comment, a \"time of validity\" for, e.g. Attestation Results, is another matter of \"freshness\" that is not addressed in the current text. \r\n\r\n",
+              "createdAt": "2020-05-13T17:19:59Z",
+              "updatedAt": "2020-05-13T17:36:05Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMTUxNzQz",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T17:36:50Z",
+          "updatedAt": "2020-05-13T17:36:51Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "OK, it seems like we agree to disagree then :-)",
+              "createdAt": "2020-05-13T17:36:50Z",
+              "updatedAt": "2020-05-13T17:36:51Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMTU2NDMz",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T17:43:14Z",
+          "updatedAt": "2020-05-13T17:43:14Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "I assume there is common ground somewhere :-) Illustrating the different aspects about freshness for conceptual messages generally, might help us to converge maybe? Appraisal Policies enable a period or maybe even duration of validity for Attestation Evidence. Then synchronized clocks are a vital part here. \r\n\r\nAlso, there might be other opinions out there?",
+              "createdAt": "2020-05-13T17:43:14Z",
+              "updatedAt": "2020-05-13T17:43:14Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMjA3Njgw",
+          "commit": {
+            "abbreviatedOid": "49750bd"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T18:51:45Z",
+          "updatedAt": "2020-05-13T18:51:46Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "> I assume there is common ground somewhere :-) \r\n\r\nAs much as I'd like to, I think our paths diverge a bit too early to try and reconcile.\r\n\r\nRe-reading your last batch of replies, though, I've found something I think you are 100% correct:\r\n\r\n> you do not always need synchronized clocks\r\n\r\ntrue!  You only need that when the requestor depends on an _explicit_ timestamp set by the responder.\r\n",
+              "createdAt": "2020-05-13T18:51:45Z",
+              "updatedAt": "2020-05-14T09:26:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 88,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDE2NzQzMTkx",
+      "title": "Yet another update to Time Considerations",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/88",
+      "state": "OPEN",
+      "author": "henkbirkholz",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "only the most essential items:\r\n* added three more timestamp types based on TUDA, trying to generalize it a bit\r\n* added a few periods to text that seems to express sentences",
+      "createdAt": "2020-05-12T13:56:46Z",
+      "updatedAt": "2020-05-12T15:18:45Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "more-time-considerations",
+      "headRefOid": "a10947251c2f35e1fa02e88db5b8764922a6666f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTM5NzUz",
+          "commit": {
+            "abbreviatedOid": "a109472"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T15:06:22Z",
+          "updatedAt": "2020-05-12T15:06:22Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "Duplicate \"examples\".\r\n\r\n(I really prefer how it read before.)",
+              "createdAt": "2020-05-12T15:06:22Z",
+              "updatedAt": "2020-05-12T15:06:22Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwMTUxODEw",
+          "commit": {
+            "abbreviatedOid": "a109472"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-12T15:18:45Z",
+          "updatedAt": "2020-05-12T15:18:45Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "Yes. Redundant \"example\" is redundant. Alas, we cannot start standards text with \"We now walk\". The alternate text was written too hastily be me.",
+              "createdAt": "2020-05-12T15:18:45Z",
+              "updatedAt": "2020-05-12T15:18:45Z"
             }
           ]
         }
