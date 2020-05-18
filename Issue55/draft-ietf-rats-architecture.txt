@@ -5,14 +5,14 @@
 RATS Working Group                                           H. Birkholz
 Internet-Draft                                            Fraunhofer SIT
 Intended status: Informational                                 D. Thaler
-Expires: 6 November 2020                                       Microsoft
+Expires: 19 November 2020                                      Microsoft
                                                            M. Richardson
                                                 Sandelman Software Works
                                                                 N. Smith
                                                                    Intel
                                                                   W. Pan
                                                      Huawei Technologies
-                                                              5 May 2020
+                                                             18 May 2020
 
 
                Remote Attestation Procedures Architecture
@@ -48,20 +48,22 @@ Status of This Memo
    working documents as Internet-Drafts.  The list of current Internet-
    Drafts is at https://datatracker.ietf.org/drafts/current/.
 
-   Internet-Drafts are draft documents valid for a maximum of six months
-   and may be updated, replaced, or obsoleted by other documents at any
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 1]
+
+
+Birkholz, et al.        Expires 19 November 2020                [Page 1]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 November 2020.
+   This Internet-Draft will expire on 19 November 2020.
 
 Copyright Notice
 
@@ -104,22 +106,22 @@ Table of Contents
      8.3.  Attestation Results . . . . . . . . . . . . . . . . . . .  21
    9.  Claims Encoding Formats . . . . . . . . . . . . . . . . . . .  22
    10. Freshness . . . . . . . . . . . . . . . . . . . . . . . . . .  24
-   11. Privacy Considerations  . . . . . . . . . . . . . . . . . . .  24
-   12. Security Considerations . . . . . . . . . . . . . . . . . . .  25
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 2]
+Birkholz, et al.        Expires 19 November 2020                [Page 2]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
-   13. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  25
+   11. Privacy Considerations  . . . . . . . . . . . . . . . . . . .  25
+   12. Security Considerations . . . . . . . . . . . . . . . . . . .  25
+   13. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  26
    14. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  26
    15. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  26
    16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  26
      16.1.  Normative References . . . . . . . . . . . . . . . . . .  26
-     16.2.  Informative References . . . . . . . . . . . . . . . . .  26
+     16.2.  Informative References . . . . . . . . . . . . . . . . .  27
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  27
 
 1.  Introduction
@@ -159,16 +161,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    This document uses the following terms.
 
-   Appraisal Policy for Evidence:  A set of rules that direct how a
-      Verifier evaluates the validity of information about an Attester.
-      Compare /security policy/ in [RFC4949]
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 3]
+
+Birkholz, et al.        Expires 19 November 2020                [Page 3]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
+
+   Appraisal Policy for Evidence:  A set of rules that direct how a
+      Verifier evaluates the validity of information about an Attester.
+      Compare /security policy/ in [RFC4949]
 
    Appraisal Policy for Attestation Result:  A set of rules that direct
       how a Relying Party uses the Attestation Results regarding an
@@ -195,18 +199,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Evidence:  A set of information that asserts the trustworthiness
       status of an Attester, that is appraised by a Verifier
 
-   Relying Party:  An entity (typically an application), that depends on
-      the validity of information about an Attester, for purposes of
-      reliably applying application specific actions.  Compare /relying
-      party/ in [RFC4949]
+   Relying Party:  An entity, that depends on the validity of
+      information about an Attester, for purposes of reliably applying
+      application specific actions.  Compare /relying party/ in
+      [RFC4949]
 
    Relying Party Owner:  An entity (typically an administrator), that is
       authorized to configure Appraisal Policy for Attestation Results
       in a Relying Party
 
-   Verifier:  An entity (typically a service provider), that appraises
-      the validity of Evidence about an Attester and produces
-      Attestation Results to be used by a Relying Party
+   Verifier:  An entity (typically a service), that appraises the
+      validity of Evidence about an Attester and produces Attestation
+      Results to be used by a Relying Party
 
    Verifier Owner:  An entity (typically an administrator), that is
       authorized to configure Appraisal Policy for Evidence in a
@@ -217,11 +221,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-
-
-
-Birkholz, et al.         Expires 6 November 2020                [Page 4]
+Birkholz, et al.        Expires 19 November 2020                [Page 4]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -277,7 +277,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 5]
+Birkholz, et al.        Expires 19 November 2020                [Page 5]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -333,7 +333,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 6]
+Birkholz, et al.        Expires 19 November 2020                [Page 6]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -389,7 +389,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 7]
+Birkholz, et al.        Expires 19 November 2020                [Page 7]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 8]
+Birkholz, et al.        Expires 19 November 2020                [Page 8]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -501,7 +501,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020                [Page 9]
+Birkholz, et al.        Expires 19 November 2020                [Page 9]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -557,7 +557,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 10]
+Birkholz, et al.        Expires 19 November 2020               [Page 10]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -608,16 +608,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    boot-cycle of a composite device, the Claims collected typically
    cannot be composed into Evidence.
 
-   The very first Attesting Environment in this example can be a
-   hardware component that is a Static Code Root of Trust.  As in any
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 11]
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 11]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   The very first Attesting Environment in this example can be a
+   hardware component that is a Static Code Root of Trust.  As in any
    other scenario, this hardware component is the first Attesting
    Environment.  It collects a rather concise number of Claims about the
    Target Environment.  The Target Environment in this example is the
@@ -663,17 +665,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
        [Henk: we might have to define what successful
        means in this example and beyond]
 
-   The essence of this example is a cascade of staged boot environments.
-   Each environment (after the initial one that is a root-of-trust) has
-   the duty of measuring its next environment before it is started.
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 12]
+
+Birkholz, et al.        Expires 19 November 2020               [Page 12]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   The essence of this example is a cascade of staged boot environments.
+   Each environment (after the initial one that is a root-of-trust) has
+   the duty of measuring its next environment before it is started.
    Therefore, creating a layered boot sequence and correspondingly
    enabling Layered Attestation.
 
@@ -722,10 +725,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 13]
+Birkholz, et al.        Expires 19 November 2020               [Page 13]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -781,7 +781,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 14]
+Birkholz, et al.        Expires 19 November 2020               [Page 14]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -837,7 +837,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 15]
+Birkholz, et al.        Expires 19 November 2020               [Page 15]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -893,7 +893,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 16]
+Birkholz, et al.        Expires 19 November 2020               [Page 16]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -949,7 +949,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 17]
+Birkholz, et al.        Expires 19 November 2020               [Page 17]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1005,7 +1005,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 18]
+Birkholz, et al.        Expires 19 November 2020               [Page 18]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1056,16 +1056,18 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    trustworthiness of the Verifier before accepting its Attestation
    Results.
 
-   The Endorser and Verifier Owner may need to trust the Verifier before
-   giving the Endorsement and Appraisal Policy to it.  Such trust can
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 19]
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 19]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
+   The Endorser and Verifier Owner may need to trust the Verifier before
+   giving the Endorsement and Appraisal Policy to it.  Such trust can
    also be established directly or indirectly, implicitly or explicitly.
    One explicit way to establish such trust may be the Verifier first
    acts as an Attester and creates Evidence about itself to be consumed
@@ -1115,9 +1117,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 20]
+Birkholz, et al.        Expires 19 November 2020               [Page 20]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1173,7 +1173,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 21]
+Birkholz, et al.        Expires 19 November 2020               [Page 21]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1215,6 +1215,25 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    of authentication and authorization.  Common formats include JWTs
    [RFC7519], CWTs [RFC8392], and X.509 certificates.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 22]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
    To enable remote attestation to be added to existing protocols,
    enabling a higher level of assurance against malware for example, it
    is important that information needed for appraising the Attester be
@@ -1225,15 +1244,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    embedded into an X.509 certificate to be passed in the protocol.
    Thus, remote attestation related information could be natively
    encoded in X.509 certificate extensions, or could be natively encoded
-
-
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 22]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
    in some other format (e.g., a CWT) which in turn is then encoded in
    an X.509 certificate extension.
 
@@ -1258,6 +1268,28 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Evidence that encodes claims in one format, while issuing Attestation
    Results that encode claims in a different format.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 23]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
                    Evidence           Attestation Results
    .--------------.   CWT                    CWT   .-------------------.
    |  Attester-A  |------------.      .----------->|  Relying Party V  |
@@ -1277,18 +1309,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
       Figure 9: Multiple Attesters and Relying Parties with Different
                                   Formats
-
-
-
-
-
-
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 23]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
 
 10.  Freshness
 
@@ -1312,6 +1332,19 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    along with the claims in the Evidence or Attestation Result, so that
    the remote entity knows that the claims were signed after the nonce
    was generated.
+
+
+
+
+
+
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 24]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
    A second approach is to rely on synchronized clocks, and include a
    signed timestamp (e.g., using [I-D.birkholz-rats-tuda]) along with
@@ -1339,13 +1372,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    that a device is running a weak version of firmware provides a way to
    aim attacks better.
 
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 24]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
    Evidence and Attestation Results data structures are expected to
    support integrity protection encoding (e.g., COSE, JOSE, X.509) and
    optionally might support confidentiality protection (e.g., COSE,
@@ -1365,6 +1391,16 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    replay, denial of service and privacy protection are needed in many
    use cases.  Section 10 discusses ways in which freshness can be used
    in this architecture to protect against replay attacks.
+
+
+
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 25]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
    To assess the security provided by a particular Appraisal Policy, it
    is important to understand the strength of the Root of Trust, e.g.,
@@ -1391,17 +1427,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    This document does not require any actions by IANA.
 
-
-
-
-
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 25]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
 14.  Acknowledgments
 
    Special thanks go to Joerg Borchert, Nancy Cam-Winget, Jessica
@@ -1425,6 +1450,13 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    [RFC7519]  Jones, M., Bradley, J., and N. Sakimura, "JSON Web Token
               (JWT)", RFC 7519, DOI 10.17487/RFC7519, May 2015,
               <https://www.rfc-editor.org/info/rfc7519>.
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 26]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
    [RFC8392]  Jones, M., Wahlstroem, E., Erdtman, S., and H. Tschofenig,
               "CBOR Web Token (CWT)", RFC 8392, DOI 10.17487/RFC8392,
@@ -1450,14 +1482,6 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    [OPCUA]    OPC Foundation, "OPC Unified Architecture Specification,
               Part 2: Security Model, Release 1.03", OPC 10000-2 , 25
               November 2015, <https://opcfoundation.org/developer-tools/
-
-
-
-Birkholz, et al.         Expires 6 November 2020               [Page 26]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
               specifications-unified-architecture/part-2-security-
               model/>.
 
@@ -1481,6 +1505,13 @@ Authors' Addresses
    United States of America
 
    Email: dthaler@microsoft.com
+
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 27]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
 
 
    Michael Richardson
@@ -1509,4 +1540,29 @@ Authors' Addresses
 
 
 
-Birkholz, et al.         Expires 6 November 2020               [Page 27]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.        Expires 19 November 2020               [Page 28]
