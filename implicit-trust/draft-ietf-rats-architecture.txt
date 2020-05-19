@@ -1055,8 +1055,8 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    1.  The key used to authenticate and integrity protect the conveyance
        channel is trusted by the Verifier to speak for the Attesting
-       Environment(s) that collected claims about the Target
-       Environment(s).
+       Environment that collected claims about the Target Environment.
+
 
 
 
