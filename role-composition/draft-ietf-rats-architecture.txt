@@ -1020,9 +1020,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    devices connected to the system bus that implement Attester roles.
    As a wide-area network connected entity, it may implement an Attester
    role.  The entity, as a system bus Verifier, may choose to fully
-   isolate its role as a wide-area network Attester.  Alternatively,
-   Attestation Results might reflect an aggregation of system bus
-   operational state claims in the form of Evidence.
+   isolate its role as a wide-area network Attester.
 
    In essence, an entity that combines more than one role also creates
    and consumes the corresponding conceptual messages as defined in this
@@ -1058,6 +1056,8 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    appraise the trustworthiness of that manufacturer's devices.  In
    solutions with weaker security, a Verifier might be configured to
    implicitly trust firmware or even software (e.g., a hypervisor).
+   That is, it might appraise the trustworthiness of an application
+   component, or operating system component or service, under the
 
 
 
@@ -1066,8 +1066,6 @@ Birkholz, et al.        Expires 20 November 2020               [Page 19]
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
-   That is, it might appraise the trustworthiness of an application
-   component, or operating system component or service, under the
    assumption that information provided about it by the lower-layer
    hypervisor or firmware is true.  A stronger level of security comes
    when information can be vouched for by hardware or by ROM code,
@@ -1113,7 +1111,9 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    reference values, or an Appraisal Policy might have a set of more
    complex logic on how to appraise the validity of information.
 
-
+   However, while an Appraisal Policy that treats all devices from a
+   given manufacturer the same may be appropriate for some use cases, it
+   would be inappropriate to use such an Appraisal Policy as the sole
 
 
 
@@ -1122,9 +1122,6 @@ Birkholz, et al.        Expires 20 November 2020               [Page 20]
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
-   However, while an Appraisal Policy that treats all devices from a
-   given manufacturer the same may be appropriate for some use cases, it
-   would be inappropriate to use such an Appraisal Policy as the sole
    means of authorization for use cases that wish to constrain _which_
    compliant devices are considered authorized for some purpose.  For
    example, an enterprise using remote attestation for Network Endpoint
@@ -1166,8 +1163,11 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    based on standard ways of expressing the information, while still
    allowing interoperability with heterogeneous devices.
 
-
-
+   Finally, whereas Evidence is signed by the device (or indirectly by a
+   manufacturer, if Endorsements are used), Attestation Results are
+   signed by a Verifier, allowing a Relying Party to only need a trust
+   relationship with one entity, rather than a larger set of entities,
+   for purposes of its Appraisal Policy.
 
 
 
@@ -1177,12 +1177,6 @@ Birkholz, et al.        Expires 20 November 2020               [Page 21]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
-
-   Finally, whereas Evidence is signed by the device (or indirectly by a
-   manufacturer, if Endorsements are used), Attestation Results are
-   signed by a Verifier, allowing a Relying Party to only need a trust
-   relationship with one entity, rather than a larger set of entities,
-   for purposes of its Appraisal Policy.
 
 9.  Claims Encoding Formats
 
@@ -1225,6 +1219,12 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    the information natively in the format that is natural for the
    Relying Party.
 
+   This motivates having a common "information model" that describes the
+   set of remote attestation related information in an encoding-agnostic
+   way, and allowing multiple encoding formats (CWT, JWT, X.509, etc.)
+   that encode the same information into the claims format needed by the
+   Relying Party.
+
 
 
 
@@ -1233,12 +1233,6 @@ Birkholz, et al.        Expires 20 November 2020               [Page 22]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
-
-   This motivates having a common "information model" that describes the
-   set of remote attestation related information in an encoding-agnostic
-   way, and allowing multiple encoding formats (CWT, JWT, X.509, etc.)
-   that encode the same information into the claims format needed by the
-   Relying Party.
 
    The following diagram illustrates that Evidence and Attestation
    Results might each have multiple possible encoding formats, so that
@@ -1281,6 +1275,12 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    Evidence or Attestation Result was generated.  The goal is merely to
    narrow the time window to something the Verifier (for Evidence) or
    Relying Party (for an Attestation Result) is willing to accept.
+
+
+
+
+
+
 
 
 
