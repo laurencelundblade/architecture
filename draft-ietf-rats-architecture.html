@@ -1928,12 +1928,22 @@ A stronger level of security comes when information can be vouched
 for by hardware or by ROM code, especially if such hardware is
 physically resistant to hardware tampering.  The component that is
 implicitly trusted is often referred to as a Root of Trust.<a href="#section-7-3" class="pilcrow">¶</a></p>
-<p id="section-7-4">In some scenarios, Evidence might contain sensitive information such as
+<p id="section-7-4">A conveyance protocol that provides authentication and integrity protection can be used
+to convey unprotected Evidence, assuming the following properties exists:<a href="#section-7-4" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-7-5">
+        <li id="section-7-5.1">The key material used to authenticate and integrity protect the conveyance channel is trusted by the Verifier to speak for the Attesting Environment(s) that collected claims about the Target Environment(s).<a href="#section-7-5.1" class="pilcrow">¶</a>
+</li>
+<li id="section-7-5.2">All unprotected Evidence that is conveyed is supplied exclusively by the Attesting Environment that has the key  material that protects the conveyance channel<a href="#section-7-5.2" class="pilcrow">¶</a>
+</li>
+<li id="section-7-5.3">The Root of Trust protects both the conveyance channel key material and the Attesting Environment with equivalent strength protections.<a href="#section-7-5.3" class="pilcrow">¶</a>
+</li>
+</ol>
+<p id="section-7-6">In some scenarios, Evidence might contain sensitive information such as
 Personally Identifiable Information.
 Thus, an Attester must trust entities to which it conveys Evidence, to not
 reveal sensitive data to unauthorized parties.
 The Verifier might share this information with other authorized parties, according rules that it controls.
-In the background-check model, this Evidence may also be revealed to Relying Party(s).<a href="#section-7-4" class="pilcrow">¶</a></p>
+In the background-check model, this Evidence may also be revealed to Relying Party(s).<a href="#section-7-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="messages">
