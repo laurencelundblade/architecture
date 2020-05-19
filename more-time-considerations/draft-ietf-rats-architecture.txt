@@ -5,14 +5,14 @@
 RATS Working Group                                           H. Birkholz
 Internet-Draft                                            Fraunhofer SIT
 Intended status: Informational                                 D. Thaler
-Expires: 13 November 2020                                      Microsoft
+Expires: 20 November 2020                                      Microsoft
                                                            M. Richardson
                                                 Sandelman Software Works
                                                                 N. Smith
                                                                    Intel
                                                                   W. Pan
                                                      Huawei Technologies
-                                                             12 May 2020
+                                                             19 May 2020
 
 
                Remote Attestation Procedures Architecture
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 1]
+Birkholz, et al.        Expires 20 November 2020                [Page 1]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -63,7 +63,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 November 2020.
+   This Internet-Draft will expire on 20 November 2020.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 2]
+Birkholz, et al.        Expires 20 November 2020                [Page 2]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -124,11 +124,11 @@ Internet-Draft              RATS Arch & Terms                   May 2020
      15.2.  Example 2: Nonce-based Passport Model Example  . . . . .  29
      15.3.  Example 3: Timestamp-based Background-Check Model
             Example  . . . . . . . . . . . . . . . . . . . . . . . .  30
-     15.4.  Example 4: Nonce-based Background-Check Model Example  .  30
-   16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  31
-     16.1.  Normative References . . . . . . . . . . . . . . . . . .  31
-     16.2.  Informative References . . . . . . . . . . . . . . . . .  31
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  32
+     15.4.  Example 4: Nonce-based Background-Check Model Example  .  31
+   16. References  . . . . . . . . . . . . . . . . . . . . . . . . .  32
+     16.1.  Normative References . . . . . . . . . . . . . . . . . .  32
+     16.2.  Informative References . . . . . . . . . . . . . . . . .  32
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  33
 
 1.  Introduction
 
@@ -165,7 +165,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 3]
+Birkholz, et al.        Expires 20 November 2020                [Page 3]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -221,7 +221,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 4]
+Birkholz, et al.        Expires 20 November 2020                [Page 4]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -277,7 +277,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 5]
+Birkholz, et al.        Expires 20 November 2020                [Page 5]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -333,7 +333,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 6]
+Birkholz, et al.        Expires 20 November 2020                [Page 6]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -389,7 +389,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 7]
+Birkholz, et al.        Expires 20 November 2020                [Page 7]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 8]
+Birkholz, et al.        Expires 20 November 2020                [Page 8]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -501,7 +501,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020                [Page 9]
+Birkholz, et al.        Expires 20 November 2020                [Page 9]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -557,7 +557,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 10]
+Birkholz, et al.        Expires 20 November 2020               [Page 10]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -613,7 +613,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 11]
+Birkholz, et al.        Expires 20 November 2020               [Page 11]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -669,7 +669,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 12]
+Birkholz, et al.        Expires 20 November 2020               [Page 12]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -725,7 +725,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 13]
+Birkholz, et al.        Expires 20 November 2020               [Page 13]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -781,7 +781,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 14]
+Birkholz, et al.        Expires 20 November 2020               [Page 14]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -837,7 +837,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 15]
+Birkholz, et al.        Expires 20 November 2020               [Page 15]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -893,7 +893,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 16]
+Birkholz, et al.        Expires 20 November 2020               [Page 16]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -949,7 +949,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 17]
+Birkholz, et al.        Expires 20 November 2020               [Page 17]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1005,7 +1005,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 18]
+Birkholz, et al.        Expires 20 November 2020               [Page 18]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1061,7 +1061,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 19]
+Birkholz, et al.        Expires 20 November 2020               [Page 19]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1117,7 +1117,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 20]
+Birkholz, et al.        Expires 20 November 2020               [Page 20]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1173,7 +1173,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 21]
+Birkholz, et al.        Expires 20 November 2020               [Page 21]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1229,7 +1229,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 22]
+Birkholz, et al.        Expires 20 November 2020               [Page 22]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1285,7 +1285,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 23]
+Birkholz, et al.        Expires 20 November 2020               [Page 23]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1341,7 +1341,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 24]
+Birkholz, et al.        Expires 20 November 2020               [Page 24]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1397,7 +1397,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 25]
+Birkholz, et al.        Expires 20 November 2020               [Page 25]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1453,7 +1453,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 26]
+Birkholz, et al.        Expires 20 November 2020               [Page 26]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1509,7 +1509,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 27]
+Birkholz, et al.        Expires 20 November 2020               [Page 27]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1565,7 +1565,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 28]
+Birkholz, et al.        Expires 20 November 2020               [Page 28]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1621,7 +1621,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 29]
+Birkholz, et al.        Expires 20 November 2020               [Page 29]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1644,15 +1644,17 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 15.3.  Example 3: Timestamp-based Background-Check Model Example
 
    The following example illustrates a hypothetical Background-Check
-   Model solution that uses timestamps and requires roughly synchronized
-   clocks between the Attester, Verifier, and Relying Party.
+   Model solution that uses timestamps and requires synchronized clocks
+   between the Attester, Verifier, and Relying Party.
 
    .----------.         .---------------.              .----------.
    | Attester |         | Relying Party |              | Verifier |
    '----------'         '---------------'              '----------'
      time(VG)                   |                           |
            |                    |                           |
-           ~                    ~                           ~
+     time(AA)                   |                           |
+           |                    |                           |
+     time(HD)                   |                           |
            |                    |                           |
      time(EG)                   |                           |
            |----Evidence------->|                           |
@@ -1664,8 +1666,46 @@ Internet-Draft              RATS Arch & Terms                   May 2020
            |                    |                           |
            |                 time(OP)                       |
 
-   The time considerations in this example are equivalent to those
-   discussed under Example 1 above.
+   In comparison with example 1, the time considerations in this example
+   go into more detail with respect to the life-cycle of Claims and the
+   requirements on time synchronization and corresponding timestamps.
+
+   The goal is to create up-to-date and recent Evidence as soon as
+   possible, in general.
+
+
+
+
+
+Birkholz, et al.        Expires 20 November 2020               [Page 30]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
+
+   At time(AA) the Attesting Environment is able to trigger an event
+   (e.g. based on an Event-Condition-Action model) to create attestation
+   Evidence as recent as possible.  As soon as the Attesting Environment
+   is aware, the new values are collected for composition into
+   semantically enriched Claims at time Time(CC).  Immediately after
+   that, Evidence based on relevant "old" Claims and the most recent
+   collected "new" Claims is generated at time(EG).
+
+   In order to create attestation on demand due to the event trigger
+   time(AA) at the time(EG), the Attester has be in synchronized state
+   with respect to the Verifiers perception of global time.  In order to
+   accomplish his, the Attester has to have an identifier for time-bound
+   recentness available at any time(HD) before time(EG) where the time
+   interval between time(HD) and time(EG) is not too large due to time
+   drift or other synchronization disablers
+   (delta(time(HD),time(EG)<threshold)).
+
+   In this usage scenario, time(VG), time(AA), and time (EG) are tightly
+   coupled in timely fashin so that the resultung attestation Evidence
+   is created most recently and as fresh as possible.  If, for example,
+   a identifier for time-bound recentness, such as a synchronization
+   token, is not avilble when the chain of actions is triggered at
+   time(AA), there recentness characteristics of the created attestation
+   Evidence are impared.
 
 15.4.  Example 4: Nonce-based Background-Check Model Example
 
@@ -1677,7 +1717,23 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 30]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Birkholz, et al.        Expires 20 November 2020               [Page 31]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1733,7 +1789,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 31]
+Birkholz, et al.        Expires 20 November 2020               [Page 32]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1789,7 +1845,7 @@ Authors' Addresses
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 32]
+Birkholz, et al.        Expires 20 November 2020               [Page 33]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1845,4 +1901,4 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 13 November 2020               [Page 33]
+Birkholz, et al.        Expires 20 November 2020               [Page 34]

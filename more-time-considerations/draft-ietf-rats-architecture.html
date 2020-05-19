@@ -839,7 +839,7 @@ table.left {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Birkholz, et al.</td>
-<td class="center">Expires 13 November 2020</td>
+<td class="center">Expires 20 November 2020</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -852,12 +852,12 @@ table.left {
 <dd class="internet-draft">draft-ietf-rats-architecture-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2020-05-12" class="published">12 May 2020</time>
+<time datetime="2020-05-19" class="published">19 May 2020</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2020-11-13">13 November 2020</time></dd>
+<dd class="expires"><time datetime="2020-11-20">20 November 2020</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -921,7 +921,7 @@ remote attestation procedures (RATS).<a href="#section-abstract-1" class="pilcro
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 13 November 2020.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 20 November 2020.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2441,7 +2441,7 @@ in terms of time(RX)-time(RG), then the Relying Party can check
 <a href="#section-15.3" class="section-number selfRef">15.3. </a><a href="#name-example-3-timestamp-based-b" class="section-name selfRef">Example 3: Timestamp-based Background-Check Model Example</a>
         </h3>
 <p id="section-15.3-1">The following example illustrates a hypothetical Background-Check Model
-solution that uses timestamps and requires roughly synchronized
+solution that uses timestamps and requires synchronized
 clocks between the Attester, Verifier, and Relying Party.<a href="#section-15.3-1" class="pilcrow">¶</a></p>
 <div class="artwork art-text alignLeft" id="section-15.3-2">
 <pre>
@@ -2450,7 +2450,9 @@ clocks between the Attester, Verifier, and Relying Party.<a href="#section-15.3-
 '----------'         '---------------'              '----------'
   time(VG)                   |                           |
         |                    |                           |
-        ~                    ~                           ~
+  time(AA)                   |                           |
+        |                    |                           |
+  time(HD)                   |                           |
         |                    |                           |
   time(EG)                   |                           |
         |----Evidence-------&gt;|                           |
@@ -2463,8 +2465,11 @@ clocks between the Attester, Verifier, and Relying Party.<a href="#section-15.3-
         |                 time(OP)                       |
 </pre><a href="#section-15.3-2" class="pilcrow">¶</a>
 </div>
-<p id="section-15.3-3">The time considerations in this example are equivalent to those
-discussed under Example 1 above.<a href="#section-15.3-3" class="pilcrow">¶</a></p>
+<p id="section-15.3-3">In comparison with example 1, the time considerations in this example go into more detail with respect to the life-cycle of Claims and the requirements on time synchronization and corresponding timestamps.<a href="#section-15.3-3" class="pilcrow">¶</a></p>
+<p id="section-15.3-4">The goal is to create up-to-date and recent Evidence as soon as possible, in general.<a href="#section-15.3-4" class="pilcrow">¶</a></p>
+<p id="section-15.3-5">At time(AA) the Attesting Environment is able to trigger an event (e.g. based on an Event-Condition-Action model) to create attestation Evidence as recent as possible. As soon as the Attesting Environment is aware, the new values are collected for composition into semantically enriched Claims at time Time(CC). Immediately after that, Evidence based on relevant "old" Claims and the most recent collected "new" Claims is generated at time(EG).<a href="#section-15.3-5" class="pilcrow">¶</a></p>
+<p id="section-15.3-6">In order to create attestation on demand due to the event trigger time(AA) at the time(EG), the Attester has be in synchronized state with respect to the Verifiers perception of global time. In order to accomplish his, the Attester has to have an identifier for time-bound recentness available at any time(HD) before time(EG) where the time interval between time(HD) and time(EG) is not too large due to time drift or other synchronization disablers (delta(time(HD),time(EG)&lt;threshold)).<a href="#section-15.3-6" class="pilcrow">¶</a></p>
+<p id="section-15.3-7">In this usage scenario, time(VG), time(AA), and time (EG) are tightly coupled in timely fashin so that the resultung attestation Evidence is created most recently and as fresh as possible. If, for example, a identifier for time-bound recentness, such as a synchronization token, is not avilble when the chain of actions is triggered at time(AA), there recentness characteristics of the created attestation Evidence are impared.<a href="#section-15.3-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="example-4-nonce-based-background-check-model-example">
