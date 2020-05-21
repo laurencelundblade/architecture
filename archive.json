@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-19T12:35:12.727849+00:00",
+  "timestamp": "2020-05-21T22:27:44.064841+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -235,7 +235,7 @@
       "id": "MDU6SXNzdWU1NTI2ODk0ODU=",
       "title": "Entity and Sub-Entity & Composite Device and Component",
       "url": "https://github.com/ietf-rats-wg/architecture/issues/19",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "henkbirkholz",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -244,8 +244,8 @@
       "labels": [],
       "body": "Taking into account the recent trends in terminology used in draft text & PR, I am proposing to add Entity and Sub-Entity to the terminology section. We do not need to over-specify here. Hence, only mentioning Composite Device and Components as an examplew for each of the terms in the definition text could be enough.\r\n\r\nAre there any objections to this proposal? If not, we could create a PR and address it in next week's meeting.",
       "createdAt": "2020-01-21T08:11:38Z",
-      "updatedAt": "2020-04-21T10:09:24Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-19T14:23:30Z",
+      "closedAt": "2020-05-19T14:23:30Z",
       "comments": [
         {
           "author": "nedmsmith",
@@ -7102,17 +7102,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0Mzk0NzYxMjk2",
       "title": "addressed a better differentiation between \"combining roles\" and \"topological models\"",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/77",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "henkbirkholz",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "* added 4.4 \"Roles and Entities\",\r\n* also removed the last occurrence of the artifact \"role composition\", and\r\n* retained section 4.3 as is and added the usage scenario from issue #73\r\n\r\n",
       "createdAt": "2020-03-27T13:42:45Z",
-      "updatedAt": "2020-04-28T14:09:16Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
+      "updatedAt": "2020-05-19T14:23:58Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "5ed55a0336ba100347d0053c33c8925ae25ed0a1",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "role-composition",
+      "headRefOid": "f6cbbb29875da9700040d40d976af10f757a9d7a",
+      "closedAt": "2020-05-19T14:23:30Z",
+      "mergedAt": "2020-05-19T14:23:30Z",
+      "mergedBy": "mcr",
+      "mergeCommit": {
+        "oid": "a506163d20feb0845fe22ca010381562dae31ebe"
+      },
       "comments": [],
       "reviews": [
         {
@@ -7131,37 +7140,37 @@
               "originalPosition": 15,
               "body": "Line is too long in the markdown, please split into multiple source lines to make diffs/commenting easier.",
               "createdAt": "2020-03-27T13:55:02Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 13,
               "body": "My opinion: I don't like trying to make \"Entities\" some formal term.   I suspect \"implementation\" works in most cases in the text below",
               "createdAt": "2020-03-27T13:55:39Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 15,
               "body": "typo: \"on\" -> \"one\"",
               "createdAt": "2020-03-27T13:55:53Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 15,
               "body": "Always put a comma after e.g.",
               "createdAt": "2020-03-27T13:56:55Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 17,
               "body": "```suggestion\r\nAn exemplary usage scenario: An entity that both connects to a wide-area network and to a system bus taking on both the Attester and Verifier roles. As a system bus entity, a Verifier consumes Evidence from other devices connected to the system bus that implement Attester roles. As a wide-area network connected entity, it may implement an Attester role. The entity, as a system bus Verifier, may choose to fully isolate its role as a wide-area network Attester. Alternatively, Attestation Results might reflect an aggregation of system bus operational state claims in the form of Evidence.\r\n```",
               "createdAt": "2020-03-27T13:57:21Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 17,
               "body": "\"An exemplary usage scenario:\" is hard to read for me since it's not a sentence or a section heading or a dictionary entry",
               "createdAt": "2020-03-27T13:58:16Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7181,7 +7190,7 @@
               "originalPosition": 17,
               "body": "I'm experiencing cognitive dissonance trying to relate the roles to both a bus connected example and a network connected example. It seems to be focusing on the composite device but highlighting the case where composite attesters could be network connected. However, I'm not certain based on this text. But otherwise, why wouldn't that discussion belong in the section on composite device?\r\n\r\nI think the goal is to illustrate use cases where roles can be combined. Maybe sticking to a few intuitive examples is best. e.g., verifier + relying party, endorser + verifier and maybe verifier+owner. Combining attester and verifier is problematic because the trust model objective is to separate attester from verifier. ",
               "createdAt": "2020-03-27T16:22:42Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7201,7 +7210,7 @@
               "originalPosition": 13,
               "body": "Agree that \"Entity\" isn't needed in the section heading. But it is helpful to separate the role from the thing that implements the role. Entity is the word most commonly used in the arch to refer to this thing. So it is OK to use it here.",
               "createdAt": "2020-03-27T16:25:24Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7221,7 +7230,7 @@
               "originalPosition": 17,
               "body": "TBH, I just copied your description from #73 into here. I probably set the wrong context?",
               "createdAt": "2020-03-27T17:18:14Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7241,7 +7250,7 @@
               "originalPosition": 17,
               "body": "I assume line 401 is okay?",
               "createdAt": "2020-03-27T17:18:49Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7261,7 +7270,7 @@
               "originalPosition": 17,
               "body": "Do you mean line 481?\r\nI think everything after \"interaction between these roles do not necessarily use the Internet Protocol\" is not about role interactions but entity interactions. I don't know if entity interactions belongs or if it does should be a separate section or at least separate paragraph. The main point of line/paragraph 481 is that an entity can host (combine) multiple roles. When that happens, the role messages between roles on peer entities remains true to the roles architecture. For example, if Verifier and RP are combined. Evidence still flows to Verifier and RP still consumes Appraisal policy for Attestation Results (even though there isn't an Attestation Results flow exposed externally to the entity). ",
               "createdAt": "2020-03-27T17:54:39Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7281,7 +7290,7 @@
               "originalPosition": 13,
               "body": "There are various uses of entities throughout the document, including composite device. We decided against \"device\" in favor of \"entity\" and in the context of this document the use of this term is now well established. We do not want to provide implementation guidance here, but an architectural concept \"on how roles can be collapsed\" which is important to know to understand for the solution I-Ds because it allows for the omission of internet protocols.\r\n\r\nI see that Dave and Ned agree, but this is one of the rare cases in which I am not convinced. I actually think a focus on implementation guidance distracts from the important parts (such as reuse of key material across roles, etc.).",
               "createdAt": "2020-04-21T09:54:59Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7301,7 +7310,7 @@
               "originalPosition": 15,
               "body": "fixed",
               "createdAt": "2020-04-21T09:56:09Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7321,7 +7330,7 @@
               "originalPosition": 15,
               "body": "fixed",
               "createdAt": "2020-04-21T09:56:31Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7341,7 +7350,7 @@
               "originalPosition": 17,
               "body": "After \"staring\" at the diff a bit, attestation results -> Attestation Results is now fixed. Did I miss something?",
               "createdAt": "2020-04-21T09:59:12Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7361,7 +7370,7 @@
               "originalPosition": 17,
               "body": "\"The following paragraph elaborates on an exemplary usage scenario:\" is now followed by a paragraph.",
               "createdAt": "2020-04-21T10:00:18Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7381,7 +7390,7 @@
               "originalPosition": 17,
               "body": "It remains an interaction between roles, the means are changing though. Even if all roles would be collapsed, they'd still interact, \"locally\". Nothing changes architecturally, I think. I consequence, this is not intended to be about entity interaction. Maybe we should simply spell that out?",
               "createdAt": "2020-04-21T10:02:31Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7401,7 +7410,7 @@
               "originalPosition": 13,
               "body": "When did we \"decide against device in favor of entity\"?   I don't think I agree with that.",
               "createdAt": "2020-04-21T14:02:24Z",
-              "updatedAt": "2020-04-21T14:50:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7421,19 +7430,19 @@
               "originalPosition": 20,
               "body": "Can't parse grammar of \"They can using\"",
               "createdAt": "2020-04-28T13:59:33Z",
-              "updatedAt": "2020-04-28T14:01:43Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 22,
               "body": "What about a simple function call within the same process?",
               "createdAt": "2020-04-28T14:00:37Z",
-              "updatedAt": "2020-04-28T14:01:43Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 24,
               "body": "I'm not sure we need to define a term for this.",
               "createdAt": "2020-04-28T14:00:57Z",
-              "updatedAt": "2020-04-28T14:05:27Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7453,13 +7462,13 @@
               "originalPosition": 29,
               "body": "I still find the sentence above odd, rather than combining an intro sentence into the paragraph below.",
               "createdAt": "2020-04-28T14:06:27Z",
-              "updatedAt": "2020-04-28T14:06:51Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             },
             {
               "originalPosition": 32,
               "body": "Above is not a complete sentence",
               "createdAt": "2020-04-28T14:06:44Z",
-              "updatedAt": "2020-04-28T14:06:51Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         },
@@ -7479,18 +7488,151 @@
               "originalPosition": 33,
               "body": "Is this referring to a Composite Device example?  If so, move it to that section, or maybe it's already covered there.",
               "createdAt": "2020-04-28T14:08:54Z",
-              "updatedAt": "2020-04-28T14:09:16Z"
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDUxNDky",
+          "commit": {
+            "abbreviatedOid": "6845f61"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:35:46Z",
+          "updatedAt": "2020-05-19T13:35:46Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\nInternet Protocol. They can be using a loopback device or other IP-based\r\n```",
+              "createdAt": "2020-05-19T13:35:46Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDUyMTM2",
+          "commit": {
+            "abbreviatedOid": "2cc7461"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:36:29Z",
+          "updatedAt": "2020-05-19T13:36:29Z",
+          "comments": [
+            {
+              "originalPosition": 22,
+              "body": "```suggestion\r\nAlternative channels to convey conceptual messages include function calls, sockets, GPIO\r\n```",
+              "createdAt": "2020-05-19T13:36:29Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDUzODIw",
+          "commit": {
+            "abbreviatedOid": "cede46d"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:38:13Z",
+          "updatedAt": "2020-05-19T13:38:14Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\ninterfaces, local busses, or hypervisor calls. This conveyance is sometime\r\n```",
+              "createdAt": "2020-05-19T13:38:14Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDU2MTg2",
+          "commit": {
+            "abbreviatedOid": "59292d1"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:40:46Z",
+          "updatedAt": "2020-05-19T13:40:47Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "```suggestion\r\nFor example, an entity that both connects to a wide-area network and to a system bus is taking on both the Attester and Verifier roles.\r\nAs a system bus entity, a Verifier consumes Evidence from other devices\r\n```",
+              "createdAt": "2020-05-19T13:40:46Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDgyMjMy",
+          "commit": {
+            "abbreviatedOid": "37d6db4"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:08:27Z",
+          "updatedAt": "2020-05-19T14:08:27Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\r\ninterfaces, local busses, or hypervisor calls. This type of conveyance is typically found\r\n```",
+              "createdAt": "2020-05-19T14:08:27Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDgzOTIy",
+          "commit": {
+            "abbreviatedOid": "d234f9c"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:10:06Z",
+          "updatedAt": "2020-05-19T14:10:07Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Could be, but that's not the point.",
+              "createdAt": "2020-05-19T14:10:06Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDg2NzQw",
+          "commit": {
+            "abbreviatedOid": "d234f9c"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:12:51Z",
+          "updatedAt": "2020-05-19T14:12:51Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "```suggestion\r\nnetwork Attester. \r\n```",
+              "createdAt": "2020-05-19T14:12:51Z",
+              "updatedAt": "2020-05-19T14:12:57Z"
             }
           ]
         }
-      ],
-      "baseRepository": "ietf-rats-wg/architecture",
-      "baseRefName": "master",
-      "baseRefOid": "5ed55a0336ba100347d0053c33c8925ae25ed0a1",
-      "headRepository": "ietf-rats-wg/architecture",
-      "headRefName": "role-composition",
-      "headRefOid": "6845f6149fd9dabfdc01633158c9b3d43654c836",
-      "mergeCommit": null
+      ]
     },
     {
       "number": 79,
@@ -7722,46 +7864,28 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDEwMTUwNzMw",
       "title": "Implicit trust",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/82",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mcr",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "replace pull request #60 with one we can edit.\r\nThis attempts to establish the architectural basis for implicit trust as a result of links.\r\n",
       "createdAt": "2020-04-28T14:20:18Z",
-      "updatedAt": "2020-05-18T23:20:22Z",
+      "updatedAt": "2020-05-19T14:47:50Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "fd3402220ae8764c44c77afed7b860e53f989fa3",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "implicit-trust",
-      "headRefOid": "364b675ae581a3f892899c5a44bc394f12f61bef",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "4612651f441a024ecce7e3798f9cadff757c0815",
+      "closedAt": "2020-05-19T14:47:45Z",
+      "mergedAt": "2020-05-19T14:47:45Z",
+      "mergedBy": "mcr",
+      "mergeCommit": {
+        "oid": "835a712bcc1adbcf8903b8abb7c661d2a009469a"
+      },
       "comments": [],
       "reviews": [
-        {
-          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDAxOTA0OTM3",
-          "commit": {
-            "abbreviatedOid": "c4b3972"
-          },
-          "author": "mcr",
-          "authorAssociation": "COLLABORATOR",
-          "state": "COMMENTED",
-          "body": "",
-          "createdAt": "2020-04-28T14:40:02Z",
-          "updatedAt": "2020-04-28T14:40:03Z",
-          "comments": [
-            {
-              "originalPosition": 4,
-              "body": "```suggestion\r\nTrust can also be tied to the communications link over which\r\n```",
-              "createdAt": "2020-04-28T14:40:02Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
-            }
-          ]
-        },
         {
           "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDAxOTE3Mjg1",
           "commit": {
@@ -7778,7 +7902,7 @@
               "originalPosition": 18,
               "body": "```suggestion\r\nAs a result, an Appraisal Policy for the Verifier may be possible that trusts the attestation evidence from the device without\r\nendorsement or cryptographically-verifiable signature of the\r\n```",
               "createdAt": "2020-04-28T14:52:03Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7798,7 +7922,7 @@
               "originalPosition": 7,
               "body": "Two sentences starting \"As an example, ... An example of such ...\" reads poorly.\r\n\r\n```suggestion\r\ncommunicate over a link that is established using a Root of Trust, such as a cellular link established by the Attester leveraging an enclave (e.g., SIM card).  The Verifier may have established the communications link and verified\r\n```",
               "createdAt": "2020-05-04T21:37:36Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7818,37 +7942,37 @@
               "originalPosition": 12,
               "body": "Redundant with lines 704-706",
               "createdAt": "2020-05-04T22:08:20Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             },
             {
               "originalPosition": 15,
               "body": "I don't think this wording is correct.   Maybe \"a Root of Trust that this entity trusts\"?",
               "createdAt": "2020-05-04T22:09:22Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             },
             {
               "originalPosition": 17,
               "body": "```suggestion\r\nAs a result, the Verifier may be able to trust the attestation Evidence from the Attester without\r\n```",
               "createdAt": "2020-05-04T22:09:37Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             },
             {
               "originalPosition": 18,
               "body": "Maybe noun/verb mismatch?  I don't think a policy trusts something, I think the Verifier trusts something based on policy.",
               "createdAt": "2020-05-04T22:11:05Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             },
             {
               "originalPosition": 19,
               "body": "```suggestion\r\nEvidence.  Note that the Appraisal Policy employed by the Verifier may take into account the\r\n```",
               "createdAt": "2020-05-04T22:11:22Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             },
             {
               "originalPosition": 21,
               "body": "```suggestion\r\nthen the Evidence might not be trusted until it is conveyed again over a re-established link.\r\n```",
               "createdAt": "2020-05-04T22:11:40Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7868,7 +7992,7 @@
               "originalPosition": 7,
               "body": "I can't tell if this paragraph is intended to add intuition to \"Root of Trust\" or to describe the duties of a Verifier that leverages a pre-existing comms session to protect the integrity of Evidence (and to ascribe the semantics of the key that the Attester 'claims' the assertions in the Evidence are accurate representation of current state of the Target environment).",
               "createdAt": "2020-05-05T01:04:02Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7888,7 +8012,7 @@
               "originalPosition": 15,
               "body": "It is at least verbose. ",
               "createdAt": "2020-05-05T01:05:09Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7908,27 +8032,7 @@
               "originalPosition": 21,
               "body": "This whole section seems to be more that of a use case that describes an architectural principle or concept than directly stating the principle or concept.  \r\n\r\nI think the principle is:\r\n- A conveyance protocol that is authenticated and integrity protected can be used to convey unprotected Evidence IF the following properties hold:\r\na) The key used to authenticate and integrity protect the conveyance channel is trusted by the Verifier to speak for the Attesting Environment that collected claims about the Target Environment.\r\nb) The Evidence in the conveyance channel is supplied by the Attesting Environment.\r\nc) The Root of Trust protects the key and the Attesting Environment with equivalent strength.\r\n\r\n\r\n",
               "createdAt": "2020-05-05T01:13:42Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
-            }
-          ]
-        },
-        {
-          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1NDQ3MTY3",
-          "commit": {
-            "abbreviatedOid": "c4b3972"
-          },
-          "author": "nedmsmith",
-          "authorAssociation": "COLLABORATOR",
-          "state": "COMMENTED",
-          "body": "",
-          "createdAt": "2020-05-05T01:20:15Z",
-          "updatedAt": "2020-05-05T01:20:15Z",
-          "comments": [
-            {
-              "originalPosition": 4,
-              "body": "+1",
-              "createdAt": "2020-05-05T01:20:15Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7948,7 +8052,7 @@
               "originalPosition": 21,
               "body": "Agree and I like Ned's articulation above. Maybe the PR should just say what's in Ned's principle?",
               "createdAt": "2020-05-05T02:03:48Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         },
@@ -7958,7 +8062,7 @@
             "abbreviatedOid": "c4b3972"
           },
           "author": "gmandyam",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2020-05-05T02:15:24Z",
@@ -7968,7 +8072,226 @@
               "originalPosition": 21,
               "body": "I have no objection.  It is concise and captures my original inten.  @nedmsmith - will you be taking the lead on the PR revision.",
               "createdAt": "2020-05-05T02:15:24Z",
-              "updatedAt": "2020-05-18T23:20:22Z"
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDY2Njgw",
+          "commit": {
+            "abbreviatedOid": "364b675"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:51:52Z",
+          "updatedAt": "2020-05-19T13:56:46Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I assume what is meant here is:\r\n\r\n* evidence is protected\r\n* remote peers are (mutually) authenticated",
+              "createdAt": "2020-05-19T13:51:53Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            },
+            {
+              "originalPosition": 7,
+              "body": "keys? of at least two remote peers? We are talking about a \"Secure Channel\" to convey unprotected Evidence right?\r\n\r\nAlso? In theory, unprotected Evidence are just Claims?\r\n\r\nI am not sure if we should water down evidence, in general. Evidence should be tamper-evident. In consequent, messing with evidence conveyed via \"secure channel\" must be evident with a similar level of assurance.",
+              "createdAt": "2020-05-19T13:52:25Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDc3Mjg1",
+          "commit": {
+            "abbreviatedOid": "364b675"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:03:33Z",
+          "updatedAt": "2020-05-19T14:03:34Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "\"the\" attesting environment and \"the\" target environment imply this does not apply to layered evidence or composite devices, is that intentional?",
+              "createdAt": "2020-05-19T14:03:34Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDc3NzYw",
+          "commit": {
+            "abbreviatedOid": "364b675"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:03:59Z",
+          "updatedAt": "2020-05-19T14:03:59Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "What is this file for?",
+              "createdAt": "2020-05-19T14:03:59Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDk0MjM0",
+          "commit": {
+            "abbreviatedOid": "4b3c327"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:20:01Z",
+          "updatedAt": "2020-05-19T14:20:01Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\n   1. The key used to authenticate and integrity protect the conveyance channel is trusted by the Verifier to speak for the Attesting Environment(s) that collected claims about the Target Environment(s).\r\n```",
+              "createdAt": "2020-05-19T14:20:01Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTA1ODUy",
+          "commit": {
+            "abbreviatedOid": "364b675"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:30:02Z",
+          "updatedAt": "2020-05-19T14:30:03Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "same question about \"the Attesting Environment\"... which Attesting Environment?  Also the phrase reads as a tautology, can we wordsmith somehow?",
+              "createdAt": "2020-05-19T14:30:03Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTE4NDE1",
+          "commit": {
+            "abbreviatedOid": "364b675"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:42:05Z",
+          "updatedAt": "2020-05-19T14:42:06Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   2. All unprotected Evidence that is conveyed is supplied exclusively by the Attesting Environment that has the key that protects the conveyance channel\r\n```",
+              "createdAt": "2020-05-19T14:42:05Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTIwOTky",
+          "commit": {
+            "abbreviatedOid": "8988bb8"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-19T14:44:20Z",
+          "updatedAt": "2020-05-19T14:44:20Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTIyNDIz",
+          "commit": {
+            "abbreviatedOid": "8988bb8"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:45:44Z",
+          "updatedAt": "2020-05-19T14:45:45Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nA conveyance protocol that provides authentication and integrity protection can be used\r\n```",
+              "createdAt": "2020-05-19T14:45:44Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTIzMTc5",
+          "commit": {
+            "abbreviatedOid": "bd7ba59"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:46:28Z",
+          "updatedAt": "2020-05-19T14:46:29Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\n   1. The key material used to authenticate and integrity protect the conveyance channel is trusted by the Verifier to speak for the Attesting Environment(s) that collected claims about the Target Environment(s).\r\n```",
+              "createdAt": "2020-05-19T14:46:28Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTIzNzUw",
+          "commit": {
+            "abbreviatedOid": "e3ac83c"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:46:58Z",
+          "updatedAt": "2020-05-19T14:46:58Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\r\n   3. The Root of Trust protects both the conveyance channel key material and the Attesting Environment with equivalent strength protections.\r\n```",
+              "createdAt": "2020-05-19T14:46:58Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NTI0MDQw",
+          "commit": {
+            "abbreviatedOid": "e3ac83c"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T14:47:13Z",
+          "updatedAt": "2020-05-19T14:47:14Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n   2. All unprotected Evidence that is conveyed is supplied exclusively by the Attesting Environment that has the key  material that protects the conveyance channel\r\n```",
+              "createdAt": "2020-05-19T14:47:14Z",
+              "updatedAt": "2020-05-19T14:47:26Z"
             }
           ]
         }
@@ -8087,9 +8410,9 @@
     {
       "number": 86,
       "id": "MDExOlB1bGxSZXF1ZXN0NDEzMjUzMzE4",
-      "title": "Update draft-ietf-rats-architecture.md",
+      "title": "revise and merge Roles/Hosting/Composition section",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/86",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "nedmsmith",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -8098,18 +8421,26 @@
       "labels": [],
       "body": "Revised the new Section 6 \"Role Hosting and Composition\" based on Henk's previously contributed content. Moved the example of multiple roles on a Composite Device to this section and integrated it into one of the existing examples. Revisited the Introduction and vocabulary sections to make \"Roles\" and \"Role Messages\" more clearly linked to the objectives of the architecture and terminology. ",
       "createdAt": "2020-05-05T00:29:59Z",
-      "updatedAt": "2020-05-18T23:51:50Z",
+      "updatedAt": "2020-05-19T14:57:46Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "role-composition",
       "baseRefOid": "6845f6149fd9dabfdc01633158c9b3d43654c836",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "Issue55",
-      "headRefOid": "1bedc330b2c5192ba43b09dd2460feb99b89a05f",
-      "closedAt": null,
+      "headRefOid": "a03e18d6e3541b944ce4c8d8fd825a7b73a782e8",
+      "closedAt": "2020-05-19T14:23:57Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "body": "re-open, and fixed up in this branch.\r\n",
+          "createdAt": "2020-05-19T14:50:44Z",
+          "updatedAt": "2020-05-19T14:50:44Z"
+        }
+      ],
       "reviews": [
         {
           "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1ODEzNjgz",
@@ -8127,19 +8458,19 @@
               "originalPosition": 5,
               "body": "Change \"Role Messages\" back to \"conceptual messages\".  The latter is the name of the section title, and we don't need to define a new term.  Same in other new sentences below.\r\n```suggestion\r\nThis documents defines a flexible architecture consisting of attestation Roles and their interactions via conceptual messages.\r\n```",
               "createdAt": "2020-05-05T13:57:13Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 30,
               "body": "I don't think \"typically a device\" is accurate.  In TEEP it's certainly not.   In SGX in general, it's not.   Better to be silent and not say what is typical.",
               "createdAt": "2020-05-05T13:59:17Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 30,
               "body": "Is \"it\" referring to \"Evidence\" now?  That doesn't seem right.   Revert changes to \"it\".",
               "createdAt": "2020-05-05T13:59:53Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8159,25 +8490,25 @@
               "originalPosition": 35,
               "body": "Bad grammar now: \"Statements .. vouches\" doesn't match.",
               "createdAt": "2020-05-05T14:01:42Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 45,
               "body": "Grammar of the last phrase is now harder to read in my view.",
               "createdAt": "2020-05-05T14:03:01Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 60,
               "body": "I don't think we should introduce the term \"service provider\" here, we'd have to define it.",
               "createdAt": "2020-05-05T14:04:04Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 113,
               "body": "```suggestion\r\nThe RATS architecture includes the definition of Roles (e.g., Attester, Verifier,\r\nRelying Party, Endorser) and conceptual messages (e.g., Evidence, Attestation Results,\r\n```",
               "createdAt": "2020-05-05T14:04:52Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8197,19 +8528,19 @@
               "originalPosition": 152,
               "body": "```suggestion\r\nor the Relying Party role also could become local where an application-specific\r\n```",
               "createdAt": "2020-05-05T14:07:37Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 157,
               "body": "```suggestion\r\nnetwork, local-area network, and span various system buses. In so doing, the bridge node \r\n```",
               "createdAt": "2020-05-05T14:08:09Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 160,
               "body": "```suggestion\r\nthe local-area network, and a Relying Party to components attached to a local system bus.\r\n```",
               "createdAt": "2020-05-05T14:08:27Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8229,7 +8560,7 @@
               "originalPosition": 60,
               "body": "Laurence suggests \"service\" instead of \"service provider\"",
               "createdAt": "2020-05-05T14:34:55Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8249,7 +8580,7 @@
               "originalPosition": 30,
               "body": "\"the extent to which it is trustworthy\"\r\n```suggestion\r\n: An entity (typically a device), whose Evidence must be appraised in order to infer the extent to which the Attester is considered trustworthy, such as when deciding whether it is authorized to perform some operation\r\n```",
               "createdAt": "2020-05-05T14:44:13Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8269,7 +8600,7 @@
               "originalPosition": 30,
               "body": "or \"the Attester\"",
               "createdAt": "2020-05-05T14:46:29Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8289,31 +8620,31 @@
               "originalPosition": 46,
               "body": "- Should mention \"claims\"\r\n- Should mention \"attestation target(s)\"\r\n- Prefer to avoid the term \"trustworthiness\"\r\n\r\nHow about: A set of claims created by the Attester that characterize the Attestation Target(s). The Attestation Evidence is conveyed from the Attester to the Verifier where it is appraised.",
               "createdAt": "2020-05-05T14:08:29Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 51,
               "body": "I don't think an RP is typically an application. I think it is typically a service or legal entity like an enterprise, network operator, bank...\r\n\r\nHow about this: The final end-entity that consumes (relies upon) the Attestation Result. The Relying Party is the end customer of the entire attestation process. The Relying Party usually makes a decision based on the Attestation Result, such as whether to let the device on the network, how large a transaction to allows, whether to allow the user of the device access to some information and such.  ",
               "createdAt": "2020-05-05T14:19:04Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 26,
               "body": "Mention that the Result goes to a Relying Party\r\n\r\nThe Result is produced by the Verifier based the inputs that are the Evidence, Endorsements and Policy and thus may contain data from or derived from each.",
               "createdAt": "2020-05-05T14:24:32Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 31,
               "body": "Prefer to avoid the term trustworthy.\r\n\r\nShould say that the Attester produces Evidence that is conveyed to the Verifier.\r\n\r\nWould really like for this to say that an Attester typically has a private key that is used to sign the Evidence.",
               "createdAt": "2020-05-05T14:30:55Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             },
             {
               "originalPosition": 36,
               "body": "Would really like this to say that it often contains the key material (e.g. public key) that is used to Verify the signature on the Evidence.",
               "createdAt": "2020-05-05T14:32:19Z",
-              "updatedAt": "2020-05-18T23:51:49Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8333,7 +8664,7 @@
               "originalPosition": 5,
               "body": "Can we not capitalize Roles?  Should not need to define a term for Roles, just use it.",
               "createdAt": "2020-05-12T14:30:53Z",
-              "updatedAt": "2020-05-18T23:51:50Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8353,7 +8684,7 @@
               "originalPosition": 15,
               "body": "```suggestion\r\nsuch as, roles, device composition, topological models and appraisal is vital for\r\n```\r\nuse capitalization consistent with line 94 which has \"topological models\"",
               "createdAt": "2020-05-12T14:32:45Z",
-              "updatedAt": "2020-05-18T23:51:50Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8373,7 +8704,7 @@
               "originalPosition": 45,
               "body": "```suggestion\r\n: A set of claims created by the Attester. The Evidence is conveyed from the Attester to the Verifier where it is appraised.\r\n```",
               "createdAt": "2020-05-12T14:37:31Z",
-              "updatedAt": "2020-05-18T23:51:50Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8393,7 +8724,7 @@
               "originalPosition": 51,
               "body": "Discussion during meeting: no consensus on the phrase \"typically an application\" being useful",
               "createdAt": "2020-05-12T14:59:54Z",
-              "updatedAt": "2020-05-18T23:51:50Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8413,7 +8744,7 @@
               "originalPosition": 51,
               "body": "Another possibility:\r\n\r\nAn entity that depends on the validity of information about an Attester.  Compare /relying party/ in {{RFC4949}}.",
               "createdAt": "2020-05-12T15:05:22Z",
-              "updatedAt": "2020-05-18T23:51:50Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
             }
           ]
         },
@@ -8433,7 +8764,105 @@
               "originalPosition": 51,
               "body": "+1 to Dave's suggested wording.",
               "createdAt": "2020-05-15T17:07:31Z",
-              "updatedAt": "2020-05-18T23:51:50Z"
+              "updatedAt": "2020-05-19T13:28:35Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDQyNzkz",
+          "commit": {
+            "abbreviatedOid": "1bedc33"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:26:41Z",
+          "updatedAt": "2020-05-19T13:26:42Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\nThis documents defines a flexible architecture consisting of attestation roles and their interactions via conceptual messages.\r\n```",
+              "createdAt": "2020-05-19T13:26:41Z",
+              "updatedAt": "2020-05-19T13:28:35Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDQ1Mzky",
+          "commit": {
+            "abbreviatedOid": "a03e18d"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:29:19Z",
+          "updatedAt": "2020-05-19T13:29:20Z",
+          "comments": [
+            {
+              "originalPosition": 35,
+              "body": "```suggestion\r\n: Statements that Endorsers make (typically a manufacturer) that vouch for the design and implementation of the Attester. Often this includes statements about the integrity of an Attester's signing capability\r\n```",
+              "createdAt": "2020-05-19T13:29:19Z",
+              "updatedAt": "2020-05-19T13:29:20Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDQ3ODQ1",
+          "commit": {
+            "abbreviatedOid": "a03e18d"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:31:52Z",
+          "updatedAt": "2020-05-19T13:31:52Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "```suggestion\r\n: An entity that depends on the validity of information about an Attester. Compare /relying party/ in {{RFC4949}}.\r\n```",
+              "createdAt": "2020-05-19T13:31:52Z",
+              "updatedAt": "2020-05-19T13:31:52Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDY4NzIw",
+          "commit": {
+            "abbreviatedOid": "a03e18d"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2020-05-19T13:54:19Z",
+          "updatedAt": "2020-05-19T13:58:31Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\nsuch as roles, device composition, topological models, and appraisal is vital for\r\n```",
+              "createdAt": "2020-05-19T13:54:20Z",
+              "updatedAt": "2020-05-19T13:58:31Z"
+            },
+            {
+              "originalPosition": 1,
+              "body": "What is this file for?",
+              "createdAt": "2020-05-19T13:55:43Z",
+              "updatedAt": "2020-05-19T13:58:31Z"
+            },
+            {
+              "originalPosition": 154,
+              "body": "```suggestion\r\nfrom loading if the firmware fails to satisfy a local appraisal policy.\r\n```",
+              "createdAt": "2020-05-19T13:56:48Z",
+              "updatedAt": "2020-05-19T13:58:31Z"
+            },
+            {
+              "originalPosition": 116,
+              "body": "I do not believe we should invent/define a term \"Role Messages\".",
+              "createdAt": "2020-05-19T13:57:49Z",
+              "updatedAt": "2020-05-19T13:58:31Z"
             }
           ]
         }
@@ -9185,13 +9614,13 @@
       "labels": [],
       "body": "only the most essential items:\r\n* added three more timestamp types based on TUDA, trying to generalize it a bit\r\n* added a few periods to text that seems to express sentences",
       "createdAt": "2020-05-12T13:56:46Z",
-      "updatedAt": "2020-05-19T12:34:37Z",
+      "updatedAt": "2020-05-21T22:27:13Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "more-time-considerations",
-      "headRefOid": "620ef97792096ab82df628f028b5c58c0ddbb4bc",
+      "headRefOid": "92cbef196802cca15eae1731bbc3571bc5d7a401",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9214,7 +9643,7 @@
               "originalPosition": 29,
               "body": "Duplicate \"examples\".\r\n\r\n(I really prefer how it read before.)",
               "createdAt": "2020-05-12T15:06:22Z",
-              "updatedAt": "2020-05-19T12:34:37Z"
+              "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
         },
@@ -9234,7 +9663,7 @@
               "originalPosition": 29,
               "body": "Yes. Redundant \"example\" is redundant. Alas, we cannot start standards text with \"We now walk\". The alternate text was written too hastily be me.",
               "createdAt": "2020-05-12T15:18:45Z",
-              "updatedAt": "2020-05-19T12:34:37Z"
+              "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
         },
@@ -9254,7 +9683,7 @@
               "originalPosition": 13,
               "body": "This ID is never used in later sections, so should not be added unless it is used in the doc.",
               "createdAt": "2020-05-19T01:13:26Z",
-              "updatedAt": "2020-05-19T12:34:37Z"
+              "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
         },
@@ -9274,7 +9703,7 @@
               "originalPosition": 13,
               "body": "Which ID do you mean here, exactly? It is had to read from the diff illustrated, I think.",
               "createdAt": "2020-05-19T10:31:42Z",
-              "updatedAt": "2020-05-19T12:34:37Z"
+              "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
         },
@@ -9294,7 +9723,7 @@
               "originalPosition": 29,
               "body": "Maybe we can say:\r\nUsing the table above, a number of hypothetical examples of how a solution might be built are illustrated below.",
               "createdAt": "2020-05-19T11:34:26Z",
-              "updatedAt": "2020-05-19T12:34:37Z"
+              "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
         },
@@ -9314,11 +9743,97 @@
               "originalPosition": 13,
               "body": "I think Dave's meaning is that the newly added 3 events (AA, CC, and HD) are not used in later sections.",
               "createdAt": "2020-05-19T11:37:18Z",
-              "updatedAt": "2020-05-19T12:34:37Z"
+              "updatedAt": "2020-05-21T22:27:13Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDAwNTYy",
+          "commit": {
+            "abbreviatedOid": "620ef97"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T12:37:49Z",
+          "updatedAt": "2020-05-19T12:37:49Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "ah okay. Thx Wei. I created  a commit (https://github.com/ietf-rats-wg/architecture/commit/620ef97792096ab82df628f028b5c58c0ddbb4bc) based on that identified gap.",
+              "createdAt": "2020-05-19T12:37:49Z",
+              "updatedAt": "2020-05-21T22:27:13Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE0NDAxODM1",
+          "commit": {
+            "abbreviatedOid": "a109472"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-19T12:39:31Z",
+          "updatedAt": "2020-05-19T12:39:32Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "Fine with me. Thx! Objections or request for polish?",
+              "createdAt": "2020-05-19T12:39:31Z",
+              "updatedAt": "2020-05-21T22:27:13Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE2NTM0OTIw",
+          "commit": {
+            "abbreviatedOid": "620ef97"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-21T22:26:48Z",
+          "updatedAt": "2020-05-21T22:26:49Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "```suggestion\r\nUsing the table above, a number of hypothetical examples of how a solution might be built are illustrated below.\r\n```",
+              "createdAt": "2020-05-21T22:26:48Z",
+              "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
         }
       ]
+    },
+    {
+      "number": 89,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDIwMTc2NTIy",
+      "title": "Changes to Roll and Host text and definitions",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/89",
+      "state": "OPEN",
+      "author": "mcr",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2020-05-19T14:58:46Z",
+      "updatedAt": "2020-05-19T15:04:43Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "835a712bcc1adbcf8903b8abb7c661d2a009469a",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "Issue55",
+      "headRefOid": "625d9a41c4755e0682425e55dddd7e1adf6cab4d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
