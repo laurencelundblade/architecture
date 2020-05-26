@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-21T22:27:44.064841+00:00",
+  "timestamp": "2020-05-26T14:04:53.690320+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -1102,7 +1102,7 @@
       "labels": [],
       "body": "Section 4.2 / 4.3 are conceptually similar hence should follow similar conventions for naming. If section 4.3 is about \"Composite Device(s)\" as it relates to attestation then section 4.2 is about \"Layered Device(s)\" as it relates to attestation. Section names should be similar. (Artifact of having different authors maybe?)\r\nFigure 2 caption is \"Layered Attester\" while Figure 3 is \"Conceptual Data Flow for a Composite Device\". \r\nIt would make more sense for the section heading for 4.2 to be \"Layered Device\" or \"Layered Device Attestation\" (and \"Composite Device Attestation\") and figure 2 to be \"Conceptual Data Flow for a Layered Device\"",
       "createdAt": "2020-03-17T20:13:44Z",
-      "updatedAt": "2020-05-05T00:34:19Z",
+      "updatedAt": "2020-05-26T13:59:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -1118,6 +1118,13 @@
           "body": "Assign this to me and I'll fix it.",
           "createdAt": "2020-05-05T00:34:19Z",
           "updatedAt": "2020-05-05T00:34:19Z"
+        },
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I would find the term \"layered device\" confusing.",
+          "createdAt": "2020-05-26T13:59:11Z",
+          "updatedAt": "2020-05-26T13:59:11Z"
         }
       ]
     },
@@ -1159,7 +1166,7 @@
       "labels": [],
       "body": "The introduction section uses the phrase \"role compositions and data flows\" then mentions \"Passport Model\" as an example of a role composition. \r\nIn section 4.3 on Composite Device the second to last section describes \"combinations of roles\" using an example involving a Composite Device.\r\n\r\nI think the architecture should have crisper understanding of two concepts a) \"topological models\" (as defined by the section 5 heading that describes Passport, BKC and Hybrid; b) \"role composition\" which ought to refer to the \"combining of roles\" by a given entity.\r\n\r\nThe terms \"role composition\" and \"combining of roles\" are too similar for them to have different meanings and \"role composition\" as an alias for \"topological models\" is unnecessary. \r\n\r\nI suggest pulling the second to the last paragraph in section 4.3 into a new section 4.4 titled \"Role Composition\" that has a paragraph defining role composition conceptually followed by the paragraph taken from section 4.3.\r\n\r\nSuggested Text for section 4.4:\r\nRATS roles are implemented by entities (e.g., devices). A simple realization of the architecture associates a single role to a single entity; for example, the topological models described in section 5.1 and 5.2 follow this convention. However, entities may host multiple roles as a way to accommodate more sophisticated use cases and deployment scenarios. An entity that both connects to a wide-area network and to a system bus may play both Attester and Verifier roles. As a system bus entity, a Verifier consumes Evidence from other devices connected to the system bus that implement an Attester role. As a wide-area network connected entity, it may implement an Attester role. The entity, as a system bus Verifier, may choose to fully isolate its role as a wide-area network Attester. Alternatively, attestation results might reflect an aggregation of system bus operational state claims in the form of Evidence. \r\n\r\nFor example, in the Composite Device scenario, the lead Attester...\r\n<paste remainder of paragraph from section 4.3>\r\n\r\nAdditionally, the introduction section should change \"role composition\" terminology to \"topological models\" as it references Passport. ",
       "createdAt": "2020-03-17T21:51:50Z",
-      "updatedAt": "2020-05-05T00:33:34Z",
+      "updatedAt": "2020-05-26T13:56:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -1175,6 +1182,13 @@
           "body": "Also addressed in Issue55. I recommend closing this issue.",
           "createdAt": "2020-05-05T00:33:34Z",
           "updatedAt": "2020-05-05T00:33:34Z"
+        },
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "\"role composition\" no longer appears in the doc.  I agree this can be closed.",
+          "createdAt": "2020-05-26T13:56:38Z",
+          "updatedAt": "2020-05-26T13:56:38Z"
         }
       ]
     },
@@ -1272,15 +1286,15 @@
       "id": "MDU6SXNzdWU2MDg2NzM4MDM=",
       "title": "FIXME in document",
       "url": "https://github.com/ietf-rats-wg/architecture/issues/84",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "dthaler",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Section 3.1 of the draft says:\r\n\r\n>   FIXME from Henk: Measurements at early stages of\r\n>   Layered Attestation are NOT evidence yet.\r\n>   This text does not cover that yet\r\n\r\nThis fixme needs to be fixed somehow.",
       "createdAt": "2020-04-28T23:16:15Z",
-      "updatedAt": "2020-05-05T01:19:41Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-26T13:55:15Z",
+      "closedAt": "2020-05-26T13:55:15Z",
       "comments": [
         {
           "author": "dthaler",
@@ -1316,6 +1330,13 @@
           "body": "I agree with the text in #85 as it doesn\u2019t use either Attesting Env or Target Env.\r\nThe issue I have with NEW is the asymmetrical use of terms \u201cAttesting Env\u201d and other stuff not \u201cTarget Env\u201d. If use of Target Env is wrong then so is use of Attesting Env. The section on \u201cTwo Environments\u201d makes these terms clear and their applicationin a Layered Device attestation also clear (in terms of cascaded measurement, attestations and executions).\r\n\r\nAre you suggesting the resolution to #84 is to substitute with text from #85?\r\n\r\nThx,\r\nNed\r\n\r\nFrom: Dave Thaler <notifications@github.com>\r\nReply-To: ietf-rats-wg/architecture <reply@reply.github.com>\r\nDate: Monday, May 4, 2020 at 6:10 PM\r\nTo: ietf-rats-wg/architecture <architecture@noreply.github.com>\r\nCc: \"Smith, Ned\" <ned.smith@intel.com>, Comment <comment@noreply.github.com>\r\nSubject: Re: [ietf-rats-wg/architecture] FIXME in document (#84)\r\n\r\n\r\nWe have a terminology convention for the thing being referred to as \u201cUEFI/BIOS/FW/FMC etc.\u201d called \u201cTarget Environment\u201d.\r\n\r\nNo, those terms are not synonymous. In layered attestation, the UEFI/BIOS/firmware is also an \"Attesting Environment\", and software above it (or started later than it) are also Target Environments, so we cannot use the term Target Environment to mean UEFI/BIOS/firmware in general. See PR #85<https://github.com/ietf-rats-wg/architecture/pull/85> for proposed use in context.\r\n\r\n\u2014\r\nYou are receiving this because you commented.\r\nReply to this email directly, view it on GitHub<https://github.com/ietf-rats-wg/architecture/issues/84#issuecomment-623787969>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/ABPMCSDCPCOMIDDVCZJXWYTRP5RPHANCNFSM4MTH6E4Q>.\r\n",
           "createdAt": "2020-05-05T01:19:40Z",
           "updatedAt": "2020-05-05T01:19:40Z"
+        },
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I believe this can be closed now that #85 is merged.",
+          "createdAt": "2020-05-26T13:55:15Z",
+          "updatedAt": "2020-05-26T13:55:15Z"
         }
       ]
     }
@@ -2098,12 +2119,41 @@
       "labels": [],
       "body": "Signed-off-by: Dave Thaler <dthaler@microsoft.com>",
       "createdAt": "2019-12-16T20:33:38Z",
-      "updatedAt": "2020-01-07T15:27:45Z",
+      "updatedAt": "2020-05-26T10:12:58Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "ff1a83686c2ab4d1397a139e0d47d95a21892a71",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "models",
+      "headRefOid": "0df5da424ef0dbc5c5656999a77b67ecdb2e4eb0",
       "closedAt": "2020-01-07T15:10:08Z",
       "mergedAt": "2020-01-07T15:10:08Z",
       "mergedBy": "mcr",
+      "mergeCommit": {
+        "oid": "0b436c247de7d79e7ecd43fdacba4597c7dec162"
+      },
       "comments": [],
       "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTU3NTIz",
+          "commit": {
+            "abbreviatedOid": "0df5da4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "PENDING",
+          "body": "",
+          "createdAt": "2020-05-26T10:12:58Z",
+          "updatedAt": "2020-05-26T10:12:58Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Thanks :-)",
+              "createdAt": "2020-05-26T10:12:58Z",
+              "updatedAt": "2020-05-26T10:12:58Z"
+            }
+          ]
+        },
         {
           "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzM4OTUxMzg2",
           "commit": {
@@ -2117,16 +2167,7 @@
           "updatedAt": "2020-01-06T23:11:42Z",
           "comments": []
         }
-      ],
-      "baseRepository": "ietf-rats-wg/architecture",
-      "baseRefName": "master",
-      "baseRefOid": "ff1a83686c2ab4d1397a139e0d47d95a21892a71",
-      "headRepository": "ietf-rats-wg/architecture",
-      "headRefName": "models",
-      "headRefOid": "0df5da424ef0dbc5c5656999a77b67ecdb2e4eb0",
-      "mergeCommit": {
-        "oid": "0b436c247de7d79e7ecd43fdacba4597c7dec162"
-      }
+      ]
     },
     {
       "number": 11,
@@ -8880,7 +8921,7 @@
       "labels": [],
       "body": "Sry, for the included conflict to references. Should have checked master first....",
       "createdAt": "2020-05-12T13:50:37Z",
-      "updatedAt": "2020-05-19T11:42:25Z",
+      "updatedAt": "2020-05-26T14:04:45Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
@@ -8905,6 +8946,41 @@
           "body": "I agree that is not necessary to start a taxonomy here ). It would be very tiny in any way. I think that it would suffice to say that recentness and uniqueness are the two vital parts of freshness with respect to evidence (attestation results work differently, they are literally more like actual tokens and could come with an expiration date aka a period of validity).",
           "createdAt": "2020-05-12T18:00:38Z",
           "updatedAt": "2020-05-12T18:00:38Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Reading the whole exchange again - how about:\r\n\r\n```\r\nFreshness of the content of Conceptual Messages has two dimensions:\r\nrecentness and uniqueness.\r\n \r\nUniqueness of Conceptual Messages can be conveyed via an included,\r\nnon-repeatable value sourced, for example, from a high quality randomness pool,\r\na \u201cgranular enough\u201d clock, a serial number that doesn\u2019t wrap-around, etc.  In the\r\ncontext of Evidence and Attestation Results, uniqueness can be encoded into a\r\n\"nonce\" attribute.\r\n \r\nRecentness of Evidence can be conveyed either via a protocol processing a\r\nnon-repeatable value (as illustrated above) in a hand-shake interaction or via a\r\npayload including a relative or absolute timestamp associated with the time of\r\ncollection of Claims by the Attester, or the time the attestation Evidence is produced.\r\nRecentness of Conceptual Messages can also be determined by either an explicit\r\nor implicit \u201cexpiry\u201d value that determines the threshold between acceptable\r\n(i.e. recent enough) and non-acceptable (i.e., too old) values of the timestamp.\r\nIt assumes time synchronization between producers and consumers.\r\n```\r\n\r\nThe sentences are still a bit long, but for the moment the more important question is,\r\nif @thomas-fossati would agree with this text that I based on his proposal?",
+          "createdAt": "2020-05-26T10:08:59Z",
+          "updatedAt": "2020-05-26T10:08:59Z"
+        },
+        {
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I don't understand why we care about uniqueness in this document.  The text does not justify why uniqueness matters for any security purpose.   Maybe a protocol can discuss it but I don't yet see why it should be mentioned in this doc.",
+          "createdAt": "2020-05-26T13:52:22Z",
+          "updatedAt": "2020-05-26T13:52:22Z"
+        },
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> The sentences are still a bit long, but for the moment the more important question is,\r\n> if @thomas-fossati would agree with this text that I based on his proposal?\r\n\r\nThanks @henkbirkholz for trying to draft a compromise.\r\n\r\nThere are some things in your write up that needs further clarification and others that seem a bit redundant and can be easily trimmed.  \r\n\r\nAmong the first set I think one key clarification is the one around:\r\n```\r\nRecentness of Evidence can be conveyed [...] via a protocol processing a\r\nnon-repeatable value (as illustrated above) in a hand-shake interaction\r\n```\r\nwhich, IMO, falls a bit too short defining exactly how uniqueness can help with recentness, which seems to be your main point.\r\n\r\nThe way I understand it, is that nonce's non-repeatability used in a transaction involving an initiator and a responder (possibly what you call \"hand-shake interaction\" above?) allows the initiator to lock a specific portion of time, i.e., to define two very specific events: a begin and an end.  If the initiator happens to also have:\r\n1) a clock, and\r\n2) a notion of expiry\r\n\r\nthen some form of _rough_ recentness, i.e., one that:\r\n\r\n1) can't distinguish between creation time and collection time of claims;\r\n2) applies to the whole claims set as opposed to individual claims\r\n\r\ncan be built even _without_ a synchronised clock at the responder.\r\n\r\nIs this what the quoted sentence really means to you?\r\n\r\nIf so, I think we can craft some text together that is short and to the point.\r\n\r\nThat said, and again thanks very much for this further edit pass, I'd be still OK with just dropping this PR altogether.\r\n",
+          "createdAt": "2020-05-26T13:57:54Z",
+          "updatedAt": "2020-05-26T13:57:54Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Because it is one of two primary enabler of recentness as a part of freshness, I think. And I think we care a lot about fresh evidence in this architecture document. Can you think of a better place for this? I still think the characteristics of \"freshness\" are quite fundamental to the RATS concepts, yes? And an architecture provides the fundamental concepts for protocol design, I think.",
+          "createdAt": "2020-05-26T14:00:47Z",
+          "updatedAt": "2020-05-26T14:00:47Z"
+        },
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@thomas-fossati, yes that is a way more detailed description of what my (rather short) was intended to capture :-)",
+          "createdAt": "2020-05-26T14:04:45Z",
+          "updatedAt": "2020-05-26T14:04:45Z"
         }
       ],
       "reviews": [
@@ -9614,7 +9690,7 @@
       "labels": [],
       "body": "only the most essential items:\r\n* added three more timestamp types based on TUDA, trying to generalize it a bit\r\n* added a few periods to text that seems to express sentences",
       "createdAt": "2020-05-12T13:56:46Z",
-      "updatedAt": "2020-05-21T22:27:13Z",
+      "updatedAt": "2020-05-26T09:55:15Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
@@ -9806,6 +9882,72 @@
               "updatedAt": "2020-05-21T22:27:13Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE3OTY0MzYz",
+          "commit": {
+            "abbreviatedOid": "92cbef1"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2020-05-26T04:36:04Z",
+          "updatedAt": "2020-05-26T04:40:03Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "time(AA) seems to be irrelevant for any security purpose, only time(EG) is relevant, so I don't think time(AA) belongs in this doc.\r\n\r\ntime(HD) also seems very confusing.   since time(HD) and time(EG) are on the same entity, and that same entity compares against a threshold, what security threat is this trying to address?  I don't follow.",
+              "createdAt": "2020-05-26T04:36:04Z",
+              "updatedAt": "2020-05-26T04:40:03Z"
+            },
+            {
+              "originalPosition": 63,
+              "body": "there is no time(CC) in the diagram, but I think time(CC) is irrelevant for any security purpose, only time(EG) matters and time(CC) can be ignored",
+              "createdAt": "2020-05-26T04:38:34Z",
+              "updatedAt": "2020-05-26T04:40:03Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTQyODE1",
+          "commit": {
+            "abbreviatedOid": "92cbef1"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T09:52:24Z",
+          "updatedAt": "2020-05-26T09:52:25Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "In order to always create the most recent Evdence possible, the Attester has to be aware of a changed Value as soon as possible. Otherwise Evidence is outdated and could even convey a misleading picture about an Attester's Target Environments, ultimately leading to incorrect risk assessments. Hence time(AA) is quite relevant, I think. \r\n\r\nThere are scenarios where this is less relevant (e.g. boot-time integrity) and some scenarios where this is more relevant (e.g. run-time integrity).\r\n\r\nI agree that time(HD) is \"squeezed\" into the diagram it is actually the reception of the distributed handles. I did not want to add a \"distributor of the handles\" the the actors in the diagram. Maybe we can address this by rewording time(HD) correspondingly? In essence, I understand why this is difficult to follow at the moment and we have to fix this.",
+              "createdAt": "2020-05-26T09:52:25Z",
+              "updatedAt": "2020-05-26T09:55:15Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTQzOTc5",
+          "commit": {
+            "abbreviatedOid": "92cbef1"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T09:53:58Z",
+          "updatedAt": "2020-05-26T09:53:58Z",
+          "comments": [
+            {
+              "originalPosition": 63,
+              "body": "I think that we can actually skip time(CC). It seemed important to various people, but I can see how you can work around that just with time(AA) and time(EG). Other thoughts?",
+              "createdAt": "2020-05-26T09:53:58Z",
+              "updatedAt": "2020-05-26T09:53:58Z"
+            }
+          ]
         }
       ]
     },
@@ -9821,19 +9963,294 @@
       "labels": [],
       "body": "",
       "createdAt": "2020-05-19T14:58:46Z",
-      "updatedAt": "2020-05-19T15:04:43Z",
+      "updatedAt": "2020-05-26T14:04:33Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "835a712bcc1adbcf8903b8abb7c661d2a009469a",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "Issue55",
-      "headRefOid": "625d9a41c4755e0682425e55dddd7e1adf6cab4d",
+      "headRefOid": "94a64e4fc166d42e562c8145e2e72698fd777061",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE3ODYyODY5",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-25T20:09:06Z",
+          "updatedAt": "2020-05-25T20:29:27Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Why are these lines deleted?  Recommend keeping them.",
+              "createdAt": "2020-05-25T20:09:06Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 24,
+              "body": "could be misread as \"The purpose is to enable readers to ... define useful terminology for attestation.\" which is not the intent.\r\n\r\n```suggestion\r\nThe purpose is to define useful terminology for attestation and enable readers to map\r\ntheir solution architecture to the canonical attestation architecture provided here.\r\n```",
+              "createdAt": "2020-05-25T20:10:56Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\nsuch as roles, device composition, topological models, and appraisal is vital for\r\n```",
+              "createdAt": "2020-05-25T20:12:06Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 36,
+              "body": "I'm not sure the change is technically correct.  The verifier vouches for the level of trustworthiness of the attester, and it vouches for the results it signs.  But it could (for example) ignore extra claims in the evidence (e.g., GPS location) that it cannot vouch for, and provide only vouched-for claims in the results.  Hence it need not vouch for the validity of the entire evidence.   I recommend reverting.",
+              "createdAt": "2020-05-25T20:14:30Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "I think this change is less correct than the original text.  The point about the \"signing capability\" typically refers to the Attesting Environment, and the endorsement vouches for that environment but not the target environment.   The new proposed text implies that it also vouches for target environments, which I think is not correct.  Recommend reverting.",
+              "createdAt": "2020-05-25T20:16:58Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "I believe the new text is less correct than the original.   For example, I would not say that a GPS claims is really about the \"trustworthiness status\" of an Attester, per se.   It's certainly information about an Attester though.  So I think Evidence can contain some info about the trustworthiness status, as well as additional claims that are not.  (E.g., a public key generated by the target environment that it wants to use for communication with a relying party).   As such, I prefer the original.",
+              "createdAt": "2020-05-25T20:20:26Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "I'm not sure what \"a service\" means here.   When you have a Verifying Relying Party, is it a service?",
+              "createdAt": "2020-05-25T20:21:31Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 109,
+              "body": "Just make sure we do not merge this PR with both versions (but you knew that).   Right now I think the \"Henk version\" reads better, and is shorter.",
+              "createdAt": "2020-05-25T20:22:33Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 123,
+              "body": "```suggestion\r\nThe RATS architecture includes the definition of roles (e.g., Attester, Verifier,\r\n```",
+              "createdAt": "2020-05-25T20:22:52Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 127,
+              "body": "```suggestion\r\ncombines multiple roles produces and consumes the associated conceptual messages.\r\n```",
+              "createdAt": "2020-05-25T20:23:19Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 133,
+              "body": "```suggestion\r\nNevertheless, the semantics of which conceptual messages are inputs and outputs to a role\r\n```",
+              "createdAt": "2020-05-25T20:23:48Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 142,
+              "body": "```suggestion\r\nThe movement of conceptual messages between locally hosted roles is referred to as\r\n```",
+              "createdAt": "2020-05-25T20:24:08Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 130,
+              "body": "```suggestion\r\nof attestation-enabled systems, therefore the various roles can be hosted on any\r\n```",
+              "createdAt": "2020-05-25T20:25:54Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 131,
+              "body": "```suggestion\r\nparticipating entity. This implies, for a given entity, that multiple roles could\r\n```",
+              "createdAt": "2020-05-25T20:26:05Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 137,
+              "body": "```suggestion\r\nInteractions between roles do not necessarily require use of Internet protocols.\r\n```",
+              "createdAt": "2020-05-25T20:26:23Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 139,
+              "body": "re \"IP-loopback devices\"... if they use \"IP\" loopback devices, how do they not use \"Internet protocols\" as in line 670?",
+              "createdAt": "2020-05-25T20:27:04Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 140,
+              "body": "```suggestion\r\nbetween the various environments that may exist on the entity that combines multiple roles.\r\n```",
+              "createdAt": "2020-05-25T20:27:16Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 146,
+              "body": "The above sentence is odd, why refer to \"the following paragraph\" with a header?",
+              "createdAt": "2020-05-25T20:27:43Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 151,
+              "body": "```suggestion\r\nThe local Verifier might convey local Attestation Results to a remote Relying Party\r\n```",
+              "createdAt": "2020-05-25T20:28:00Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            },
+            {
+              "originalPosition": 158,
+              "body": "```suggestion\r\nmight need to host multiple roles depending on the type of behavior each connected domain\r\n```",
+              "createdAt": "2020-05-25T20:28:21Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTU5MjQy",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T10:15:27Z",
+          "updatedAt": "2020-05-26T10:15:27Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "If this was not redundant content, it seems to be vital to highlight that early on.",
+              "createdAt": "2020-05-26T10:15:27Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTYwMDgw",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T10:16:41Z",
+          "updatedAt": "2020-05-26T10:16:42Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "If we are at it, I'd say \"remote attestation\" instead of \"attestation\". That nit aside, I think this reads better.",
+              "createdAt": "2020-05-26T10:16:42Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTYyMjQ5",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T10:19:52Z",
+          "updatedAt": "2020-05-26T10:19:52Z",
+          "comments": [
+            {
+              "originalPosition": 36,
+              "body": "I agree with Dave here. And I even think that we should word-smith a proposed change out of this comment and be more verbose here (yes, I know... even more words, but these seem to be universal useful).",
+              "createdAt": "2020-05-26T10:19:52Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTYyODYw",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T10:20:47Z",
+          "updatedAt": "2020-05-26T10:20:48Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "After reading this more thoroughly again, I have to agree with Dave here, too.",
+              "createdAt": "2020-05-26T10:20:47Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTYzMzU1",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T10:21:31Z",
+          "updatedAt": "2020-05-26T10:21:31Z",
+          "comments": [
+            {
+              "originalPosition": 139,
+              "body": "True",
+              "createdAt": "2020-05-26T10:21:31Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MTY0MzQ3",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T10:22:57Z",
+          "updatedAt": "2020-05-26T10:22:58Z",
+          "comments": [
+            {
+              "originalPosition": 146,
+              "body": "Removing the colon would simplify this into a leading sentence?",
+              "createdAt": "2020-05-26T10:22:58Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzMxMjM0",
+          "commit": {
+            "abbreviatedOid": "625d9a4"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:04:25Z",
+          "updatedAt": "2020-05-26T14:04:26Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "```suggestion\r\nThe Verifier appraises Evidence via Appraisal Policies and creates\r\nthe Attestation Results to support Relying Parties in their decision\r\nprocess.\r\n```",
+              "createdAt": "2020-05-26T14:04:25Z",
+              "updatedAt": "2020-05-26T14:04:33Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
