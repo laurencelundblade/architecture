@@ -5,14 +5,14 @@
 RATS Working Group                                           H. Birkholz
 Internet-Draft                                            Fraunhofer SIT
 Intended status: Informational                                 D. Thaler
-Expires: 20 November 2020                                      Microsoft
+Expires: 27 November 2020                                      Microsoft
                                                            M. Richardson
                                                 Sandelman Software Works
                                                                 N. Smith
                                                                    Intel
                                                                   W. Pan
                                                      Huawei Technologies
-                                                             19 May 2020
+                                                             26 May 2020
 
 
                Remote Attestation Procedures Architecture
@@ -53,7 +53,7 @@ Status of This Memo
 
 
 
-Birkholz, et al.        Expires 20 November 2020                [Page 1]
+Birkholz, et al.        Expires 27 November 2020                [Page 1]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -63,7 +63,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 November 2020.
+   This Internet-Draft will expire on 27 November 2020.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Birkholz, et al.        Expires 20 November 2020                [Page 2]
+Birkholz, et al.        Expires 27 November 2020                [Page 2]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -141,35 +141,39 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
    The Verifier appraises Evidence via Appraisal Policies and creates
    the Attestation Results to support Relying Parties in their decision
-   process.
+   process.  This documents defines a flexible architecture consisting
+   of attestation roles and their interactions via conceptual messages.
+   Additionally, this document defines a universal set of terms that can
+   be mapped to various existing and emerging Remote Attestation
+   Procedures.  Common topological models and the data flows associated
+   with them, such as the "Passport Model" and the "Background-Check
+   Model" are illustrated.  The purpose is to define useful terminology
+   for attestation and enable readers to map their solution architecture
+   to the canonical attestation architecture provided here.  Having a
+   common terminology that provides well-understood meanings for common
+   themes such as roles, device composition, topological models, and
+   appraisal is vital for semantic interoperability across solutions and
+   platforms involving multiple vendors and providers.
 
-   This documents defines a flexible architecture with corresponding
-   roles and their interaction via conceptual messages.  Additionally,
-   this document defines a universal set of terms that can be mapped to
-   various existing and emerging Remote Attestation Procedures.  Common
-   topological models and the data flows associated with them, such as
-   the "Passport Model" and the "Background-Check Model" are
-   illustrated.  The purpose is to enable readers of this document to
-   map their current and emerging solutions to the architecture provided
-   and the corresponding terminology defined.
 
-   A common terminology that provides a well-understood semantic meaning
-   to the concepts, roles, and models in this document is vital to
-   create semantic interoperability between solutions and across
-   different platforms.
+
+
+
+
+
+
+
+
+
+Birkholz, et al.        Expires 27 November 2020                [Page 3]
+
+Internet-Draft              RATS Arch & Terms                   May 2020
+
 
    Amongst other things, this document is about trust and
    trustworthiness.  Trust is a decision being made.  Trustworthiness is
    a quality that is assessed via evidence created.  This is a subtle
    difference and being familiar with the difference is crucial for
-
-
-
-Birkholz, et al.        Expires 20 November 2020                [Page 3]
-
-Internet-Draft              RATS Arch & Terms                   May 2020
-
-
    using this document.  Additionally, the concepts of freshness and
    trust relationships with respect to RATS are elaborated on to enable
    implementers in order to choose appropriate solutions to compose
@@ -192,10 +196,10 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       including information about an Attester, where the Verifier
       vouches for the validity of the results
 
-   Attester:  An entity whose attributes must be appraised in order to
-      determine whether the entity is considered trustworthy, such as
-      when deciding whether the entity is authorized to perform some
-      operation
+   Attester:  An entity (typically a device), whose Evidence must be
+      appraised in order to infer the extent to which the Attester is
+      considered trustworthy, such as when deciding whether it is
+      authorized to perform some operation
 
    Claim:  A piece of asserted information, often in the form of a name/
       value pair.  (Compare /claim/ in [RFC7519])
@@ -204,32 +208,33 @@ Internet-Draft              RATS Arch & Terms                   May 2020
       manufacturer) vouches for the integrity of an Attester's signing
       capability
 
-   Endorser:  An entity that creates Endorsements that can be used to
-      help to appraise the trustworthiness of Attesters
+   Endorser:  An entity (typically a manufacturer) whose Endorsements
+      help Verifiers appraise the authenticity of Evidence
 
    Evidence:  A set of information about an Attester that is to be
       appraised by a Verifier
 
-   Relying Party:  An entity that depends on the validity of information
-      about another entity, typically for purposes of authorization.
-      Compare /relying party/ in [RFC4949]
-
-   Relying Party Owner:  An entity, such as an administrator, that is
-      authorized to configure Appraisal Policy for Attestation Results
-      in a Relying Party.
+   Relying Party:  An entity, that depends on the validity of
+      information about an Attester, for purposes of reliably applying
+      application specific actions.  Compare /relying party/ in
+      [RFC4949]
 
 
 
-
-Birkholz, et al.        Expires 20 November 2020                [Page 4]
+Birkholz, et al.        Expires 27 November 2020                [Page 4]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
 
-   Verifier:  An entity that appraises the validity of Evidence about an
-      Attester
+   Relying Party Owner:  An entity (typically an administrator), that is
+      authorized to configure Appraisal Policy for Attestation Results
+      in a Relying Party
 
-   Verifier Owner:  An entity, such as an administrator, that is
+   Verifier:  An entity that appraises the validity of Evidence about an
+      Attester and produces Attestation Results to be used by a Relying
+      Party
+
+   Verifier Owner:  An entity (typically an administrator), that is
       authorized to configure Appraisal Policy for Evidence in a
       Verifier
 
@@ -272,12 +277,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-
-
-
-
-
-Birkholz, et al.        Expires 20 November 2020                [Page 5]
+Birkholz, et al.        Expires 27 November 2020                [Page 5]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -333,7 +333,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020                [Page 6]
+Birkholz, et al.        Expires 27 November 2020                [Page 6]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -389,7 +389,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020                [Page 7]
+Birkholz, et al.        Expires 27 November 2020                [Page 7]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020                [Page 8]
+Birkholz, et al.        Expires 27 November 2020                [Page 8]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -501,7 +501,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020                [Page 9]
+Birkholz, et al.        Expires 27 November 2020                [Page 9]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -557,7 +557,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 10]
+Birkholz, et al.        Expires 27 November 2020               [Page 10]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -613,7 +613,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 11]
+Birkholz, et al.        Expires 27 November 2020               [Page 11]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -669,7 +669,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 12]
+Birkholz, et al.        Expires 27 November 2020               [Page 12]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -725,7 +725,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 13]
+Birkholz, et al.        Expires 27 November 2020               [Page 13]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -781,7 +781,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 14]
+Birkholz, et al.        Expires 27 November 2020               [Page 14]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -837,7 +837,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 15]
+Birkholz, et al.        Expires 27 November 2020               [Page 15]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -893,7 +893,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 16]
+Birkholz, et al.        Expires 27 November 2020               [Page 16]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -949,7 +949,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 17]
+Birkholz, et al.        Expires 27 November 2020               [Page 17]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1005,7 +1005,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 18]
+Birkholz, et al.        Expires 27 November 2020               [Page 18]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1061,7 +1061,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 19]
+Birkholz, et al.        Expires 27 November 2020               [Page 19]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1117,7 +1117,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 20]
+Birkholz, et al.        Expires 27 November 2020               [Page 20]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1173,7 +1173,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 21]
+Birkholz, et al.        Expires 27 November 2020               [Page 21]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1229,7 +1229,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 22]
+Birkholz, et al.        Expires 27 November 2020               [Page 22]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1285,7 +1285,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 23]
+Birkholz, et al.        Expires 27 November 2020               [Page 23]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1341,7 +1341,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 24]
+Birkholz, et al.        Expires 27 November 2020               [Page 24]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1397,7 +1397,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 25]
+Birkholz, et al.        Expires 27 November 2020               [Page 25]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1453,7 +1453,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 26]
+Birkholz, et al.        Expires 27 November 2020               [Page 26]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1509,7 +1509,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 27]
+Birkholz, et al.        Expires 27 November 2020               [Page 27]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1565,7 +1565,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 28]
+Birkholz, et al.        Expires 27 November 2020               [Page 28]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1621,7 +1621,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 29]
+Birkholz, et al.        Expires 27 November 2020               [Page 29]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1677,7 +1677,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 30]
+Birkholz, et al.        Expires 27 November 2020               [Page 30]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1733,7 +1733,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 31]
+Birkholz, et al.        Expires 27 November 2020               [Page 31]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1789,7 +1789,7 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 32]
+Birkholz, et al.        Expires 27 November 2020               [Page 32]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1845,7 +1845,7 @@ Authors' Addresses
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 33]
+Birkholz, et al.        Expires 27 November 2020               [Page 33]
 
 Internet-Draft              RATS Arch & Terms                   May 2020
 
@@ -1901,4 +1901,4 @@ Internet-Draft              RATS Arch & Terms                   May 2020
 
 
 
-Birkholz, et al.        Expires 20 November 2020               [Page 34]
+Birkholz, et al.        Expires 27 November 2020               [Page 34]
