@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-26T14:04:53.690320+00:00",
+  "timestamp": "2020-06-01T16:04:24.877232+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -546,7 +546,7 @@
       "id": "MDU6SXNzdWU1NjAxNjE2NTY=",
       "title": "It seems to miss a final conclusion for the second paragragh in section 5.1",
       "url": "https://github.com/ietf-rats-wg/architecture/issues/39",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "FrankXL",
       "authorAssociation": "NONE",
       "assignees": [
@@ -555,8 +555,8 @@
       "labels": [],
       "body": "Since the resource access protocol between the Attester and Relying\r\nParty includes an Attestation Result, in this model the details of\r\nthat protocol constrain the serialization format of the Attestation\r\nResult. The format of the Evidence on the other hand is only\r\nconstrained by the Attester-Verifier attestation protocol. \"So...\"",
       "createdAt": "2020-02-05T06:08:23Z",
-      "updatedAt": "2020-03-27T16:47:38Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-29T22:00:07Z",
+      "closedAt": "2020-05-29T22:00:07Z",
       "comments": [
         {
           "author": "FrankXL",
@@ -571,6 +571,13 @@
           "body": "I don't think it is correct to assert that Attestation Results are 'a kind of Evidence'. Attestation Results are a statement of truth that is believed by Relying Party because the RP trusts whatever the Verify says about the Attester. It is wrong to position that Evidence and Results are the same because they (may) have the same claims / encodings. ",
           "createdAt": "2020-03-27T16:47:38Z",
           "updatedAt": "2020-03-27T16:47:38Z"
+        },
+        {
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@FrankXL , can you see if our latest text satisfies this concern, and if not, please re-open this issue.",
+          "createdAt": "2020-05-29T22:00:06Z",
+          "updatedAt": "2020-05-29T22:00:06Z"
         }
       ]
     },
@@ -648,7 +655,7 @@
       "id": "MDU6SXNzdWU1NjMyNjk4MDM=",
       "title": "to what extent does the security considerations talk about how long things are valid?",
       "url": "https://github.com/ietf-rats-wg/architecture/issues/42",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mcr",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -657,8 +664,8 @@
       "labels": [],
       "body": "TEEP and others needs to know what kind of SLA RATS can provide.\r\n",
       "createdAt": "2020-02-11T15:07:17Z",
-      "updatedAt": "2020-03-27T16:49:04Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-29T22:00:30Z",
+      "closedAt": "2020-05-29T22:00:30Z",
       "comments": [
         {
           "author": "dthaler",
@@ -778,6 +785,13 @@
           "body": "Is this issue resolved by the Freshness section and appendix?",
           "createdAt": "2020-03-27T16:49:04Z",
           "updatedAt": "2020-03-27T16:49:04Z"
+        },
+        {
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I believe we've hit this out of the park.\r\n",
+          "createdAt": "2020-05-29T22:00:30Z",
+          "updatedAt": "2020-05-29T22:00:30Z"
         }
       ]
     },
@@ -906,7 +920,7 @@
       "id": "MDU6SXNzdWU1NzQ4ODY1NTU=",
       "title": "Evidence description misses the mark",
       "url": "https://github.com/ietf-rats-wg/architecture/issues/55",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "laurencelundblade",
       "authorAssociation": "NONE",
       "assignees": [
@@ -915,8 +929,8 @@
       "labels": [],
       "body": "Section 7.1 should start out with something more like \"Evidence is made up of claims and usually signed by the attester\"n (not signed by the device).  It should say claims are being standardized.  Should say \"Evidence is always evaluated by a Verifier\"\r\n",
       "createdAt": "2020-03-03T19:23:11Z",
-      "updatedAt": "2020-05-05T00:32:45Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-29T22:00:54Z",
+      "closedAt": "2020-05-29T22:00:54Z",
       "comments": [
         {
           "author": "mcr",
@@ -931,6 +945,13 @@
           "body": "Created \"Issue55\" branch and pull request.",
           "createdAt": "2020-05-05T00:32:45Z",
           "updatedAt": "2020-05-05T00:32:45Z"
+        },
+        {
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Issue55 merged.",
+          "createdAt": "2020-05-29T22:00:54Z",
+          "updatedAt": "2020-05-29T22:00:54Z"
         }
       ]
     },
@@ -1014,12 +1035,12 @@
       "author": "laurencelundblade",
       "authorAssociation": "NONE",
       "assignees": [
-        "mcr"
+        "laurencelundblade"
       ],
       "labels": [],
       "body": "Here's some possible text.\r\n\r\nEndorser\r\nThe primary function of an Endorser is to endorse an Attester so that a Verifier can know to trust that Attester. The Endorser does this by creating an Endorsement and conveying it securely to the Verifier. The primary basis for a Verifier trusting an Attester is the Endorsement.\r\n\r\nThere is thus an existential relationship between Attesters and Endorsers.  An Attester with no Endorsement is not worth very much since there is no good basis by which a Verifier can trust it so every Attester needs an Endorser. The Endorser\u2019s primary function is to endorse Attesters so an Endorser doesn\u2019t have anything to do without some Attesters to endorse.\r\n\r\nA Verify cannot do its job without Endorsements. It must have an Endorsement for each Attester from which it received Attestation Evidence. Without this, the Attester is not trusted and there is no basis for trusting the Evidence it produces.\r\n\r\nThere is a trust triangle between the Endorser, Attester and Verifier. The Endorser tells the Verifier that an Attester is trustworthy.\r\n\r\nEndorsement\r\nUltimately an Endorsement must be realized as some input bytes to a Verifier and they must be conveyed securely from the Endorser to the Verifier. RATS architecture does not impose any limit or restriction on the formats of these bytes or the conveyance mechanism.  In practice they are expected to vary quite widely.\r\n\r\nIn most cases the Endorsement will include the key material that is used to verify signatures on the Evidence. Since the Evidence will contain a nonce, this signature verification serves to authenticate the attester. The Endorsement may also contain information about the Attester such as its type, version, manufacturer and such.\r\n\r\nIn one example, the Endorser and the Verifier are the same legal organization, so secure conveyance is entirely an internal issue for the organization. It may consist of one employee copying a set of public keys from computer in the company to another.\r\n\r\nIn another example, the Endorsement may take the form of a PKI hierarchy. The Endorser conveys a root certificate to the Verifier. The Endorser also creates per-attester certificates under that root. Those per-attester certificates are programmed into Attesters. The Attester sends them to the  Verifier attached to the Evidence. There may be several levels of certificates in the PKI hierarchy. The Verifier walks the certificate chain to determine trust.  Note in the case the abstract notion of Endorsement comes to the Verifier in two parts, one in an out-of-band secure conveyance or a root certificate and the other as the signed (self-securing) certificates from the Attester.\r\n\r\nUnendorsed Attesters\r\nThe use of unendorsed Attesters is discouraged because there is no good basis for establishing trust in them. An unendorsed Attester may still have a signing key and produce signed evidence. A Verifier may choose to have some trust in the Evidence they produce by assuming they are trusted on first use (TOFU), building up trust over time after seeing a lot of presumably good attestation evidence, or because it is fed into a machine learning algorithm that correlates to known fraud.  Rats architecture include any facilities, details or designs for this mode of use and explicitly considers it insecure.",
       "createdAt": "2020-03-10T14:50:23Z",
-      "updatedAt": "2020-03-24T14:56:25Z",
+      "updatedAt": "2020-05-29T21:59:04Z",
       "closedAt": null,
       "comments": []
     },
@@ -1077,7 +1098,7 @@
       "id": "MDU6SXNzdWU1ODMwNTU5NDQ=",
       "title": "create pull requests with time-sequence and table of time points",
       "url": "https://github.com/ietf-rats-wg/architecture/issues/69",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mcr",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -1086,8 +1107,8 @@
       "labels": [],
       "body": "https://mailarchive.ietf.org/arch/msg/rats/huQUUnk96jS2Av4uO4pVBs_iMVs/\r\n\r\nEric and Dave will convert HTML table to pull request.\r\n",
       "createdAt": "2020-03-17T14:31:04Z",
-      "updatedAt": "2020-03-17T14:31:11Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-29T21:58:09Z",
+      "closedAt": "2020-05-29T21:58:09Z",
       "comments": []
     },
     {
@@ -9690,7 +9711,7 @@
       "labels": [],
       "body": "only the most essential items:\r\n* added three more timestamp types based on TUDA, trying to generalize it a bit\r\n* added a few periods to text that seems to express sentences",
       "createdAt": "2020-05-12T13:56:46Z",
-      "updatedAt": "2020-05-26T09:55:15Z",
+      "updatedAt": "2020-05-26T14:54:59Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
@@ -9948,6 +9969,26 @@
               "updatedAt": "2020-05-26T09:53:58Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzgxNzAw",
+          "commit": {
+            "abbreviatedOid": "92cbef1"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:54:59Z",
+          "updatedAt": "2020-05-26T14:54:59Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "Agreed that \"HD\" is not a good term, but a better term will be worked on.\r\n",
+              "createdAt": "2020-05-26T14:54:59Z",
+              "updatedAt": "2020-05-26T14:54:59Z"
+            }
+          ]
         }
       ]
     },
@@ -9956,24 +9997,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDIwMTc2NTIy",
       "title": "Changes to Roll and Host text and definitions",
       "url": "https://github.com/ietf-rats-wg/architecture/pull/89",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mcr",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2020-05-19T14:58:46Z",
-      "updatedAt": "2020-05-26T14:04:33Z",
+      "updatedAt": "2020-05-26T14:26:03Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "835a712bcc1adbcf8903b8abb7c661d2a009469a",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "Issue55",
-      "headRefOid": "94a64e4fc166d42e562c8145e2e72698fd777061",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "cff41ee07e05bbd00ab4a5efff43e8bf54a267bb",
+      "closedAt": "2020-05-26T14:26:03Z",
+      "mergedAt": "2020-05-26T14:26:03Z",
+      "mergedBy": "mcr",
+      "mergeCommit": {
+        "oid": "cf41d07c0446196a77acfe559d90641ca59021bb"
+      },
       "comments": [],
       "reviews": [
         {
@@ -9992,121 +10035,121 @@
               "originalPosition": 6,
               "body": "Why are these lines deleted?  Recommend keeping them.",
               "createdAt": "2020-05-25T20:09:06Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 24,
               "body": "could be misread as \"The purpose is to enable readers to ... define useful terminology for attestation.\" which is not the intent.\r\n\r\n```suggestion\r\nThe purpose is to define useful terminology for attestation and enable readers to map\r\ntheir solution architecture to the canonical attestation architecture provided here.\r\n```",
               "createdAt": "2020-05-25T20:10:56Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 26,
               "body": "```suggestion\r\nsuch as roles, device composition, topological models, and appraisal is vital for\r\n```",
               "createdAt": "2020-05-25T20:12:06Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 36,
               "body": "I'm not sure the change is technically correct.  The verifier vouches for the level of trustworthiness of the attester, and it vouches for the results it signs.  But it could (for example) ignore extra claims in the evidence (e.g., GPS location) that it cannot vouch for, and provide only vouched-for claims in the results.  Hence it need not vouch for the validity of the entire evidence.   I recommend reverting.",
               "createdAt": "2020-05-25T20:14:30Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 50,
               "body": "I think this change is less correct than the original text.  The point about the \"signing capability\" typically refers to the Attesting Environment, and the endorsement vouches for that environment but not the target environment.   The new proposed text implies that it also vouches for target environments, which I think is not correct.  Recommend reverting.",
               "createdAt": "2020-05-25T20:16:58Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 60,
               "body": "I believe the new text is less correct than the original.   For example, I would not say that a GPS claims is really about the \"trustworthiness status\" of an Attester, per se.   It's certainly information about an Attester though.  So I think Evidence can contain some info about the trustworthiness status, as well as additional claims that are not.  (E.g., a public key generated by the target environment that it wants to use for communication with a relying party).   As such, I prefer the original.",
               "createdAt": "2020-05-25T20:20:26Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 75,
               "body": "I'm not sure what \"a service\" means here.   When you have a Verifying Relying Party, is it a service?",
               "createdAt": "2020-05-25T20:21:31Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 109,
               "body": "Just make sure we do not merge this PR with both versions (but you knew that).   Right now I think the \"Henk version\" reads better, and is shorter.",
               "createdAt": "2020-05-25T20:22:33Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 123,
               "body": "```suggestion\r\nThe RATS architecture includes the definition of roles (e.g., Attester, Verifier,\r\n```",
               "createdAt": "2020-05-25T20:22:52Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 127,
               "body": "```suggestion\r\ncombines multiple roles produces and consumes the associated conceptual messages.\r\n```",
               "createdAt": "2020-05-25T20:23:19Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 133,
               "body": "```suggestion\r\nNevertheless, the semantics of which conceptual messages are inputs and outputs to a role\r\n```",
               "createdAt": "2020-05-25T20:23:48Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 142,
               "body": "```suggestion\r\nThe movement of conceptual messages between locally hosted roles is referred to as\r\n```",
               "createdAt": "2020-05-25T20:24:08Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 130,
               "body": "```suggestion\r\nof attestation-enabled systems, therefore the various roles can be hosted on any\r\n```",
               "createdAt": "2020-05-25T20:25:54Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 131,
               "body": "```suggestion\r\nparticipating entity. This implies, for a given entity, that multiple roles could\r\n```",
               "createdAt": "2020-05-25T20:26:05Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 137,
               "body": "```suggestion\r\nInteractions between roles do not necessarily require use of Internet protocols.\r\n```",
               "createdAt": "2020-05-25T20:26:23Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 139,
               "body": "re \"IP-loopback devices\"... if they use \"IP\" loopback devices, how do they not use \"Internet protocols\" as in line 670?",
               "createdAt": "2020-05-25T20:27:04Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 140,
               "body": "```suggestion\r\nbetween the various environments that may exist on the entity that combines multiple roles.\r\n```",
               "createdAt": "2020-05-25T20:27:16Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 146,
               "body": "The above sentence is odd, why refer to \"the following paragraph\" with a header?",
               "createdAt": "2020-05-25T20:27:43Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 151,
               "body": "```suggestion\r\nThe local Verifier might convey local Attestation Results to a remote Relying Party\r\n```",
               "createdAt": "2020-05-25T20:28:00Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             },
             {
               "originalPosition": 158,
               "body": "```suggestion\r\nmight need to host multiple roles depending on the type of behavior each connected domain\r\n```",
               "createdAt": "2020-05-25T20:28:21Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10126,7 +10169,7 @@
               "originalPosition": 6,
               "body": "If this was not redundant content, it seems to be vital to highlight that early on.",
               "createdAt": "2020-05-26T10:15:27Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10146,7 +10189,7 @@
               "originalPosition": 24,
               "body": "If we are at it, I'd say \"remote attestation\" instead of \"attestation\". That nit aside, I think this reads better.",
               "createdAt": "2020-05-26T10:16:42Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10166,7 +10209,7 @@
               "originalPosition": 36,
               "body": "I agree with Dave here. And I even think that we should word-smith a proposed change out of this comment and be more verbose here (yes, I know... even more words, but these seem to be universal useful).",
               "createdAt": "2020-05-26T10:19:52Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10186,7 +10229,7 @@
               "originalPosition": 50,
               "body": "After reading this more thoroughly again, I have to agree with Dave here, too.",
               "createdAt": "2020-05-26T10:20:47Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10206,7 +10249,7 @@
               "originalPosition": 139,
               "body": "True",
               "createdAt": "2020-05-26T10:21:31Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10226,7 +10269,7 @@
               "originalPosition": 146,
               "body": "Removing the colon would simplify this into a leading sentence?",
               "createdAt": "2020-05-26T10:22:58Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         },
@@ -10246,11 +10289,137 @@
               "originalPosition": 3,
               "body": "```suggestion\r\nThe Verifier appraises Evidence via Appraisal Policies and creates\r\nthe Attestation Results to support Relying Parties in their decision\r\nprocess.\r\n```",
               "createdAt": "2020-05-26T14:04:25Z",
-              "updatedAt": "2020-05-26T14:04:33Z"
+              "updatedAt": "2020-05-26T14:21:34Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzM0MTAw",
+          "commit": {
+            "abbreviatedOid": "94a64e4"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:07:21Z",
+          "updatedAt": "2020-05-26T14:07:22Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n\r\nThe Verifier appraises Evidence via Appraisal Policies and creates\r\n```",
+              "createdAt": "2020-05-26T14:07:21Z",
+              "updatedAt": "2020-05-26T14:21:34Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzM4ODcz",
+          "commit": {
+            "abbreviatedOid": "94a64e4"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:11:50Z",
+          "updatedAt": "2020-05-26T14:11:51Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "```suggestion\r\n: The output generated by a Verifier, typically including information about an Attester, where the Verifier vouches for the validity of the results\r\n```",
+              "createdAt": "2020-05-26T14:11:50Z",
+              "updatedAt": "2020-05-26T14:21:34Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzQxOTA5",
+          "commit": {
+            "abbreviatedOid": "94a64e4"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:14:57Z",
+          "updatedAt": "2020-05-26T14:14:58Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\r\n: A secure statement that some entity (typically a manufacturer) vouches for the integrity of an Attester's signing capability\r\n```",
+              "createdAt": "2020-05-26T14:14:57Z",
+              "updatedAt": "2020-05-26T14:21:34Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzQyNzU1",
+          "commit": {
+            "abbreviatedOid": "94a64e4"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:15:50Z",
+          "updatedAt": "2020-05-26T14:15:50Z",
+          "comments": [
+            {
+              "originalPosition": 61,
+              "body": "```suggestion\r\n: A set of information about an Attester that is to be appraised by a Verifier\r\n```",
+              "createdAt": "2020-05-26T14:15:50Z",
+              "updatedAt": "2020-05-26T14:21:34Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDE4MzQ0OTUw",
+          "commit": {
+            "abbreviatedOid": "94a64e4"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-26T14:18:05Z",
+          "updatedAt": "2020-05-26T14:18:05Z",
+          "comments": [
+            {
+              "originalPosition": 76,
+              "body": "```suggestion\r\n: An entity that appraises the validity of Evidence about an Attester\r\n```",
+              "createdAt": "2020-05-26T14:18:05Z",
+              "updatedAt": "2020-05-26T14:21:34Z"
             }
           ]
         }
       ]
+    },
+    {
+      "number": 90,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDIzMjUzMzUy",
+      "title": "added content for recentness and uniqueness to the Freshness section",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/90",
+      "state": "OPEN",
+      "author": "mcr",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\r\nTo this branch, the text from Thomas will be added.\r\n",
+      "createdAt": "2020-05-26T14:47:41Z",
+      "updatedAt": "2020-05-26T14:47:41Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "c47c3538e39d8e4fef5311dd8b1eb912f05d57d8",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "freshness2",
+      "headRefOid": "5da00272dc9a162c90df9cf308dd6e7b801ab1bc",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
