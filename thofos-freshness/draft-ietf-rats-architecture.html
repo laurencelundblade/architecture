@@ -2100,7 +2100,7 @@ a different format.<a href="#section-8-7" class="pilcrow">¶</a></p>
       <h2 id="name-freshness">
 <a href="#section-9" class="section-number selfRef">9. </a><a href="#name-freshness" class="section-name selfRef">Freshness</a>
       </h2>
-<p id="section-9-1">It is important to prevent old Evidence or old Attestation Results that are no longer correct to be assessed as valid. Replay Attacks are an important reason to do that. More importantly, the validity of Conceptual Message, such as Evidence or Attestation Results, are the basis for trustworthy RATS, in general.
+<p id="section-9-1">It is important to prevent old Evidence or old Attestation Results that are no longer correct to be assessed as valid. Replay attacks are an important reason to do that. More importantly, the validity of Conceptual Messages, such as Evidence or Attestation Results, are the basis for trustworthy remote attestation procedures, in general.
 Some mechanism of ensuring that Evidence and Attestation
 Results are actually fresh are required. In essence, there has to be some degree of assurance
 that they still reflect the latest operational state of the Attester and that, for example, Attestation
@@ -2115,7 +2115,7 @@ resource budget (e.g., an energy budget in constrained devices).
 The goal is to narrow the time window to something the Verifier
 (for Evidence) or Relying Party (for an Attestation Result) is willing to accept.<a href="#section-9-1" class="pilcrow">¶</a></p>
 <p id="section-9-2">There are four common approaches to providing some assurance of freshness, effectively determining the epoch of the
-validity-span of Evidence or Attestation Results.<a href="#section-9-2" class="pilcrow">¶</a></p>
+validity-span of, e.g., Evidence or Attestation Results.<a href="#section-9-2" class="pilcrow">¶</a></p>
 <div id="implicit-timekeeping-using-nonces">
 <section id="section-9.1">
         <h3 id="name-implicit-timekeeping-using-">
