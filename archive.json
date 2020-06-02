@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-06-02T01:29:11.397968+00:00",
+  "timestamp": "2020-06-02T14:17:09.585387+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -9711,13 +9711,13 @@
       "labels": [],
       "body": "only the most essential items:\r\n* added three more timestamp types based on TUDA, trying to generalize it a bit\r\n* added a few periods to text that seems to express sentences",
       "createdAt": "2020-05-12T13:56:46Z",
-      "updatedAt": "2020-06-01T17:06:15Z",
+      "updatedAt": "2020-06-02T14:05:33Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "more-time-considerations",
-      "headRefOid": "c0f5698925c0ace59ce0e98b17c31a09e0b2f952",
+      "headRefOid": "5dfece1e16e4e9f27cd3d45150afe28e6dbb11f2",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9740,7 +9740,7 @@
               "originalPosition": 29,
               "body": "Duplicate \"examples\".\r\n\r\n(I really prefer how it read before.)",
               "createdAt": "2020-05-12T15:06:22Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9760,7 +9760,7 @@
               "originalPosition": 29,
               "body": "Yes. Redundant \"example\" is redundant. Alas, we cannot start standards text with \"We now walk\". The alternate text was written too hastily be me.",
               "createdAt": "2020-05-12T15:18:45Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9780,7 +9780,7 @@
               "originalPosition": 13,
               "body": "This ID is never used in later sections, so should not be added unless it is used in the doc.",
               "createdAt": "2020-05-19T01:13:26Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9800,7 +9800,7 @@
               "originalPosition": 13,
               "body": "Which ID do you mean here, exactly? It is had to read from the diff illustrated, I think.",
               "createdAt": "2020-05-19T10:31:42Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9820,7 +9820,7 @@
               "originalPosition": 29,
               "body": "Maybe we can say:\r\nUsing the table above, a number of hypothetical examples of how a solution might be built are illustrated below.",
               "createdAt": "2020-05-19T11:34:26Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9840,7 +9840,7 @@
               "originalPosition": 13,
               "body": "I think Dave's meaning is that the newly added 3 events (AA, CC, and HD) are not used in later sections.",
               "createdAt": "2020-05-19T11:37:18Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9860,7 +9860,7 @@
               "originalPosition": 13,
               "body": "ah okay. Thx Wei. I created  a commit (https://github.com/ietf-rats-wg/architecture/commit/620ef97792096ab82df628f028b5c58c0ddbb4bc) based on that identified gap.",
               "createdAt": "2020-05-19T12:37:49Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9880,7 +9880,7 @@
               "originalPosition": 29,
               "body": "Fine with me. Thx! Objections or request for polish?",
               "createdAt": "2020-05-19T12:39:31Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9900,7 +9900,7 @@
               "originalPosition": 29,
               "body": "```suggestion\r\nUsing the table above, a number of hypothetical examples of how a solution might be built are illustrated below.\r\n```",
               "createdAt": "2020-05-21T22:26:48Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9920,13 +9920,13 @@
               "originalPosition": 65,
               "body": "time(AA) seems to be irrelevant for any security purpose, only time(EG) is relevant, so I don't think time(AA) belongs in this doc.\r\n\r\ntime(HD) also seems very confusing.   since time(HD) and time(EG) are on the same entity, and that same entity compares against a threshold, what security threat is this trying to address?  I don't follow.",
               "createdAt": "2020-05-26T04:36:04Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             },
             {
               "originalPosition": 63,
               "body": "there is no time(CC) in the diagram, but I think time(CC) is irrelevant for any security purpose, only time(EG) matters and time(CC) can be ignored",
               "createdAt": "2020-05-26T04:38:34Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9946,7 +9946,7 @@
               "originalPosition": 65,
               "body": "In order to always create the most recent Evdence possible, the Attester has to be aware of a changed Value as soon as possible. Otherwise Evidence is outdated and could even convey a misleading picture about an Attester's Target Environments, ultimately leading to incorrect risk assessments. Hence time(AA) is quite relevant, I think. \r\n\r\nThere are scenarios where this is less relevant (e.g. boot-time integrity) and some scenarios where this is more relevant (e.g. run-time integrity).\r\n\r\nI agree that time(HD) is \"squeezed\" into the diagram it is actually the reception of the distributed handles. I did not want to add a \"distributor of the handles\" the the actors in the diagram. Maybe we can address this by rewording time(HD) correspondingly? In essence, I understand why this is difficult to follow at the moment and we have to fix this.",
               "createdAt": "2020-05-26T09:52:25Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9966,7 +9966,7 @@
               "originalPosition": 63,
               "body": "I think that we can actually skip time(CC). It seemed important to various people, but I can see how you can work around that just with time(AA) and time(EG). Other thoughts?",
               "createdAt": "2020-05-26T09:53:58Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         },
@@ -9986,7 +9986,7 @@
               "originalPosition": 65,
               "body": "Agreed that \"HD\" is not a good term, but a better term will be worked on.\r\n",
               "createdAt": "2020-05-26T14:54:59Z",
-              "updatedAt": "2020-06-01T17:06:15Z"
+              "updatedAt": "2020-06-02T14:05:33Z"
             }
           ]
         }
@@ -10496,13 +10496,13 @@
       "labels": [],
       "body": "This commit slightly changes the Freshness section to reflect the\r\noutcome of the discussion around PR #87.  (Hopefully I've managed to\r\ncapture the gist of Henk's thinking without disrupting too much the\r\nexisting flow.)\r\n\r\nTL;DR\r\n\r\nThe key change here is the removal of reply protection as a goal in\r\nitself.  The section now states clearly that the overall goal is instead\r\nthe identification of the point in time when attestation claims have\r\nbeen signed and/or generated so that a freshness policy can be applied.\r\nIn this perspective, the fundamental property provided by a nonce-based\r\nscheme with regards to freshness is its ability to lock the requester's\r\nclock to the underlying protocol transaction, thus indirectly\r\nestablishing the epoch of the attestation / verification event.  By\r\nmaking the nonce unique and non-predictable, the timeline locking cannot\r\nbe subverted, which provides anti-replay.  However, that is a nice\r\nside-effect rather than the primary goal.\r\n\r\nThis commit also adds some precision around the nonce and clock\r\nproperties - unpredictability and trustworthiness respectively.",
       "createdAt": "2020-06-01T16:05:24Z",
-      "updatedAt": "2020-06-02T01:24:51Z",
+      "updatedAt": "2020-06-02T14:16:37Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "c47c3538e39d8e4fef5311dd8b1eb912f05d57d8",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "thofos-freshness",
-      "headRefOid": "8bb928930ec96ffefc02a50ca1d213954a71b440",
+      "headRefOid": "50391169f1cf4750131304b8d0f7cb514a64b06c",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -10540,37 +10540,37 @@
               "originalPosition": 48,
               "body": "I believe \"Evidence\" is slightly better than \"attributes\" (but I can live with it either way) since only the attributes that appear in Evidence are actually appraised.\r\n\r\nOn \"whether\" vs \"the extent to which\", I believe the latter is more correct since the former implies it's always exactly boolean, and the latter is more liberal in terms of how may different possibilities there are.",
               "createdAt": "2020-06-01T20:36:51Z",
-              "updatedAt": "2020-06-01T20:40:47Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 66,
               "body": "FYI I am ok either way, but I think \"another entity\" was previously changed to \"an Attester\" so not sure why reverting is being proposed in this PR but again I can live with it either way.",
               "createdAt": "2020-06-01T20:37:39Z",
-              "updatedAt": "2020-06-01T20:40:47Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 76,
               "body": "Why is this line removed?",
               "createdAt": "2020-06-01T20:38:43Z",
-              "updatedAt": "2020-06-01T20:40:47Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 93,
               "body": "We should not be adding FIXME comments into the doc at this point",
               "createdAt": "2020-06-01T20:39:04Z",
-              "updatedAt": "2020-06-01T20:40:47Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 115,
               "body": "I find the wording of \"--in itself-- is composed\" to be harder to read than the previous text",
               "createdAt": "2020-06-01T20:39:52Z",
-              "updatedAt": "2020-06-01T20:40:47Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 168,
               "body": "This seems to revert a bunch of changes we agreed to.   Maybe it needs a rebase or something?",
               "createdAt": "2020-06-01T20:40:35Z",
-              "updatedAt": "2020-06-01T20:40:47Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             }
           ]
         },
@@ -10590,55 +10590,125 @@
               "originalPosition": 277,
               "body": "Please break lines into shorter source lines, like in the old text, to make diffs easier to review.",
               "createdAt": "2020-06-01T20:41:32Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 297,
               "body": "\"epoch of the validity-span\" is hard to parse and understand.  Can this be rephrased in layman's terms?",
               "createdAt": "2020-06-01T20:42:27Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 331,
               "body": "\"having Claim\" is bad grammar.\r\n\"having Claims\"?  \"having a Claim\"? \"having each Claim\"?\r\n\r\nBut which approach is the one where each Claim can be separately annotated with a timestamp?   In the original text with only two approaches, it would be part of this one.",
               "createdAt": "2020-06-01T20:43:41Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 339,
               "body": "For parity with previous subsection, this would then require adding text saying \"This typically requires additional claims about the Attester's timetick counter mechanism in order to provide such assurance.\"",
               "createdAt": "2020-06-01T20:46:19Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 342,
               "body": "I don't yet follow why the time interval since nonce was received is interesting for anything.  Explain, or provide a forward reference if it's later.",
               "createdAt": "2020-06-01T20:47:14Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 350,
               "body": "The term \"validity-span\" is not a normal term as far as I know",
               "createdAt": "2020-06-01T20:48:17Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 352,
               "body": "can't parse \"track is to avoid\"",
               "createdAt": "2020-06-01T20:48:47Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 344,
               "body": "I can't figure out how/why this is any different architecturally from nonces.  To me, the handle is just a nonce as far as I can tell from the below discussion.",
               "createdAt": "2020-06-01T20:49:53Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
             },
             {
               "originalPosition": 366,
               "body": "I'm not sure I agree with this.  Shouldn't it be covered by the policy?  If an attester can only get a stale value and can't vouch for it not having been changed since, then putting that fact in the Evidence allows the verifier to make a decision appropriately.",
               "createdAt": "2020-06-01T20:51:13Z",
-              "updatedAt": "2020-06-01T20:51:42Z"
+              "updatedAt": "2020-06-02T14:16:37Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyMzAwODc1",
+          "commit": {
+            "abbreviatedOid": "8bb9289"
+          },
+          "author": "William-PanWei",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T02:26:33Z",
+          "updatedAt": "2020-06-02T02:26:34Z",
+          "comments": [
+            {
+              "originalPosition": 48,
+              "body": "+1, I agree with Dave, there may be other intermediate situations between simple trust and non-trust.",
+              "createdAt": "2020-06-02T02:26:33Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyMzEwMDY1",
+          "commit": {
+            "abbreviatedOid": "8bb9289"
+          },
+          "author": "William-PanWei",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2020-06-02T02:58:43Z",
+          "updatedAt": "2020-06-02T07:58:35Z",
+          "comments": [
+            {
+              "originalPosition": 277,
+              "body": "```suggestion\r\nIt is important to prevent old Evidence or old Attestation Results\r\nthat are no longer correct to be assessed as valid. Replay attacks\r\nare an important reason to do that. More importantly, the validity\r\nof Conceptual Messages, such as Evidence or Attestation Results,\r\nis the basis for trustworthy remote attestation procedures, in general.\r\n```",
+              "createdAt": "2020-06-02T02:58:43Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
+            },
+            {
+              "originalPosition": 119,
+              "body": "I feel that line 388 and 390 are duplicated.",
+              "createdAt": "2020-06-02T03:04:13Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
+            },
+            {
+              "originalPosition": 283,
+              "body": "```suggestion\r\nstate of the Attester, and/or the Appraisal Policy for Evidence,\r\n```",
+              "createdAt": "2020-06-02T03:53:38Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
+            },
+            {
+              "originalPosition": 353,
+              "body": "```suggestion\r\nDistributed handles are used in place of nonces for Evidence generation.\r\n```",
+              "createdAt": "2020-06-02T07:15:48Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
+            },
+            {
+              "originalPosition": 344,
+              "body": "It seems like that the handle is also a nonce, and the difference is that this nonce is from a third party (a centralized entity), not the Verifier or Relying Party.\r\nI'm afraid this approach is more complex because you need to consider the time sync among three entities. For example, the time of receiving the handle among different entities may be different, therefore the handle expired time will be different. If the handle on the Verifier expires earlier than the Attester, the handle may already be expired while Verifier receives the Evidence from Attester.",
+              "createdAt": "2020-06-02T07:48:56Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
+            },
+            {
+              "originalPosition": 398,
+              "body": "I think these new-added events had been questioned before, that the examples below don't use them.",
+              "createdAt": "2020-06-02T07:57:02Z",
+              "updatedAt": "2020-06-02T14:16:37Z"
             }
           ]
         }
