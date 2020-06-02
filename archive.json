@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-06-01T16:04:24.877232+00:00",
+  "timestamp": "2020-06-02T01:29:11.397968+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -9711,13 +9711,13 @@
       "labels": [],
       "body": "only the most essential items:\r\n* added three more timestamp types based on TUDA, trying to generalize it a bit\r\n* added a few periods to text that seems to express sentences",
       "createdAt": "2020-05-12T13:56:46Z",
-      "updatedAt": "2020-05-26T14:54:59Z",
+      "updatedAt": "2020-06-01T17:06:15Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "2a8eec68b3de946ddb8840f1776c54cd72646c96",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "more-time-considerations",
-      "headRefOid": "92cbef196802cca15eae1731bbc3571bc5d7a401",
+      "headRefOid": "c0f5698925c0ace59ce0e98b17c31a09e0b2f952",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9740,7 +9740,7 @@
               "originalPosition": 29,
               "body": "Duplicate \"examples\".\r\n\r\n(I really prefer how it read before.)",
               "createdAt": "2020-05-12T15:06:22Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9760,7 +9760,7 @@
               "originalPosition": 29,
               "body": "Yes. Redundant \"example\" is redundant. Alas, we cannot start standards text with \"We now walk\". The alternate text was written too hastily be me.",
               "createdAt": "2020-05-12T15:18:45Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9780,7 +9780,7 @@
               "originalPosition": 13,
               "body": "This ID is never used in later sections, so should not be added unless it is used in the doc.",
               "createdAt": "2020-05-19T01:13:26Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9800,7 +9800,7 @@
               "originalPosition": 13,
               "body": "Which ID do you mean here, exactly? It is had to read from the diff illustrated, I think.",
               "createdAt": "2020-05-19T10:31:42Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9820,7 +9820,7 @@
               "originalPosition": 29,
               "body": "Maybe we can say:\r\nUsing the table above, a number of hypothetical examples of how a solution might be built are illustrated below.",
               "createdAt": "2020-05-19T11:34:26Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9840,7 +9840,7 @@
               "originalPosition": 13,
               "body": "I think Dave's meaning is that the newly added 3 events (AA, CC, and HD) are not used in later sections.",
               "createdAt": "2020-05-19T11:37:18Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9860,7 +9860,7 @@
               "originalPosition": 13,
               "body": "ah okay. Thx Wei. I created  a commit (https://github.com/ietf-rats-wg/architecture/commit/620ef97792096ab82df628f028b5c58c0ddbb4bc) based on that identified gap.",
               "createdAt": "2020-05-19T12:37:49Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9880,7 +9880,7 @@
               "originalPosition": 29,
               "body": "Fine with me. Thx! Objections or request for polish?",
               "createdAt": "2020-05-19T12:39:31Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9900,7 +9900,7 @@
               "originalPosition": 29,
               "body": "```suggestion\r\nUsing the table above, a number of hypothetical examples of how a solution might be built are illustrated below.\r\n```",
               "createdAt": "2020-05-21T22:26:48Z",
-              "updatedAt": "2020-05-21T22:27:13Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9920,13 +9920,13 @@
               "originalPosition": 65,
               "body": "time(AA) seems to be irrelevant for any security purpose, only time(EG) is relevant, so I don't think time(AA) belongs in this doc.\r\n\r\ntime(HD) also seems very confusing.   since time(HD) and time(EG) are on the same entity, and that same entity compares against a threshold, what security threat is this trying to address?  I don't follow.",
               "createdAt": "2020-05-26T04:36:04Z",
-              "updatedAt": "2020-05-26T04:40:03Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             },
             {
               "originalPosition": 63,
               "body": "there is no time(CC) in the diagram, but I think time(CC) is irrelevant for any security purpose, only time(EG) matters and time(CC) can be ignored",
               "createdAt": "2020-05-26T04:38:34Z",
-              "updatedAt": "2020-05-26T04:40:03Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9946,7 +9946,7 @@
               "originalPosition": 65,
               "body": "In order to always create the most recent Evdence possible, the Attester has to be aware of a changed Value as soon as possible. Otherwise Evidence is outdated and could even convey a misleading picture about an Attester's Target Environments, ultimately leading to incorrect risk assessments. Hence time(AA) is quite relevant, I think. \r\n\r\nThere are scenarios where this is less relevant (e.g. boot-time integrity) and some scenarios where this is more relevant (e.g. run-time integrity).\r\n\r\nI agree that time(HD) is \"squeezed\" into the diagram it is actually the reception of the distributed handles. I did not want to add a \"distributor of the handles\" the the actors in the diagram. Maybe we can address this by rewording time(HD) correspondingly? In essence, I understand why this is difficult to follow at the moment and we have to fix this.",
               "createdAt": "2020-05-26T09:52:25Z",
-              "updatedAt": "2020-05-26T09:55:15Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9966,7 +9966,7 @@
               "originalPosition": 63,
               "body": "I think that we can actually skip time(CC). It seemed important to various people, but I can see how you can work around that just with time(AA) and time(EG). Other thoughts?",
               "createdAt": "2020-05-26T09:53:58Z",
-              "updatedAt": "2020-05-26T09:53:58Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         },
@@ -9986,7 +9986,7 @@
               "originalPosition": 65,
               "body": "Agreed that \"HD\" is not a good term, but a better term will be worked on.\r\n",
               "createdAt": "2020-05-26T14:54:59Z",
-              "updatedAt": "2020-05-26T14:54:59Z"
+              "updatedAt": "2020-06-01T17:06:15Z"
             }
           ]
         }
@@ -10407,19 +10407,242 @@
       "labels": [],
       "body": "\r\nTo this branch, the text from Thomas will be added.\r\n",
       "createdAt": "2020-05-26T14:47:41Z",
-      "updatedAt": "2020-05-26T14:47:41Z",
+      "updatedAt": "2020-06-02T01:28:36Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "c47c3538e39d8e4fef5311dd8b1eb912f05d57d8",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "freshness2",
-      "headRefOid": "5da00272dc9a162c90df9cf308dd6e7b801ab1bc",
+      "headRefOid": "2333cf7e901edb2379a529aaa92a1e7e537a4ec7",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyMTc0MzY0",
+          "commit": {
+            "abbreviatedOid": "5da0027"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2020-06-01T20:54:20Z",
+          "updatedAt": "2020-06-01T21:02:57Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "Why is \"Results\" made plural in 850 and 856 but not here?\r\n\r\n```suggestion\r\nResults were generated using the latest Evidence and Appraisal Policy for Evidence.\r\n```",
+              "createdAt": "2020-06-01T20:54:20Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 13,
+              "body": "I prefer keeping \"might\" to avoid any confusion with \"MAY\" (which this isn't)\r\n\r\n```suggestion\r\nstate of the Attester, and the Appraisal Policy for Evidence, might\r\n```",
+              "createdAt": "2020-06-01T20:55:33Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "Double use of colon looks bad\r\n\r\n```suggestion\r\ntwo characteristics that can be part of freshness, recentness and uniqueness, are elaborated on below:\r\n```",
+              "createdAt": "2020-06-01T20:56:28Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 35,
+              "body": "I would expect \"recentness\" (or some other term) to be usable with claim values.  Claim values might have been generated long before the evidence was created.   I thought before we were using the term \"freshness\" to refer to evidence, and \"recentness\" to refer to claim values.   I don't care which terms we use, but we should not ignore discussion about claim values.\r\n\r\nAlso I see \"evidence\" is used lower case here...",
+              "createdAt": "2020-06-01T20:58:37Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 36,
+              "body": "Did you really mean \"relaying\" party?  This looks like a typo for Relying Party, but Relying Parties get Attestation Results not Evidence per se.   If you really do mean \"relaying\" party then better to use a term other than \"party\" (\"entity\"?) with it so it wouldn't look like a typo.",
+              "createdAt": "2020-06-01T21:00:12Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "I am not sure yet why this section is important.  I read the text below and I still can't figure out why it would be in the document.  I can't say I object yet, I can just say \"why do we need this\"?",
+              "createdAt": "2020-06-01T21:01:25Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "```suggestion\r\ninclude a unique handle (e.g., a UUID used as a nonce). If the Verifier\r\n```",
+              "createdAt": "2020-06-01T21:01:55Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            },
+            {
+              "originalPosition": 55,
+              "body": "What's the use case for \"appraising uniqueness characteristics\"?",
+              "createdAt": "2020-06-01T21:02:35Z",
+              "updatedAt": "2020-06-02T01:28:36Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 91,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDI2MDc0NTcx",
+      "title": "Freshness section slight reorg",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/91",
+      "state": "OPEN",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This commit slightly changes the Freshness section to reflect the\r\noutcome of the discussion around PR #87.  (Hopefully I've managed to\r\ncapture the gist of Henk's thinking without disrupting too much the\r\nexisting flow.)\r\n\r\nTL;DR\r\n\r\nThe key change here is the removal of reply protection as a goal in\r\nitself.  The section now states clearly that the overall goal is instead\r\nthe identification of the point in time when attestation claims have\r\nbeen signed and/or generated so that a freshness policy can be applied.\r\nIn this perspective, the fundamental property provided by a nonce-based\r\nscheme with regards to freshness is its ability to lock the requester's\r\nclock to the underlying protocol transaction, thus indirectly\r\nestablishing the epoch of the attestation / verification event.  By\r\nmaking the nonce unique and non-predictable, the timeline locking cannot\r\nbe subverted, which provides anti-replay.  However, that is a nice\r\nside-effect rather than the primary goal.\r\n\r\nThis commit also adds some precision around the nonce and clock\r\nproperties - unpredictability and trustworthiness respectively.",
+      "createdAt": "2020-06-01T16:05:24Z",
+      "updatedAt": "2020-06-02T01:24:51Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "c47c3538e39d8e4fef5311dd8b1eb912f05d57d8",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "thofos-freshness",
+      "headRefOid": "8bb928930ec96ffefc02a50ca1d213954a71b440",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "henkbirkholz",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added consolidated text based on Thomas initial version and review from MCR",
+          "createdAt": "2020-06-01T18:16:35Z",
+          "updatedAt": "2020-06-02T01:23:51Z"
+        },
+        {
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> This commit slightly changes the Freshness section to reflect the\r\n> outcome of the discussion around PR #87. (Hopefully I've managed to\r\n> capture the gist of Henk's thinking without disrupting too much the\r\n> existing flow.)\r\n\r\nSo, if #87 is dead, can you close it?   ",
+          "createdAt": "2020-06-02T01:24:51Z",
+          "updatedAt": "2020-06-02T01:24:51Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyMTYyOTIy",
+          "commit": {
+            "abbreviatedOid": "8bb9289"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2020-06-01T20:36:51Z",
+          "updatedAt": "2020-06-01T20:40:47Z",
+          "comments": [
+            {
+              "originalPosition": 48,
+              "body": "I believe \"Evidence\" is slightly better than \"attributes\" (but I can live with it either way) since only the attributes that appear in Evidence are actually appraised.\r\n\r\nOn \"whether\" vs \"the extent to which\", I believe the latter is more correct since the former implies it's always exactly boolean, and the latter is more liberal in terms of how may different possibilities there are.",
+              "createdAt": "2020-06-01T20:36:51Z",
+              "updatedAt": "2020-06-01T20:40:47Z"
+            },
+            {
+              "originalPosition": 66,
+              "body": "FYI I am ok either way, but I think \"another entity\" was previously changed to \"an Attester\" so not sure why reverting is being proposed in this PR but again I can live with it either way.",
+              "createdAt": "2020-06-01T20:37:39Z",
+              "updatedAt": "2020-06-01T20:40:47Z"
+            },
+            {
+              "originalPosition": 76,
+              "body": "Why is this line removed?",
+              "createdAt": "2020-06-01T20:38:43Z",
+              "updatedAt": "2020-06-01T20:40:47Z"
+            },
+            {
+              "originalPosition": 93,
+              "body": "We should not be adding FIXME comments into the doc at this point",
+              "createdAt": "2020-06-01T20:39:04Z",
+              "updatedAt": "2020-06-01T20:40:47Z"
+            },
+            {
+              "originalPosition": 115,
+              "body": "I find the wording of \"--in itself-- is composed\" to be harder to read than the previous text",
+              "createdAt": "2020-06-01T20:39:52Z",
+              "updatedAt": "2020-06-01T20:40:47Z"
+            },
+            {
+              "originalPosition": 168,
+              "body": "This seems to revert a bunch of changes we agreed to.   Maybe it needs a rebase or something?",
+              "createdAt": "2020-06-01T20:40:35Z",
+              "updatedAt": "2020-06-01T20:40:47Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyMTY1OTM3",
+          "commit": {
+            "abbreviatedOid": "8bb9289"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2020-06-01T20:41:31Z",
+          "updatedAt": "2020-06-01T20:51:42Z",
+          "comments": [
+            {
+              "originalPosition": 277,
+              "body": "Please break lines into shorter source lines, like in the old text, to make diffs easier to review.",
+              "createdAt": "2020-06-01T20:41:32Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 297,
+              "body": "\"epoch of the validity-span\" is hard to parse and understand.  Can this be rephrased in layman's terms?",
+              "createdAt": "2020-06-01T20:42:27Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 331,
+              "body": "\"having Claim\" is bad grammar.\r\n\"having Claims\"?  \"having a Claim\"? \"having each Claim\"?\r\n\r\nBut which approach is the one where each Claim can be separately annotated with a timestamp?   In the original text with only two approaches, it would be part of this one.",
+              "createdAt": "2020-06-01T20:43:41Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 339,
+              "body": "For parity with previous subsection, this would then require adding text saying \"This typically requires additional claims about the Attester's timetick counter mechanism in order to provide such assurance.\"",
+              "createdAt": "2020-06-01T20:46:19Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 342,
+              "body": "I don't yet follow why the time interval since nonce was received is interesting for anything.  Explain, or provide a forward reference if it's later.",
+              "createdAt": "2020-06-01T20:47:14Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 350,
+              "body": "The term \"validity-span\" is not a normal term as far as I know",
+              "createdAt": "2020-06-01T20:48:17Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 352,
+              "body": "can't parse \"track is to avoid\"",
+              "createdAt": "2020-06-01T20:48:47Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 344,
+              "body": "I can't figure out how/why this is any different architecturally from nonces.  To me, the handle is just a nonce as far as I can tell from the below discussion.",
+              "createdAt": "2020-06-01T20:49:53Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            },
+            {
+              "originalPosition": 366,
+              "body": "I'm not sure I agree with this.  Shouldn't it be covered by the policy?  If an attester can only get a stale value and can't vouch for it not having been changed since, then putting that fact in the Evidence allows the verifier to make a decision appropriately.",
+              "createdAt": "2020-06-01T20:51:13Z",
+              "updatedAt": "2020-06-01T20:51:42Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
