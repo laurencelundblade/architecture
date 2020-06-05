@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-06-02T14:17:09.585387+00:00",
+  "timestamp": "2020-06-05T23:24:07.792751+00:00",
   "repo": "ietf-rats-wg/architecture",
   "labels": [
     {
@@ -1360,6 +1360,22 @@
           "updatedAt": "2020-05-26T13:55:15Z"
         }
       ]
+    },
+    {
+      "number": 92,
+      "id": "MDU6SXNzdWU2MzE3MjI0ODg=",
+      "title": "Trust Model: Relying Party may require Verifier to act as Attester",
+      "url": "https://github.com/ietf-rats-wg/architecture/issues/92",
+      "state": "OPEN",
+      "author": "gkostal",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "To establish trust in a Verifier, Section 7 states that a Relying Party may require \"information\" about the Verifier:\r\n>Or, for a stronger level of security, the Relying Party might require that the Verifier itself provide information about itself that the Relying Party can use to assess the trustworthiness of the Verifier before accepting its Attestation Results\r\n\r\nSection 7 states that an Endorser or Verifier Owner may establish trust in a Verifier by treating it as an Attester:\r\n>The Endorser and Verifier Owner may need to trust the Verifier before giving the Endorsement and Appraisal Policy to it. Such trust can also be established directly or indirectly, implicitly or explicitly. One explicit way to establish such trust may be the Verifier first acts as an Attester and creates Evidence about itself to be consumed by the Endorser and/or Verifier Owner as the Relying Parties. If it is accepted as trustworthy, then they can provide Endorsements and Appraisal Policies that enable it to act as a Verifier.\r\n\r\n**Topic 1: spec content.**  Why the differing levels of specifics?  Is it intentional that the methods to establish trust is different for { Endorser, Verified Owner } and the Relying Party?  I believe that the Relying Party may require Evidence from the Verifier to trust it, in fact, this is precisely how the Microsoft Azure Attestation Service (a Verifier) has been designed and implemented.\r\n\r\n**Topic 2: conceptual dataflow diagram.**  The conceptual dataflow diagram in the architecture spec does not currently reflect that the Verifier may also be an Attester and then share Evidence with the Endorser, Verifier Owner and Relying Party.  Should it be updated?  Or have a 2nd more complex diagram?\r\n\r\n**Topic 3: EAT.**  If accurate, I'd like to see a clear acknowledgement that the Verifier may need to act as an Attester for the Relying Party since I'd like to then see specifically how the IETF EAT specification covers this circumstance.  In other words, for an EAT that represents an AttestationResult, would the Evidence for the Verifier be embedded or discovered?  If embedded, how are submods distinguished for the Verifier's Evidence versus the AttestationResult's embedded claims, including nested EAT's?",
+      "createdAt": "2020-06-05T16:14:39Z",
+      "updatedAt": "2020-06-05T16:14:39Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -10407,13 +10423,13 @@
       "labels": [],
       "body": "\r\nTo this branch, the text from Thomas will be added.\r\n",
       "createdAt": "2020-05-26T14:47:41Z",
-      "updatedAt": "2020-06-02T01:28:36Z",
+      "updatedAt": "2020-06-02T17:37:34Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
-      "baseRefOid": "c47c3538e39d8e4fef5311dd8b1eb912f05d57d8",
+      "baseRefOid": "a822b6e7805f594288c6003a776230fc4650fe6d",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "freshness2",
-      "headRefOid": "2333cf7e901edb2379a529aaa92a1e7e537a4ec7",
+      "headRefOid": "66352b2ce8dea6074639c131ea6da6cea10ab98e",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -10436,49 +10452,49 @@
               "originalPosition": 9,
               "body": "Why is \"Results\" made plural in 850 and 856 but not here?\r\n\r\n```suggestion\r\nResults were generated using the latest Evidence and Appraisal Policy for Evidence.\r\n```",
               "createdAt": "2020-06-01T20:54:20Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 13,
               "body": "I prefer keeping \"might\" to avoid any confusion with \"MAY\" (which this isn't)\r\n\r\n```suggestion\r\nstate of the Attester, and the Appraisal Policy for Evidence, might\r\n```",
               "createdAt": "2020-06-01T20:55:33Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 30,
               "body": "Double use of colon looks bad\r\n\r\n```suggestion\r\ntwo characteristics that can be part of freshness, recentness and uniqueness, are elaborated on below:\r\n```",
               "createdAt": "2020-06-01T20:56:28Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 35,
               "body": "I would expect \"recentness\" (or some other term) to be usable with claim values.  Claim values might have been generated long before the evidence was created.   I thought before we were using the term \"freshness\" to refer to evidence, and \"recentness\" to refer to claim values.   I don't care which terms we use, but we should not ignore discussion about claim values.\r\n\r\nAlso I see \"evidence\" is used lower case here...",
               "createdAt": "2020-06-01T20:58:37Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 36,
               "body": "Did you really mean \"relaying\" party?  This looks like a typo for Relying Party, but Relying Parties get Attestation Results not Evidence per se.   If you really do mean \"relaying\" party then better to use a term other than \"party\" (\"entity\"?) with it so it wouldn't look like a typo.",
               "createdAt": "2020-06-01T21:00:12Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 45,
               "body": "I am not sure yet why this section is important.  I read the text below and I still can't figure out why it would be in the document.  I can't say I object yet, I can just say \"why do we need this\"?",
               "createdAt": "2020-06-01T21:01:25Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 52,
               "body": "```suggestion\r\ninclude a unique handle (e.g., a UUID used as a nonce). If the Verifier\r\n```",
               "createdAt": "2020-06-01T21:01:55Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             },
             {
               "originalPosition": 55,
               "body": "What's the use case for \"appraising uniqueness characteristics\"?",
               "createdAt": "2020-06-01T21:02:35Z",
-              "updatedAt": "2020-06-02T01:28:36Z"
+              "updatedAt": "2020-06-02T17:37:34Z"
             }
           ]
         }
@@ -10496,13 +10512,13 @@
       "labels": [],
       "body": "This commit slightly changes the Freshness section to reflect the\r\noutcome of the discussion around PR #87.  (Hopefully I've managed to\r\ncapture the gist of Henk's thinking without disrupting too much the\r\nexisting flow.)\r\n\r\nTL;DR\r\n\r\nThe key change here is the removal of reply protection as a goal in\r\nitself.  The section now states clearly that the overall goal is instead\r\nthe identification of the point in time when attestation claims have\r\nbeen signed and/or generated so that a freshness policy can be applied.\r\nIn this perspective, the fundamental property provided by a nonce-based\r\nscheme with regards to freshness is its ability to lock the requester's\r\nclock to the underlying protocol transaction, thus indirectly\r\nestablishing the epoch of the attestation / verification event.  By\r\nmaking the nonce unique and non-predictable, the timeline locking cannot\r\nbe subverted, which provides anti-replay.  However, that is a nice\r\nside-effect rather than the primary goal.\r\n\r\nThis commit also adds some precision around the nonce and clock\r\nproperties - unpredictability and trustworthiness respectively.",
       "createdAt": "2020-06-01T16:05:24Z",
-      "updatedAt": "2020-06-02T14:16:37Z",
+      "updatedAt": "2020-06-02T15:49:03Z",
       "baseRepository": "ietf-rats-wg/architecture",
       "baseRefName": "master",
       "baseRefOid": "c47c3538e39d8e4fef5311dd8b1eb912f05d57d8",
       "headRepository": "ietf-rats-wg/architecture",
       "headRefName": "thofos-freshness",
-      "headRefOid": "50391169f1cf4750131304b8d0f7cb514a64b06c",
+      "headRefOid": "7c022f8ff15442cac85cde5b4d2cdab6cceab705",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -10540,37 +10556,37 @@
               "originalPosition": 48,
               "body": "I believe \"Evidence\" is slightly better than \"attributes\" (but I can live with it either way) since only the attributes that appear in Evidence are actually appraised.\r\n\r\nOn \"whether\" vs \"the extent to which\", I believe the latter is more correct since the former implies it's always exactly boolean, and the latter is more liberal in terms of how may different possibilities there are.",
               "createdAt": "2020-06-01T20:36:51Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 66,
               "body": "FYI I am ok either way, but I think \"another entity\" was previously changed to \"an Attester\" so not sure why reverting is being proposed in this PR but again I can live with it either way.",
               "createdAt": "2020-06-01T20:37:39Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 76,
               "body": "Why is this line removed?",
               "createdAt": "2020-06-01T20:38:43Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 93,
               "body": "We should not be adding FIXME comments into the doc at this point",
               "createdAt": "2020-06-01T20:39:04Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 115,
               "body": "I find the wording of \"--in itself-- is composed\" to be harder to read than the previous text",
               "createdAt": "2020-06-01T20:39:52Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 168,
               "body": "This seems to revert a bunch of changes we agreed to.   Maybe it needs a rebase or something?",
               "createdAt": "2020-06-01T20:40:35Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             }
           ]
         },
@@ -10590,55 +10606,55 @@
               "originalPosition": 277,
               "body": "Please break lines into shorter source lines, like in the old text, to make diffs easier to review.",
               "createdAt": "2020-06-01T20:41:32Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 297,
               "body": "\"epoch of the validity-span\" is hard to parse and understand.  Can this be rephrased in layman's terms?",
               "createdAt": "2020-06-01T20:42:27Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 331,
               "body": "\"having Claim\" is bad grammar.\r\n\"having Claims\"?  \"having a Claim\"? \"having each Claim\"?\r\n\r\nBut which approach is the one where each Claim can be separately annotated with a timestamp?   In the original text with only two approaches, it would be part of this one.",
               "createdAt": "2020-06-01T20:43:41Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 339,
               "body": "For parity with previous subsection, this would then require adding text saying \"This typically requires additional claims about the Attester's timetick counter mechanism in order to provide such assurance.\"",
               "createdAt": "2020-06-01T20:46:19Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 342,
               "body": "I don't yet follow why the time interval since nonce was received is interesting for anything.  Explain, or provide a forward reference if it's later.",
               "createdAt": "2020-06-01T20:47:14Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 350,
               "body": "The term \"validity-span\" is not a normal term as far as I know",
               "createdAt": "2020-06-01T20:48:17Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 352,
               "body": "can't parse \"track is to avoid\"",
               "createdAt": "2020-06-01T20:48:47Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 344,
               "body": "I can't figure out how/why this is any different architecturally from nonces.  To me, the handle is just a nonce as far as I can tell from the below discussion.",
               "createdAt": "2020-06-01T20:49:53Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 366,
               "body": "I'm not sure I agree with this.  Shouldn't it be covered by the policy?  If an attester can only get a stale value and can't vouch for it not having been changed since, then putting that fact in the Evidence allows the verifier to make a decision appropriately.",
               "createdAt": "2020-06-01T20:51:13Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             }
           ]
         },
@@ -10658,7 +10674,7 @@
               "originalPosition": 48,
               "body": "+1, I agree with Dave, there may be other intermediate situations between simple trust and non-trust.",
               "createdAt": "2020-06-02T02:26:33Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             }
           ]
         },
@@ -10678,41 +10694,307 @@
               "originalPosition": 277,
               "body": "```suggestion\r\nIt is important to prevent old Evidence or old Attestation Results\r\nthat are no longer correct to be assessed as valid. Replay attacks\r\nare an important reason to do that. More importantly, the validity\r\nof Conceptual Messages, such as Evidence or Attestation Results,\r\nis the basis for trustworthy remote attestation procedures, in general.\r\n```",
               "createdAt": "2020-06-02T02:58:43Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 119,
               "body": "I feel that line 388 and 390 are duplicated.",
               "createdAt": "2020-06-02T03:04:13Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 283,
               "body": "```suggestion\r\nstate of the Attester, and/or the Appraisal Policy for Evidence,\r\n```",
               "createdAt": "2020-06-02T03:53:38Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 353,
               "body": "```suggestion\r\nDistributed handles are used in place of nonces for Evidence generation.\r\n```",
               "createdAt": "2020-06-02T07:15:48Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 344,
               "body": "It seems like that the handle is also a nonce, and the difference is that this nonce is from a third party (a centralized entity), not the Verifier or Relying Party.\r\nI'm afraid this approach is more complex because you need to consider the time sync among three entities. For example, the time of receiving the handle among different entities may be different, therefore the handle expired time will be different. If the handle on the Verifier expires earlier than the Attester, the handle may already be expired while Verifier receives the Evidence from Attester.",
               "createdAt": "2020-06-02T07:48:56Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
             },
             {
               "originalPosition": 398,
               "body": "I think these new-added events had been questioned before, that the examples below don't use them.",
               "createdAt": "2020-06-02T07:57:02Z",
-              "updatedAt": "2020-06-02T14:16:37Z"
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzI4MjMw",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:19:47Z",
+          "updatedAt": "2020-06-02T14:19:48Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\r\nThis is essential in deciding whether the included Claims and their values can be considered fresh, meaning they still reflect the latest state of the Attester, and that any Attestation Result was generated using the latest Appraisal Policy for Evidence.\r\n```",
+              "createdAt": "2020-06-02T14:19:47Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzI5OTIw",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:21:36Z",
+          "updatedAt": "2020-06-02T14:21:36Z",
+          "comments": [
+            {
+              "originalPosition": 50,
+              "body": "```suggestion\r\nFreshness is a key component  for enabling caching and reuse of both Evidence and Attestation Results, which is especially valuable in cases where their computation uses a substantial part of the resource budget (e.g., energy in constrained devices).\r\n```",
+              "createdAt": "2020-06-02T14:21:36Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzQ2NjM3",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:38:57Z",
+          "updatedAt": "2020-06-02T14:38:57Z",
+          "comments": [
+            {
+              "originalPosition": 57,
+              "body": "```suggestion\r\nTimestamps can also be added on a per-Claim basis if wanted, to allow distinguishing the time of creation of Evidence from the time that a specific Claim value was generated.\r\n```",
+              "createdAt": "2020-06-02T14:38:57Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU0MTc4",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:46:37Z",
+          "updatedAt": "2020-06-02T14:46:37Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "```suggestion\r\nIn this approach, a non-predictable nonce is sent by the remote entity, and the nonce is then signed and included along with the Claims in the Evidence or Attestation Result.\r\n```",
+              "createdAt": "2020-06-02T14:46:37Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU1MDI4",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:47:28Z",
+          "updatedAt": "2020-06-02T14:47:28Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "```suggestion\r\nAfter the appraising entity checks that the sent and received nonces are the same, the appraising entity knows that the Claims were signed after the nonce was generated.\r\n```",
+              "createdAt": "2020-06-02T14:47:28Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU1NDY1",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:47:54Z",
+          "updatedAt": "2020-06-02T14:47:55Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2020-06-02T14:47:54Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU2NzYy",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:49:16Z",
+          "updatedAt": "2020-06-02T14:49:17Z",
+          "comments": [
+            {
+              "originalPosition": 73,
+              "body": "```suggestion\r\nFor example, if clocks exist and are considered trustworthy but are not synchronized, first a nonce-based exchange may be used to determine the (rough) time offset between the involved peers, followed by any number of timestamp based exchanges.\r\n```",
+              "createdAt": "2020-06-02T14:49:16Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU2OTM5",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:49:27Z",
+          "updatedAt": "2020-06-02T14:49:27Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "```suggestion\r\nA second approach places the onus of timekeeping solely on the appraising entity (e.g., the Verifier for Evidence, or the Relying Party for an Attestation Result).\r\n```",
+              "createdAt": "2020-06-02T14:49:27Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU3MzQz",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:49:50Z",
+          "updatedAt": "2020-06-02T14:49:51Z",
+          "comments": [
+            {
+              "originalPosition": 64,
+              "body": "```suggestion\r\nIn this approach, a non-predictable nonce is generated by the appraising entity, and the nonce is then signed and included along with the Claims in the Evidence or Attestation Result.\r\n```",
+              "createdAt": "2020-06-02T14:49:51Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzU3NjAx",
+          "commit": {
+            "abbreviatedOid": "5039116"
+          },
+          "author": "mcr",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:50:07Z",
+          "updatedAt": "2020-06-02T14:50:07Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "```suggestion\r\nAfter checking the sent and received nonces are the same, the appraising entity knows that the Claims were signed after the nonce was generated, effectively locking its clock to the produced payload.\r\n```",
+              "createdAt": "2020-06-02T14:50:07Z",
+              "updatedAt": "2020-06-02T14:55:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyNzY3MjE5",
+          "commit": {
+            "abbreviatedOid": "7c022f8"
+          },
+          "author": "dthaler",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T14:59:36Z",
+          "updatedAt": "2020-06-02T14:59:36Z",
+          "comments": [
+            {
+              "originalPosition": 65,
+              "body": "```suggestion\r\nAfter checking the sent and received nonces are the same, the appraising entity knows that the Claims were signed after the nonce was generated.\r\n```",
+              "createdAt": "2020-06-02T14:59:36Z",
+              "updatedAt": "2020-06-02T14:59:36Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDIyODE5MzI2",
+          "commit": {
+            "abbreviatedOid": "7c022f8"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-06-02T15:49:03Z",
+          "updatedAt": "2020-06-02T15:49:03Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "I don't think we should ditch this.\r\n\r\nThe essential premise is on line 869. In particular, by using \"solely\" I wanted to discuss the case where the only clock that the appraiser can trust is its own.  The intent of line 870 is just to illustrate two common instances where the appraiser can't rely on the peer's clock.\r\n\r\nThe overall premise for this whole paragraph is that appraiser does _not_ consider any time assertion made the peer, and to determine what kind of information can be used in this case to evaluate freshness.\r\n\r\nClearly, once the peer's clock becomes usable - as in the example at line 880 - then finer-grained timestamping can become input to the evaluation of the freshness policy as well.\r\n\r\nHopefully I have made my intention clear and the ambiguities in the existing text can be fixed accordingly :-)",
+              "createdAt": "2020-06-02T15:49:03Z",
+              "updatedAt": "2020-06-02T15:49:03Z"
             }
           ]
         }
       ]
+    },
+    {
+      "number": 93,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDI4ODQyODk5",
+      "title": "Authors don't need to be in acknowledgments section",
+      "url": "https://github.com/ietf-rats-wg/architecture/pull/93",
+      "state": "OPEN",
+      "author": "dthaler",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Wei Pan was added to the author list but wasn't removed from the\r\nAcknowledgements section at the time so now appears in both places.\r\nThis PR corrects that.\r\n\r\nSigned-off-by: Dave Thaler <dthaler@ntdev.microsoft.com>",
+      "createdAt": "2020-06-05T23:23:57Z",
+      "updatedAt": "2020-06-05T23:24:02Z",
+      "baseRepository": "ietf-rats-wg/architecture",
+      "baseRefName": "master",
+      "baseRefOid": "a822b6e7805f594288c6003a776230fc4650fe6d",
+      "headRepository": "ietf-rats-wg/architecture",
+      "headRefName": "acknowledge",
+      "headRefOid": "266c3f57bc69b999ba0dd40dfefc9403c0a10ed3",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
